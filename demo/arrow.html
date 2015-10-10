@@ -1,7 +1,4 @@
-<!DOCTYPE html>
-<html>
-
-	<head lang="en">
+<html><head lang="en">
 		<meta charset="UTF-8">
 		<title>箭头</title>
 		<link href="../stylesheets/bootstrap.min.css" rel="stylesheet">
@@ -10,7 +7,7 @@
 				position: relative;
 				width: 50px;
 				height: 50px;
-				background-color: #F2F2BF;
+				background-color: #dff0d8;
 			}
 			.arrow:after,
 			.arrow:before {
@@ -23,36 +20,36 @@
 			}
 			.arrow-left:before {
 				left: 10px;
-				border-left: 25px solid #F2F2BF;
+				border-left: 25px solid #dff0d8;
 				z-index: 2;
 			}
 			.arrow-left:after {
 				left: 16px;
-				border-left: 25px solid red;
+				border-left: 25px solid green;
 			}
 			.arrow-right:before {
 				right: 16px;
-				border-right: 25px solid red;
+				border-right: 25px solid green;
 			}
 			.arrow-right:after {
 				right: 10px;
-				border-right: 25px solid #F2F2BF;
+				border-right: 25px solid #dff0d8;
 			}
 			.arrow-top:before {
 				top: 16px;
-				border-top: 25px solid red;
+				border-top: 25px solid green;
 			}
 			.arrow-top:after {
 				top: 10px;
-				border-top: 25px solid #F2F2BF;
+				border-top: 25px solid #dff0d8;
 			}
 			.arrow-bottom:before {
 				bottom: 16px;
-				border-bottom: 25px solid red;
+				border-bottom: 25px solid green;
 			}
 			.arrow-bottom:after {
 				bottom: 10px;
-				border-bottom: 25px solid #F2F2BF;
+				border-bottom: 25px solid #dff0d8;
 			}
 			.demo {
 				float: left;
@@ -108,24 +105,24 @@
 				border-left: 30px solid transparent;
 			}
 			.sp_5 {
-				box-shadow: 0 0 0 10px red;
+				box-shadow: 0 0 0 10px green;
 			}
 			.sp_6 {
-				background-color: red;
+				background-color: green;
 				border-radius: 50%;
 			}
 			/*----css绘制图形结束----------- */
 		</style>
-	</head>
 
-	<body>
-		<div class="arrow arrow-left demo"></div>
-		<div class="arrow arrow-right demo"></div>
-		<div class="arrow arrow-top demo"></div>
-		<div class="arrow arrow-bottom demo"></div>
+	<body screen_capture_injected="true">
+
 		<div class="demo_border">
+			<div class="arrow arrow-left demo"></div>
+			<div class="arrow arrow-right demo"></div>
+			<div class="arrow arrow-top demo"></div>
+			<div class="arrow arrow-bottom demo"></div>
 			<table border="0" style="">
-				<tr style="background-color:white;">
+				<tbody><tr style="background-color:white;">
 					<td class="td">
 						<span class="sp_1"></span>
 					</td>
@@ -148,7 +145,7 @@
 						<span class="sp_6"></span>
 					</td>
 				</tr>
-			</table>
+			</tbody></table>
 			<div class="panel panel-success">
 				<div class="panel-heading">使用html和css可以绘制矩形，三角形和圆形的办法</div>
 				<div class="panel-body">
@@ -169,6 +166,5 @@
 				</div>
 			</div>
 		</div>
-	</body>
+	
 
-</html>
