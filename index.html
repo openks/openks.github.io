@@ -1,10 +1,80 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
+
 	<head>
 		<meta charset="utf-8">
-		<title>openks的index测试页3</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+		<!-- bootstrapdemo页 -->
+		<title>栗子</title>
+
+		<!-- Bootstrap -->
+		<link href="stylesheets/bootstrap.min.css" rel="stylesheet">
+
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+		<style type="text/css">
+			body {
+				text-align: center;
+			}
+			.center {
+				margin: 0 auto;
+			}
+			.list-group {
+				width: 90%
+			}
+			.col{
+				float: left;
+				width: 25%;
+			}
+		</style>
 	</head>
+
 	<body>
-		这里是index的测试页222
+		<div class="col left">
+			<h1><span class="label label-info">html5</span></h1>
+			<div class="list-group center">
+				<a href="demo/canvas/canvas.html" class="list-group-item list-group-item-success" target="_blank">简易canvas画板</a>
+				<a href="demo/clock/clock.html" class="list-group-item list-group-item-info" target="_blank">canvas时钟</a>
+				<a href="demo/nodeppt/demo.htm" class="list-group-item list-group-item-warn" target="_blank">nodeppt</a>
+				<a href="demo/drag/drag.html" class="list-group-item list-group-item-danger" target="_blank">html5拖拽</a>
+				<a href="demo/file/file.html" class="list-group-item list-group-item-success" target="_blank">文件上传页面优化</a>
+			</div>
+		</div>
+		<div class="col center">
+			<h1><span class="label label-info">css3</span></h1>
+			<div class="list-group center">
+				<a href="demo/sprite/sprite.html" class="list-group-item list-group-item-success" target="_blank">png/svg sprite</a>
+				<a href="demo/arrow.html" class="list-group-item list-group-item-info" target="_blank">css绘制三角形，圆形，矩形和箭头</a>
+				<a href="demo/check_mark.html" class="list-group-item list-group-item-warning" target="_blank">css绘制对号</a>
+			</div>
+		</div>
+		<div class="col">
+			<h1><span class="label label-info">ie兼容性问题</span></h1>
+			<div class="list-group center">
+				<a href="demo/ie6_float_double_space.html" class="list-group-item list-group-item-success" target="_blank">ie6 float双倍边距</a>
+				<a href="demo/ie6_margin_0_auto_center_bug.html" class="list-group-item list-group-item-info" target="_blank">ie6 margin 0 auto 无法居中问题</a>
+				<a href="demo/ie_id_or_name.html" class="list-group-item list-group-item-warning" target="_blank">ie 根据Id选择元素不正确问题 </a>
+				<a href="demo/ie_li_trapezium.html" class="list-group-item list-group-item-danger" target="_blank">ie li梯形显示问题</a>
+			</div>
+		</div>
+		<div class="col">
+			<h1><span class="label label-info">其他</span></h1>
+			<div class="list-group center">
+				<a href="demo/screenX_clientX_pageX.html" class="list-group-item list-group-item-success" target="_blank">screenX clientX pageX区别</a>
+				<a href="demo/css-unit.html" class="list-group-item list-group-item-info" target="_blank">css单位em和rem的区别</a>
+				<a href="demo/page/test.html" class="list-group-item list-group-item-warning" target="_blank">单页面伪装多页面</a>
+			</div>
+		</div>
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="javascripts/jquery.min.js"></script>
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="javascripts/bootstrap.min.js"></script>
 	</body>
+
 </html>
