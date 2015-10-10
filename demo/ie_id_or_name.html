@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>ie的documentMode
+			<8时根据id获取元素可能有误</title>
+				<style type="text/css">
+					.warn {
+						color: red;
+					}
+				</style>
+	</head>
+
+	<body>
+		<form action="IE_BUG2.html" method="get">
+			<p>name:
+				<input type="text" name="username" />
+			</p>
+			<p>id:
+				<input type="text" id="username" />
+			</p>
+			<p>
+				<input type="button" value="给id赋值" onclick="changeValue();" />
+			</p>
+			当name和id相等时，document.getElementById()可能会获取到不正确的结果
+			<br /> <span class="warn">文档模式小于8时该问题出现：document.documentMode<8 </span>
+			<br /> 两个input 一个的id和另一个的name相同时 哪个在前获取的就是哪个
+		</form>
+		<script language="Javascript">
+			function changeValue() {
+				var d = document.getElementById('username');
+				d.value = 'haha';
+			}
+		</script>
+	</body>
+
+</html>

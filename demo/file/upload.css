@@ -1,0 +1,49 @@
+.upload {
+	font-size: 300px;
+	position: absolute;
+	right: 0;
+	opacity: 0;
+	top: 0;
+	cursor: pointer;
+	filter: alpha(opacity=0);
+}
+.file_group {
+	width: 200px;
+	height: 80px;
+	margin: 0 auto;
+	border: 2px solid red;
+	overflow: hidden;
+	background: #f50;
+	position: relative;
+	cursor: pointer;
+	text-align: center;
+	line-height: 80px;
+	color: #fff;
+	font-size: 16px;
+	border-radius: 4px;
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+.up-area {
+	margin: 10px auto;
+	border: 1px dashed #ccc;
+	background-color: #eee;
+	width: 600px;
+	height: 200px;
+	line-height: 22px;
+	padding-top: 120px;
+	text-align: center;
+	color: #666;
+	cursor: pointer;
+}
+.up-area:hover {
+	background-color: #ddd;
+}
+.info {
+	width: 600px;
+	background-color: #eee;
+	margin-top: 78px;
+	margin: 0 auto;
+}

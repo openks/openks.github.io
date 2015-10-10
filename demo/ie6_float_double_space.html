@@ -1,0 +1,34 @@
+﻿<!DOCTYPE HTML>
+<html lang="en-US">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>float两倍空白</title>
+		<style type="text/css">
+			body {
+				/*margin: 0;*/
+			}
+			.top {
+				width: 900px;
+				height: 550px;
+				background: gray;
+				float: left;
+				margin-left: 50px;
+				line-height: 30px;
+				/*display: inline;*/
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="top">
+			一个元素左浮动（float：left）且添加了左边margin（margin-left:10px;）
+			<br />那么会自动的加一倍变成30（含ie6 body默认的10px）
+			<br/> 边距翻倍只有当元素边距碰到包含块时才发生。
+			<br/> 当一个元素浮动到另一个浮动元素是不会翻倍。
+			<br/> marginTop和marginBottom并不翻倍。
+			<br/>解决方法：给div加：display:inline,
+		</div>
+	</body>
+
+</html>

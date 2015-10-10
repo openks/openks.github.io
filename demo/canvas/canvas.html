@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="Description" content="简易画板,html和css绘制圆形，三角形和矩形，返回顶部" />
+		<!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+		<title>简易画板</title>
+		<!-- Bootstrap -->
+		<link href="../stylesheets/bootstrap.min.css" rel="stylesheet">
+		<style>
+			* {
+				margin: 0;
+				padding: 0
+			}
+			/*---------画板开始-------------------*/
+			
+			.div_canvas {
+				border: 2px solid rgb(223, 240, 216);
+				width: 702px;
+				height: 300px;
+				margin: 20px auto;
+			}
+			#myCanvas {
+				border-right: 2px solid rgb(223, 240, 216);
+				float: left;
+			}
+			#tools {
+				width: 64px;
+				height: 296px;
+				float: left;
+				background-color: rgb(251, 249, 249);
+				line-height: 25px;
+			}
+			#tools span {
+				width: 20px;
+				height: 20px;
+				float: left;
+				margin: 5px;
+				border-radius: 50%;
+			}
+			/*---------画板结束-------------------*/
+			/*----css绘制图形开始------------------*/
+			
+			table {
+				border-collapse: separate;
+				border-spacing: 5px;
+				background-color: rgb(223, 240, 216);
+				margin: 20px auto;
+				width: 100%;
+				height: 100px;
+			}
+			p {
+				text-indent: 2em;
+			}
+			.demo_border {
+				margin: 0 auto;
+				width: 720px;
+			}
+			.td {
+				width: 120px;
+				height: 100px;
+				text-align: center;
+			}
+			.td span {
+				width: 20px;
+				height: 20px;
+				display: inline-block;
+			}
+			.sp_1 {
+				border: 10px solid green;
+			}
+			.sp_2 {
+				border-top: 10px solid blue;
+				border-right: 10px solid red;
+				border-bottom: 10px solid yellow;
+				border-left: 10px solid green;
+			}
+			span.sp_3 {
+				width: 0px;
+				height: 0px;
+				border-right: 30px solid transparent;
+				border-bottom: 30px solid green;
+				border-left: 30px solid transparent;
+			}
+			span.sp_4 {
+				width: 0px;
+				height: 0px;
+				border-bottom: 30px solid green;
+				border-left: 30px solid transparent;
+			}
+			.sp_5 {
+				box-shadow: 0 0 0 10px red;
+			}
+			.sp_6 {
+				background-color: red;
+				border-radius: 50%;
+			}
+			/*----css绘制图形结束----------- */
+		</style>
+	</head>
+
+	<body data-role="page">
+		<div class="div_canvas">
+			<canvas id="myCanvas" width="632" height="300"></canvas>
+			<div id="tools"></div>
+		</div>
+		<div class="demo_border">
+			<table border="0" style="">
+				<tr style="background-color:white;">
+					<td class="td">
+						<span class="sp_1"></span>
+					</td>
+					<td class="td">
+						<span class="sp_2"></span>
+
+					</td>
+					<td class="td">
+						<span class="sp_3"></span>
+
+					</td>
+					<td class="td">
+						<span class="sp_4"></span>
+
+					</td>
+					<td class="td">
+						<span class="sp_5"></span>
+					</td>
+					<td class="td">
+						<span class="sp_6"></span>
+					</td>
+				</tr>
+			</table>
+			<div class="panel panel-success">
+				<div class="panel-heading">使用html和css可以绘制矩形，三角形和圆形的办法</div>
+				<div class="panel-body">
+					<h5>矩形：</h5>
+					<p>使用border来实现 (图一)<code>border: 10px solid green;</code></p>
+					<p>使用box-shadow来实现 (图五)<code>box-shadow: 0 0 0 10px red;</code></p>
+					<h5>三角形：</h5>
+					<p>使用背景色（图三） 设置下左右三个边框，下边框有颜色，左右透明即可</p>
+					<p><code>border-right: 30px solid transparent;</code></p>
+					<p><code>border-bottom: 30px solid green;</code></p>
+					<p><code>border-left: 30px solid transparent;</code></p>
+					<p>使用背景色（图四） 设置下左两个边框，下边框有颜色，左边框透明即可 </p>
+					<p>同理可实现其他形状三角形(可根据图二延伸)</p>
+					<h5>圆形：</h5>
+					<p> 设置圆角边框为一半即可（图六）<code> border-radius: 50%;</code></p>
+				</div>
+			</div>
+		</div>
+
+		<script src="../../javascripts/jquery.min.js"></script>
+		<script src="../../javascripts/jquery.mobile-1.4.5.min.js"></script>
+		<script src="../../javascripts/bootstrap.min.js"></script>
+		<script src="../../javascripts/top.js"></script>
+		<script src="canvas.js"></script>
+	</body>
+
+</html>

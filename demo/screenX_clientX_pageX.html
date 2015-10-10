@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>screenX_clientX_pageX</title>
+		<meta charset="utf-8">
+		<script type="text/javascript" src="../javascripts/jquery.min.js"></script>
+		<style>
+			body {
+				margin: 0;
+				padding: 0;
+			}
+			.div {
+				text-align: center;
+				font-size: 24px;
+				height: 300px;
+				width: 1300px;
+				line-height: 300px;
+				color: yellow;
+			}
+			#d1 {
+				background-color: red;
+			}
+			#d2 {
+				background-color: green;
+			}
+			#d3 {
+				background-color: blue;
+			}
+			#d4 {
+				position: absolute;
+				background-color: yellow;
+				height: 186px;
+				width: 120px;
+				top: 0;
+			}
+			.tips {
+				position: fixed;
+				top: 0px;
+				left: 200px;
+				background-color: yellow;
+				line-height: 30px;
+			}
+		</style>
+		<script type="text/javascript">
+			$(function() {
+				window.onscroll = function() {
+					$("#d4").css("top", getScrollTop());
+				};
+				document.onmousemove = function(e) {
+					if (e == null) {
+						e = window.event;
+					}
+					var html = "screenX:" + e.screenX + "<br/>";
+					html += "screenY:" + e.screenY + "<br/><br/>";
+					html += "clientX:" + e.clientX + "<br/>";
+					html += "clientY:" + e.clientY + "<br/><br/>";
+					if (e.pageX == null) {
+						html += "pageX:" + e.x + "<br/>";
+						html += "pageY:" + e.y + "<br/>";
+					} else {
+						html += "pageX:" + e.pageX + "<br/>";
+						html += "pageY:" + e.pageY + "<br/>";
+					}
+					html += "body.scrollTop:<br/>" + document.body.scrollTop + "<br/>";
+					$("#d4").html(html);
+				};
+			});
+
+			function getScrollTop() {
+				var top = (document.documentElement && document.documentElement.scrollTop) ||
+					document.body.scrollTop;
+				return top;
+			}
+		</script>
+	</head>
+
+	<body>
+		<div id="d1" class="div">div1 height:300px width:1300px</div>
+		<div id="d2" class="div">div2 height:300px width:1300px</div>
+		<div id="d3" class="div">div3 height:300px width:1300px</div>
+		<div id="d4"></div>
+		<div class="tips">
+			screenX:鼠标位置相对于用户屏幕水平偏移量，而screenY也就是垂直方向的，此时的参照点也就是原点是屏幕的左上角。
+			<br /> pageX:跟screenX相比就是将参照点改成了浏览器内容区域的左上角，该参照点会随之滚动条的移动而移动。
+			<br /> clientX：参照点也是浏览器内容区域的左上角，但它不会随着滚动条而变动"
+			<br /> 参考 叶de第柒章 并略有改动
+			<br />原文地址 <a href="http://www.cnblogs.com/yehuabin/archive/2013/03/07/2946004.html">叶de第柒章原文链接</a> 
+		</div>
+	</body>
+
+</html>

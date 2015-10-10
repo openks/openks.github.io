@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>css单位</title>
+		<style type="text/css">
+			html {
+				font-size: 14px;
+			}
+			.em1 {
+				font-size: 12px;
+			}
+			.em2 {
+				font-size: 2em;
+			}
+			.em3 {
+				font-size: 2em;
+			}
+			.rem1 {
+				font-size: 2rem;
+			}
+			.rem2 {
+				font-size: 2rem;
+			}
+			.rem3 {
+				font-size: 2rem;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="em1">
+			这里是em1
+			<div class="em2">
+				这里是em2
+				<div class="em3">
+					这里是em3
+				</div>
+			</div>
+		</div>
+		区别:em单位是会继承的，rem不会继承
+		<div class="rem1">
+			这里是rem1
+			<div class="rem2">
+				这里是rem2
+				<div class="rem3">
+					这里是rem3
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>

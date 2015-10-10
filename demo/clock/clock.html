@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>简易时钟</title>
+		<link href="../../stylesheets/top.css" rel="stylesheet">
+		<style type="text/css">
+			#div_clock {
+				position: relative;
+			}
+			#clock {
+				position: absolute;
+			}
+			#pins {
+				position: absolute;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id='div_clock'>
+			<canvas id="clock" height="500" width="400"></canvas>
+			<canvas id="pins" height="500" width="400"></canvas>
+		</div>
+		<div class="jump-top-box">
+			<div class="jump-top js_top">
+				<a href="#" target="_self">返回顶部</a>
+			</div>
+			<div class="jump-task-list">
+				<a target="_blank" href="../../demo.html">栗子列表</a>
+			</div>
+		</div>
+		<script src="clock.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../javascripts/jquery.min.js"></script>
+		<script src="../../javascripts/top.js"></script>
+	</body>
+
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>html5文件拖拽</title>
+		<link href="../../stylesheets/top.css" rel="stylesheet">
+	</head>
+	<style>
+		.dustbin {
+			width: 50px;
+			height: 500px;
+			background-color: gray;
+			float: left;
+			text-align: center;
+			padding: 5px 50px;
+			line-height: 160px;
+			font-size: 50px;
+		}
+		.dragbox {
+			float: left;
+			margin-left: 20px;
+		}
+		.draglist {
+			height: 50px;
+			width: 300px;
+			line-height: 50px;
+			background: #eee;
+			margin-bottom: 10px;
+			padding: 10px;
+			cursor: move;
+			border: 2px dashed #ccc;
+		}
+		.tips {
+			position: fixed;
+			background-color: #eee;
+			width: 100%;
+			bottom: 10px;
+			text-align: center;
+			margin: 0;
+		}
+	</style>
+
+	<body>
+		<div class="dustbin">垃圾箱</div>
+		<div class="dragbox">
+			<div class="draglist js_drag" title="拖拽列表到垃圾箱查看效果" draggable="true">列表1</div>
+			<div class="draglist js_drag" title="拖拽列表到垃圾箱查看效果" draggable="true">列表2</div>
+			<div class="draglist js_drag" title="拖拽列表到垃圾箱查看效果" draggable="true">列表3</div>
+			<div class="draglist js_drag" title="拖拽列表到垃圾箱查看效果" draggable="true">列表4</div>
+			<div class="draglist js_drag" title="拖拽列表到垃圾箱查看效果" draggable="true">列表5</div>
+			<div class="draglist js_drag" title="拖拽列表到垃圾箱查看效果" draggable="true">列表6</div>
+		</div>
+		<div class="tips">
+			<blockquote> 该例子参考并略微修改了 <a target="_blank" href="http://www.zhangxinxu.com/wordpress/2011/02/html5-drag-drop-%E6%8B%96%E6%8B%BD%E4%B8%8E%E6%8B%96%E6%94%BE%E7%AE%80%E4%BB%8B/">张鑫旭的例子</a></blockquote>
+		</div>
+		<div class="jump-top-box">
+			<div class="jump-top js_top">
+				<a href="#" target="_self">返回顶部</a>
+			</div>
+			<div class="jump-task-list">
+				<a target="_blank" href="../../demo.html">栗子列表</a>
+			</div>
+		</div>
+		<script src="../../javascripts/jquery.min.js"></script>
+		<script>
+			var drags = $(".js_drag"),
+				drag = null,
+				dragbox = $(".dragbox")[0],
+				eleDustbin = $(".dustbin")[0];
+			eleDrag = null;
+			for (var i = 0, len = drags.length; i < len; i++) {
+				drag = drags[i];
+				drag.onselectstart = function(e) {
+					return false;
+				}
+				drag.ondragstart = function(e) {
+					e.dataTransfer.effectAllowed = "move";
+					e.dataTransfer.setData("text", e.target.innerHTML);
+					e.dataTransfer.setDragImage(e.target, 0, 0);
+					eleDrag = e.target;
+					return true;
+				}
+				drag.ondragend = function(e) {
+					e.dataTransfer.clearData("text");
+					eleDrag = null;
+					return true;
+				}
+			}
+			dragbox.ondragover = function(e) {
+				e.preventDefault();
+				return true;
+			};
+			eleDustbin.ondragover = function(e) {
+				e.preventDefault();
+				return true;
+			};
+			eleDustbin.ondragenter = function(e) {
+				this.style.color = "#ffffff";
+				return true;
+			};
+			eleDustbin.ondragleave = function(e) {
+				this.style.color = "#000000";
+				return false;
+			}
+			eleDustbin.ondrop = function(ev) {
+				if (eleDrag) {
+					eleDrag.parentNode.removeChild(eleDrag);
+				}
+				this.style.color = "#000000";
+				return false;
+			};
+		</script>
+		<script src="../../javascripts/top.js"></script>
+	</body>
+
+</html>

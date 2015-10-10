@@ -1,0 +1,38 @@
+$icons: google-plus2,facebook2,twitter2,feed3,youtube3,vimeo2;
+$width:32px;
+$height:32px;
+$sprite_w:320px;
+$sprite_h:32px;
+body {
+  font: 1.2em/1.5 Sans-serif;
+  text-align: center;
+};
+.clearfix.mhl{
+    float: left;
+    width: 30%;
+};
+.icon{
+    width:$width;
+    height: $height;
+    display: inline-block;
+    background: url(../sprite.svg) no-repeat;
+};
+.png{
+  background: url(../sprite.png) no-repeat;  
+};
+@for $i from 1 through length($icons){
+  .icon-#{nth($icons,$i)}{
+    background-position: -1 * (($i - 1) * 48px) 0;
+  } 
+};
+    
+.icon.big{
+    width:$width*2;
+    height: $height*2;
+    background-size: $sprite_w*2 $sprite_h*2;
+};
+@for $i from 1 through length($icons){
+  .big.icon-#{nth($icons,$i)}{
+    background-position: -2 * (($i - 1) * 48px) 0;
+  } 
+};

@@ -1,0 +1,59 @@
+body {
+  font: 1.2em/1.5 Sans-serif;
+  text-align: center; }
+
+.clearfix.mhl {
+  float: left;
+  width: 30%; }
+
+.icon {
+  width: 32px;
+  height: 32px;
+  display: inline-block;
+  background: url(../sprite.svg) no-repeat; }
+
+.png {
+  background: url(../sprite.png) no-repeat; }
+
+.icon-google-plus2 {
+  background-position: 0px 0; }
+
+.icon-facebook2 {
+  background-position: -48px 0; }
+
+.icon-twitter2 {
+  background-position: -96px 0; }
+
+.icon-feed3 {
+  background-position: -144px 0; }
+
+.icon-youtube3 {
+  background-position: -192px 0; }
+
+.icon-vimeo2 {
+  background-position: -240px 0; }
+
+.icon.big {
+  width: 64px;
+  height: 64px;
+  background-size: 640px 64px; }
+
+.big.icon-google-plus2 {
+  background-position: 0px 0; }
+
+.big.icon-facebook2 {
+  background-position: -96px 0; }
+
+.big.icon-twitter2 {
+  background-position: -192px 0; }
+
+.big.icon-feed3 {
+  background-position: -288px 0; }
+
+.big.icon-youtube3 {
+  background-position: -384px 0; }
+
+.big.icon-vimeo2 {
+  background-position: -480px 0; }
+
+/*# sourceMappingURL=sprite.css.map */
