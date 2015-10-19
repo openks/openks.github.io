@@ -52,8 +52,14 @@
 				});
 			});
 			Zepto.init();
-			$(".wrapper-inp").on("click", function() {
-				$(".js-show-uBirthday").trigger("click");
+			$(".wrapper-inp").on("click", function(e) {
+				e.preventDefault();
+				e.stopPropagation();
+				if(e.target==e.currentTarget){
+//					console.log("show");
+					Zepto(".js-show-uBirthday").triggerHandler("click");
+				}
+//				console.log("wrapper.");
 			});
 		</script>
 	</body>

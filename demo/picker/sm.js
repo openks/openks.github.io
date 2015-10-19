@@ -3978,7 +3978,7 @@ $.device = (function ($) {
     return this.each(function() {
       if(!this) return;
       var $this = $(this);
-      debugger;
+//    debugger;
       var picker = $this.data("picker");
       if(!picker) {
         var p = $.extend({input: this}, params);
