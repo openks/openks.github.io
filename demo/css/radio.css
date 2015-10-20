@@ -1,0 +1,21 @@
+input[type='radio'] {
+    display: none;
+}
+
+li.item-content {
+    list-style: none;
+    width: 450px;
+    height: 50px;
+    background-color: gray;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    overflow: hidden;
+}
+
+li.item-content.cur {
+    border: 2px solid red;
+}
