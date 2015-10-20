@@ -12,9 +12,7 @@ $(function() {
 		var str = "选择文件各属性如下：<br/>",
 			selectFile = fs[0];
 		for (var i in selectFile) {
-			if (selectFile.hasOwnProperty(i)) {
-				str += i + ":" + selectFile[i] + "<br/>";
-			}
+			str += i + ":" + selectFile[i] + "<br/>";
 		}
 		div_new.innerHTML = str;
 		jsinfo = document.getElementById("js-info");
