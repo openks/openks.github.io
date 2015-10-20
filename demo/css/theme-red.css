@@ -1,0 +1,13 @@
+div#wrapper {
+	background-color: red;
+}
+input#red {
+	color: #fff;
+}
+
+input[type="button"] {
+    background-color: red;
+}
+
+input#green {
+}

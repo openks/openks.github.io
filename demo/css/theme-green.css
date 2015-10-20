@@ -1,0 +1,12 @@
+div#wrapper {
+    background-color: green;
+}
+
+input#green {
+    background-color: green;
+    color: #fff;
+}
+
+input[type="button"] {
+    background-color: green;
+}
