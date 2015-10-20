@@ -1,0 +1,48 @@
+.wrapper {
+    position: relative;
+    width: 500px;
+    margin: 0 auto;
+    height: 300px;
+    background-color: #DC7070;
+    overflow: auto;
+}
+
+.wrapper-inner {
+    position: absolute;
+    top: 0;
+    width: 300px;
+    height: 200px;
+    background-color: #8D8DD0;
+}
+
+input#search,#clear {
+    width: 200px;
+    height: 50px;
+    margin-left: 50px;
+    margin-top: 30px;
+    background-color: green;
+    border: none;
+    outline: none;
+}
+
+.tips {
+    position: absolute;
+    right: 20px;
+    font-size: 14px;
+    font-weight: lighter;
+}
+
+a#testLink {
+    display: block;
+    width: 500px;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.label-info {
+    position: relative;
+    width: 500px;
+    margin: 0 auto;
+    height: 300px;
+}
