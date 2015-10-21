@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>cover层</title>
+		<!-- 新 Bootstrap 核心 CSS 文件 -->
+		<link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/cover.css" />
+
+	</head>
+
+	<body>
+		<input type="button" name="showCover" class="btn btn-primary" id="showCover" value="显示弹层" />
+		<p class="lead"> 弹层有两种方式：</p>
+		<p>方式一：两个对象：一个遮罩层宽高为全屏设置背景色及透明度（RGBA或者opacity）另外一个层为最上层显示内容，显示或隐藏时需同时处理两个对象</p>
+		<p>方式二：一个对象：只有一个遮罩层设置背景图片（1像素宽高，该图片自带透明度）显示内容在该遮罩层内部，显示或隐藏只需处理一个对象即可， 该demo即采用方式二。</p>
+		<div class="cover">
+			<div class="content">
+				<p>在这里显示提示信息</p>
+				<code>
+					position: fixed;<br>
+					left: 50%;<br>
+					top: 50%;<br>
+					margin-left: -100px;<br>
+					margin-top: -100px;<br>
+					width: 200px;<br>
+					height: 200px;
+				</code>
+				<input type="button" name="closeCover" class="btn btn-primary" id="closeCover" value="关闭弹层" />
+			</div>
+		</div>
+		<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+		<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+
+		<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+		<script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		<script type="text/javascript">
+			$("#closeCover").on("click", function() {
+				$(".cover").css({
+					"display": "none"
+				});
+			});
+			$("#showCover").on("click", function() {
+				$(".cover").css({
+					"display": "block"
+				});
+			});
+			 //			var close=document.getElementById("closeCover");
+			 //			close.onclick=function(){
+			 //				document.getElementsByClassName("cover")[0].style.display="none";
+			 //			}
+			 //			var showCover=document.getElementById("showCover");
+			 //			showCover.onclick=function(){     
+			 //				document.getElementsByClassName("cover")[0].style.display="block";
+			 //				alert("hello");
+			 //			}
+		</script>
+	</body>
+
+</html>
