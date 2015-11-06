@@ -1,0 +1,25 @@
+.names {
+	width: 232px;
+	height: 430px;
+	margin: 0;
+	padding: 0;
+	background-color: #F6F6F6;
+	overflow: hidden;
+}
+.user {
+	width: 200px;
+	height: 90px;
+	font-size: 20px;
+	color: #fff;
+	line-height: 1.5;
+	padding: 5px 10px;
+	margin: 5px;
+	border-radius: 8px;
+	background-color: #E08240;
+}
+.user label {
+	display: block;
+}
+.user span {
+	margin-left: -6px;
+}

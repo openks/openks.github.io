@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>IE和W3C事件</title>
+		<style type="text/css">
+			.tb-user {
+				background-color: #E8E8E8;
+				border-collapse: collapse;
+			}
+			.tb-user table,
+			.tb-user th,
+			.tb-user td {
+				padding: 5px;
+				border: 1px solid #000;
+			}
+			.demo1 {
+				position: absolute;
+				left: 500px;
+				top: 10px;
+				width: 300px;
+				height: 250px;
+				background-color: #e3e3e3;
+			}
+			.inner {
+				position: relative;
+				float: left;
+				width: 100px;
+				height: 240px;
+				margin: 5px;
+				margin-left: 50%;
+				right: 50px;
+				/*设置为宽度的一半*/
+				
+				background-color: #E05454;
+			}
+		</style>
+	</head>
+
+	<body>
+		<table class="tb-user">
+			<tr>
+				<th>First name</th>
+				<th>Last name</th>
+			</tr>
+			<tr>
+				<td>John</td>
+				<td>Doe</td>
+			</tr>
+			<tr>
+				<td>Jane</td>
+				<td>Doe</td>
+			</tr>
+		</table>
+
+		<div class="demo1" id="wrapper">
+			<div class="inner" id="inner"></div>
+		</div>
+		<script type="text/javascript">
+			var wrapper = document.getElementById("wrapper");
+			var inner = document.getElementById("inner");
+			if (!Element.prototype.addEventListener) {
+				//IE
+				console.log("IE");
+				wrapper.attachEvent("onclick", function() {
+					console.log("wrapper");
+				});
+				inner.attachEvent("onclick", function() {
+					console.log("inner");
+				});
+			} else {
+				console.log("W3C");
+				//W3C 可修改第三个参数为true查看效果
+				wrapper.addEventListener("click", function() {
+					console.log(this.id)
+				},false);
+				inner.addEventListener("click", function() {
+					console.log(this.id)
+				},false);
+			}
+		</script>
+	</body>
+
+</html>
