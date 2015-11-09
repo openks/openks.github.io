@@ -28,12 +28,13 @@
 				float: left;
 				width: 100px;
 				height: 240px;
-				margin: 5px;
+				
 				margin-left: 50%;
 				right: 50px;
-				/*设置为宽度的一半*/
-				
 				background-color: #E05454;
+				color: #fff;
+				font-size: 16px;
+				padding: 6px;
 			}
 		</style>
 	</head>
@@ -55,7 +56,7 @@
 		</table>
 
 		<div class="demo1" id="wrapper">
-			<div class="inner" id="inner"></div>
+			<div class="inner" id="inner">click me to see difference between IE EVENT and W3C Event in console</div>
 		</div>
 		<script type="text/javascript">
 			var wrapper = document.getElementById("wrapper");
@@ -74,10 +75,10 @@
 				//W3C 可修改第三个参数为true查看效果
 				wrapper.addEventListener("click", function() {
 					console.log(this.id)
-				},false);
+				}, false);
 				inner.addEventListener("click", function() {
 					console.log(this.id)
-				},false);
+				}, false);
 			}
 		</script>
 	</body>
