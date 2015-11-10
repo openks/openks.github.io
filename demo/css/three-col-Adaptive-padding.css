@@ -1,0 +1,28 @@
+body{
+  margin:0;
+}
+div#main {
+  padding: 0 150px 0 200px;
+  background-color: #DE8F8F;
+  overflow: hidden;
+}
+
+div#left {
+  width: 200px;
+  /* height: 100%; */
+  float: left;
+  background-color: #9595DC;
+  margin-left: -200px;
+}
+
+div#right {
+  width: 150px;
+  float: left;
+  margin-right: -150px;
+  background-color: #3CEA40;
+}
+
+div#center {
+  float: left;
+  background-color: #E3e3e3;
+}

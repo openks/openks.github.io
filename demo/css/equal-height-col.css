@@ -1,0 +1,82 @@
+div#container3 {
+	float: left;
+	width: 100%;
+	background-color: green;
+	position: relative;
+	overflow: hidden;
+}
+div#container2 {
+	float: left;
+	width: 100%;
+	background-color: yellow;
+	position: relative;
+	right: 30%;
+}
+div#container1 {
+	float: left;
+	width: 100%;
+	background-color: orange;
+	position: relative;
+	right: 40%;
+}
+div#col3 {
+	float: left;
+	position: relative;
+	overflow: hidden;
+	width: 30%;
+	left: 70%;
+}
+div#col2 {
+	float: left;
+	position: relative;
+	overflow: hidden;
+	width: 40%;
+	left: 70%;
+}
+div#col1 {
+	float: left;
+	position: relative;
+	overflow: hidden;
+	width: 30%;
+	left: 70%;
+	height: 408px;
+}
+/*Ã¤Â¸â€¹Ã©ÂÂ¢Ã§Å¡â€žÃ¥Â®Å¾Ã§Å½Â°Ã¦â€“Â¹Ã¦Â³â€¢*/
+.equal-height {
+    float: left;
+    position: relative;
+}
+#wrapper1 {
+    width: 100%;
+    background-color: green;
+    left: 30%;
+}
+#wrapper2 {
+    width: 100%;
+    background-color: blue;
+    left: 20%;
+}
+#wrapper3 {
+    width: 500px;
+    background-color: red;
+    overflow: hidden;
+}
+div#inner1 {
+    width: 50%;
+    right: 50%;
+    /* background-color: darkmagenta; */
+    overflow: hidden;
+}
+div#inner2 {
+    right: 50%;
+    width: 30%;
+    overflow: hidden;
+    /* background-color: aqua; */
+    height: 200px;
+}
+div#inner3 {
+    right: 50%;
+    width: 20%;
+    /* background-color: honeydew; */
+    overflow: hidden;
+}

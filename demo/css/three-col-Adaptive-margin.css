@@ -1,0 +1,38 @@
+body {
+	min-width: 500px;
+}
+body,
+h2 {
+	margin: 0;
+}
+#main {
+	margin: 5px;
+}
+#header {
+	height: 100px;
+	background-color: #C3c3c3;
+}
+#footer {
+	height: 50px;
+	background-color: #C3C3C3;
+	clear: both;
+}
+#left {
+	width: 200px;
+	float: left;
+	background-color: #FFBB8B;
+}
+#center {
+	margin: 0 -200px;
+	width: 100%;
+	float: left;
+}
+#center .inner {
+	margin: 0 200px;
+	background-color: #F1DF90;
+}
+#right {
+	width: 200px;
+	float: right;
+	background-color: #AFD9EF;
+}
