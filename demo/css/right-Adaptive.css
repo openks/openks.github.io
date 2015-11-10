@@ -1,0 +1,25 @@
+html,body{
+  height:100%;
+  margin:0;
+}
+.content {
+  height: 100%;
+  padding: 0;
+  padding-left: 200px;
+  background-color: #8383FF;
+  overflow: hidden;
+}
+
+.center {
+  float: left;
+  background-color: yellow;
+  overflow: auto;
+}
+
+.left {
+  width: 200px;
+  height: 100%;
+  float: left;
+  background-color: red;
+  margin-left: -200px;
+}

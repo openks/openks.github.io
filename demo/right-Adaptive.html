@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>right-Adaptive</title>
+		<link rel="stylesheet" type="text/css" href="css/right-Adaptive.css" />
+	</head>
+
+	<body>
+		<div class="content">
+			<div class="left">
+				这里左边的宽高是固定死100%高度的。
+			</div>
+			<div class="center">
+				1，上市前，阿里不惜壮士断腕的来反对售假。2011年，阿里发现阿里出现了内外勾结的欺诈性供应事件。据说，有100多名阿里销售员工涉及这一不道德行为。 对待这一事件，集团CEO卫哲和COO李旭辉离职。这一波制裁假货的售假事件，甚至引发了假货集团通过各种渠道围攻淘宝的现象。 这一做法，使阿里在美国贸易代表办公室赢得了尊重，并将淘宝从黑名单中删除。2，上市后，阿里也一直在打假。数据显示，阿里成立了一只超过2000员工的打假工作组，并且在这一工作组上提供了超过1亿美金的费用。通过大数据对比，阿里每天可以发现数以万件的假货产品，并进行处理，比如下架。仅2014年一年，该公司就从淘宝上删除了1亿件侵权产品。
+				尽管如此，包括美国服装协会，对阿里的指责，却没有停止，这又是为什么？主要原因是：1，打假涉及到了阿里两难问题。分析认为，如果阿里彻底根除假货问题，那么，会有很多人遭遇破产。原因是，打假会提升阿里在国际上的形象，但是，却极有可能使很多小卖家没了生计。2，阿里虽然打假力度不小，但是收效并不乐观。比如，马云旗下这个零售网站去年的商品交易总额达到3,940亿美元，是eBay的五倍。 据悉，每天约有10万家新的淘宝店铺通过注册。这些店铺是否会用来销售假冒产品，并没有人知道。尽管，每天会有大量的售假商店被关停，但淘宝平台上仍存在海量的假货。美国服装鞋袜业联合会主席朱厄妮塔·达根签署的致马云的公开信说，尽管已就售假问题进行了多年探讨，但尚未取得任何“有意义”的结果。需要指出的是，这是美国服装鞋袜业联合会2015年第二次公开批评阿里巴巴的打假工作。4月份，该组织曾向美国多位证券与贸易官员发出公开信，称该公司在淘宝网上对假货持容忍态度。
+			</div>
+		</div>
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<script type="text/javascript">
+			/**
+			 *如果不给center设置高度，当center内容超出一屏时内容无法滚动，overflow:scroll只有在高度是固定值的地方才起作用
+			 */
+			function setHeight() {
+				var curHeight = parseInt($(".center").css("height"), 10);
+				
+				if (!(curHeight < $(window).height())) {
+					$(".center").css({
+						"height": $(window).height() + "px"
+					});
+				}
+			};
+			$(function() {
+				setHeight();
+				window.onresize = setHeight;
+			});
+		</script>
+	</body>
+
+</html>
