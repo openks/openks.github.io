@@ -22,8 +22,15 @@ $(function() {
 	area.onclick = function() {
 		file.click();
 	};
-	file.onchange = function() {
+	file.onchange = function(e) {
 		uploadFile(this.files);
+		var file = e.target.files[0];
+		var reader = new FileReader()
+		reader.onload = function(e) {
+			var $img = $('.showPic img').attr("src", e.target.result);
+			$('.showPic').empty().append($img);
+		}
+		reader.readAsDataURL(file)
 	};
 	area.ondragenter = function(ev) {
 		this.className = 'up-area hover';

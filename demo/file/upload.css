@@ -47,3 +47,14 @@
 	margin-top: 78px;
 	margin: 0 auto;
 }
+
+.showPic {
+  width: 739px;
+  height: 300px;
+  margin: 0 auto;
+}
+
+.showPic img {
+  /* width: 300px; */
+  /* height: 300px; */
+}
