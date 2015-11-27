@@ -25,7 +25,7 @@ $(function() {
 	file.onchange = function(e) {
 		uploadFile(this.files);
 		var file = e.target.files[0];
-		var reader = new FileReader()
+		var reader = new FileReader();
 		reader.onload = function(e) {
 			var $img = $('.showPic img').attr("src", e.target.result);
 			$('.showPic').empty().append($img);
