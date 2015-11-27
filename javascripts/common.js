@@ -1,4 +1,5 @@
-;/**
+;
+/**
  * 倒计时程序
  *
  * @param totle
@@ -46,27 +47,47 @@ if (location.hash.indexOf("debug=true") > -1) {
 window.log = log;
 
 //动态设置字体大小
-var fontNo = screen.width/320*20;
-document.getElementsByTagName("html")[0].style.fontSize=fontNo+"px"
+var fontNo = screen.width / 320 * 20;
+document.getElementsByTagName("html")[0].style.fontSize = fontNo + "px"
 
 /**
  * 根据年龄字符串获取年龄值
  * @param {Object} dateStr "2010-01-01"
  */
-function getYears(dateStr ) {
-    var now = new Date();
-    var old = new Date(dateStr );
-    var years = now.getFullYear() - old.getFullYear();
-    if (now.getMonth() < old.getMonth()) {
-        years = years - 1;
-    }
-    if (now.getMonth() == old.getMonth() && now.getDate() < old.getDate()) {
-        years = years - 1;
-    }
-    years = years < 0 ? 0 : years;
-//  console.log(dateStr  + "--" + years);
-    return years;
+function getYears(dateStr) {
+	var now = new Date();
+	var old = new Date(dateStr);
+	var years = now.getFullYear() - old.getFullYear();
+	if (now.getMonth() < old.getMonth()) {
+		years = years - 1;
+	}
+	if (now.getMonth() == old.getMonth() && now.getDate() < old.getDate()) {
+		years = years - 1;
+	}
+	years = years < 0 ? 0 : years;
+	//  console.log(dateStr  + "--" + years);
+	return years;
 }
 
+Date.prototype.format = function(format) {
+	var o = {
+		"M+": this.getMonth() + 1, //month 
+		"d+": this.getDate(), //day 
+		"h+": this.getHours(), //hour 
+		"m+": this.getMinutes(), //minute 
+		"s+": this.getSeconds(), //second 
+		"q+": Math.floor((this.getMonth() + 3) / 3), //quarter 
+		"S": this.getMilliseconds() //millisecond 
+	}
 
+	if (/(y+)/.test(format)) {
+		format = format.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
+	}
 
+	for (var k in o) {
+		if (new RegExp("(" + k + ")").test(format)) {
+			format = format.replace(RegExp.$1, RegExp.$1.length == 1 ? o[k] : ("00" + o[k]).substr(("" + o[k]).length));
+		}
+	}
+	return format;
+}
