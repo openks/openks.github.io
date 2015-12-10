@@ -5,13 +5,17 @@
 		<meta charset="UTF-8">
 		<title>简易时钟</title>
 		<link href="../../stylesheets/top.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="../css/clock.css" />
 		<style type="text/css">
 			#div_clock {
 				position: relative;
+				height: 500px;
 			}
+			
 			#clock {
 				position: absolute;
 			}
+			
 			#pins {
 				position: absolute;
 			}
@@ -22,6 +26,47 @@
 		<div id='div_clock'>
 			<canvas id="clock" height="500" width="400"></canvas>
 			<canvas id="pins" height="500" width="400"></canvas>
+		</div>
+		<div class="clock-wrapper">
+			<div class="clock-border">
+				<div class="clock">
+					<ul class='minute-marks'>
+						<li class='five'></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li class='five'></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li class='five'></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li class='five'></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li class='five'></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li class='five'></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+					<div class='hour'>
+						<div class='hand'></div>
+					</div>
+				</div>
+			</div>
 		</div>
 		<div class="jump-top-box">
 			<div class="jump-top js_top">
