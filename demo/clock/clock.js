@@ -83,3 +83,19 @@ function getTime() {
 }
 window.requestAnimationFrame(getTime);
 //setInterval(getTime,1000);
+
+function setTime(){
+ var  time=new Date();
+  var seconds = time.getSeconds();
+  var mins=time.getMinutes();
+  var hours=time.getHours()%12;
+  $(".second").css({"transform":"rotate("+seconds*6+"deg)"});
+  $(".minute").css({"transform":"rotate("+(seconds/10+mins*6)+"deg)"});
+  $(".hour").css({"transform":"rotate("+(seconds/120+mins/2+hours*30)+"deg)"});
+  window.requestAnimationFrame(setTime);
+}
+window.requestAnimationFrame(setTime);
+//setInterval(setTime,1000);
+//setTimeout(setTime,1000)
+
+
