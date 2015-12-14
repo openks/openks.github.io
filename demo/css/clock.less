@@ -1,0 +1,222 @@
+@clockSize : 400px;
+
+@step : 360/60;
+
+
+@borderWidth     : round(@clockSize / 22);
+@wrapperWidth    : round(@clockSize * 1.15);
+
+
+.clock-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #eceef0;
+    overflow: hidden;
+}
+
+.clock-border{
+    .center;
+    .size(@wrapperWidth, @wrapperWidth);
+    
+    border-width: @borderWidth;
+    border-color: transparent #d2d8df #d2d8df;
+    border-style: solid;
+    .border-radius(50%);
+    .background-clip(border-box);
+    .rotate(-45);
+}
+
+.clock {
+    .center;
+    .size(@clockSize, @clockSize);
+    padding: 0;
+    background-color: #262c33;
+    border: @borderWidth solid #373f4a;
+    .border-radius(50%);
+    .background-clip(border-box);   // lesshat inserts padding-box along with border-radius, which makes it look ugly on webkit
+    .rotate(45);
+}
+
+.minute-marks {
+    @minuteSize: @clockSize/100;
+    @fiveSize: @clockSize/20;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    .size(0);
+    li {
+        .center;
+        display: inline-block;
+        .size(200);
+
+        &:before,
+        &:after {
+            content: '';
+            .center;
+            .size(0);
+            display: inline-block;
+            border-color: #d4d5d6;
+            border-width: @minuteSize;
+            border-style: solid;
+            .opacity(0.6);
+            .border-radius(@minuteSize);
+        }
+        &:before { top:    -@clockSize + @minuteSize*5; }
+        &:after  { bottom: -@clockSize + @minuteSize*5; }
+
+        &.five {
+            &:before,
+            &:after {
+                .size(0, @fiveSize);
+            }
+            &:before { top:    -@clockSize + @fiveSize*2; }
+            &:after  { bottom: -@clockSize + @fiveSize*2; }
+        }
+    .rotateMinutes;
+    }
+}
+
+.hour {
+    @hourWidth  : @clockSize * 0.04;
+    @hourLength : @clockSize * 0.3;
+    
+    .center;
+    .rotate(-45deg);
+
+    .hand { 
+        .pointed-hand(@hourWidth, @hourLength); 
+    }
+}
+
+.minute {
+    @minuteWidth  : @clockSize * 0.03;
+    @minuteLength : @clockSize * 0.42;
+   
+    .center;
+    .rotate(45deg);
+
+    .hand { 
+        .pointed-hand(@minuteWidth, @minuteLength); 
+    }
+}
+
+.second {
+    @secondWidth  : @clockSize * 0.02;
+    @secondLength : @clockSize * 0.6;
+
+    .center;
+    .rotate(60deg);
+
+    .hand {
+        .center;
+
+        &:before {
+            content: '';
+            display: inline-block;
+            .center;
+            @top : -@secondLength/2;
+            top: @top; // animates to => top: @top;
+            .size(@secondWidth,  @secondLength); // animates to => .size(@secondWidth, @secondLength);
+            background-color: #f16b41;
+            .border-radius(@secondWidth);
+            .transform-origin(center, @secondLength*3/4);
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            .center;
+            display: inline-block;
+            .size(@secondWidth*4,@secondWidth*4);
+            .border-radius(@secondWidth*4);
+            background-color: #f16b41;
+        }
+    }
+}
+
+
+// Mixins:
+.center(){
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+.opacity(@opacity:0){
+    opacity:@opacity;
+}
+.size(@width:0px; @height:0px){
+    width:@width;
+    height: @height;
+}
+.border-radius(@borderRadius:30px){
+    border-radius:@borderRadius;
+}
+.rotate(@rotate:45){
+    transform: rotate(unit(@rotate, deg));
+}
+.background-clip(@status:border-box){
+    background-clip:@status;
+} 
+.rotateMinutes () {
+    @limit : 31;
+    .loop(1);
+    .loop (@index) when (@index < @limit) {
+        @delay : 0.017s;
+        &:nth-child(@{index}) {
+            // step => 360 degrees, 60 second
+            // since there is no nth-child(0), we need to back every rotation a little (hence the -@step)
+            .rotate(@index*@step - @step);
+        }
+        .loop(@index + 1);
+    }
+}
+
+.pointed-hand (@width, @length) {
+    @arrowCorrection : @clockSize/200;
+
+    .center;
+
+    &:before {
+        content: '';
+        .center;
+        display: inline-block;
+        top: -@length; 
+        .size(@width, @length);
+        height: @length;
+        .border-top-left-radius(@arrowCorrection);
+        .border-top-right-radius(@arrowCorrection);
+        background-color: #fff;
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        .center;
+        top: -(2*@length) - @width + @arrowCorrection; // animates to => top: -(2*@length) - @width + @arrowCorrection;
+        display: inline-block;
+        border-bottom: @width solid #fff;
+        border-left: @width/2 solid transparent;
+        border-right: @width/2 solid transparent;
+        .size(0);
+    }
+}
+
+.border-top-left-radius(@radius) {
+   border-top-left-radius: @radius;
+}
+.border-top-right-radius(@radius) {
+  border-top-right-radius: @radius;
+}
+
+.transform-origin(@x,@y)
+{
+    transform-origin:@arguments;
+}
+
