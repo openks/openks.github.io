@@ -1,0 +1,35 @@
+.hide {
+  display: none;
+}
+.bt {
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+}
+.ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.center {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+.opacity {
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+/*# sourceMappingURL=myless.css.map */

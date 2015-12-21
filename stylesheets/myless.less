@@ -1,0 +1,60 @@
+.hide {
+    display: none;
+}
+
+.bt {
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.opacity(@opacity: 0.5) {
+    @opacityIE: @opacity * 100;
+    opacity: @opacity;
+    filter: ~"alpha(opacity=@{opacityIE})";
+}
+
+.rotate (@deg: 0deg) {
+    transform: rotate(unit(@rotate, deg));
+}
+
+.ellipsis {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.center{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+
+.border-radius(@borderRadius:30px){
+    border-radius:@borderRadius;
+}
+
+.box-sizing(@model: content-box) {
+    box-sizing: @model;
+}
+
+.background-clip(@status:border-box){
+    background-clip:@status;
+} 
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+.opacity {
+    .opacity;
+}
