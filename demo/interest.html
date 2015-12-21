@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>利息计算</title>
+		<link rel="stylesheet" type="text/css" href="css/interest.css" />
+		<script src="//libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<script src="js/interest.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+		<ul>
+			<li>
+				<label for="totle">总金额</label>
+				<input id="totle" type="text" value=10000 />
+			</li>
+			<li>
+				<label for="inst-per-y">年息%</label>
+				<input id="inst-per-y" type="text" />
+			</li>
+			<li>
+				<label for="inst-per-m">月息%</label>
+				<input id="inst-per-m" type="text" />
+			</li>
+			<li>
+				<label for="inst-fen-y">年息(分)</label>
+				<input id="inst-fen-y" type="text" />
+			</li>
+			<li>
+				<label for="inst-fen-m">月息(分)</label>
+				<input id="inst-fen-m" type="text" />
+			</li>
+			<li>
+				<label for="instest">利息</label>
+				<input id="instest" type="text" />
+			</li>
+			<li>
+				<label for="day-instest">日息</label>
+				<input id="day-instest" type="text" />
+			</li>
+		</ul>
+		<div class="bts">
+			<input type="button" id="calc" value="计算" />
+			<input type="button" id="clean" value="清空" />
+		</div>
+
+	</body>
+
+</html>

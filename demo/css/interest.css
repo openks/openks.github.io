@@ -1,0 +1,42 @@
+.bts {
+  width: 260px;
+  text-align: center;
+  margin: 0 auto;
+  padding-left: 30px;
+}
+
+ul {
+  width: 280px;
+  background-color: #e3e3e3;
+  list-style: none;
+  padding: 10px 0;
+  margin: 0px auto;
+}
+
+li {
+  margin: 10px;
+}
+
+li label {
+  width: 72px;
+  height: 30px;
+  line-height: 30px;
+  display: inline-block;
+  text-align: right;
+  /* background-color: red; */
+}
+
+li input {
+  line-height: 30px;
+  padding-left: 4px;
+}
+
+.bts input {
+  width: 80px;
+  height: 40px;
+  margin-top: 10px;
+}
+
+.error {
+  border: 1px solid red;
+}

@@ -11,7 +11,7 @@
  */
 var COUNT_INTERVAL = null;
 
-function(totle, callBack, callBackLast) {
+function countDown(totle, callBack, callBackLast) {
 	if (arguments.length == 2) {
 		callBackLast = callBack;
 	}
@@ -90,4 +90,34 @@ Date.prototype.format = function(format) {
 		}
 	}
 	return format;
+};
+/*
+ * <img data‐src="1.png" data‐webp="1.png.webp" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" >
+	1.  img标签使用1px的透明gif做填充图片
+	2.  利用data­src放普通图片
+	3.  利用data­webp放webp图片
+	4.  利用js判断浏览器是否支持webp，从而选择合适的图片格式
+ */
+function check_webp() {
+	var img = new Image();
+	img.src = "data:image/webp;base64,UklGRhoAAABXRUJQVlA4TA0AAAAvAAAAEAcQERGIiP4HAA==";
+	img.onload = function() {
+		var result = (img.width > 0) && (img.height > 0);
+		var imgs = document.getElementsByTagName("img");
+		if (result) {
+			for (var i = 0; i < imgs.length; i++) {
+				imgs[i].src = imgs[i].getAttribute("data-webp");
+			}
+		} else {
+			for (var i = 0; i < imgs.length; i++) {
+				imgs[i].src = imgs[i].getAttribute("data-src");
+			}
+		}
+	};
+	img.onerror = function() {
+		var imgs = document.getElementsByTagName("img");
+		for (var i = 0; i < imgs.length; i++) {
+			imgs[i].src = imgs[i].getAttribute("data-src");
+		}
+	};
 }
