@@ -4,10 +4,26 @@
 	<head>
 		<meta charset="utf-8">
 		<title>日历控件</title>
-		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
-		<script src="js/jquery-ui.min.js"></script>
+		<script src="//libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+
+		<script src="//apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
 		<script src="js/jquery-datepicker-zh.js"></script>
-		<link href="css/jquery-ui.min.css" rel="stylesheet" />
+		<script src="js/jquery-ui-timepicker-addon.js"></script>
+		<link href="//apps.bdimg.com/libs/jqueryui/1.10.4/css/jquery-ui.min.css" rel="stylesheet" />
+		<style type="text/css">
+			.ui-datepicker-year,
+			.ui-datepicker-month {
+				width: 40%!important;
+			}
+			
+			.ui-datepicker-year {
+				margin-right: 2%!important;
+			}
+			
+			.ui-datepicker-month {
+				margin-left: 2%!important;
+			}
+		</style>
 	</head>
 
 	<body>
@@ -34,7 +50,7 @@
 				return format;
 			}
 			$(function() {
-				$(".datepicker").datepicker({ //添加日期选择功能  
+				$(".datepicker").datetimepicker({ //添加日期选择功能  
 					numberOfMonths: 1, //显示几个月  
 					showButtonPanel: true, //是否显示按钮面板  
 					changeMonth: true,
@@ -43,7 +59,7 @@
 					clearText: "清除", //清除日期的按钮名称  
 					closeText: "关闭", //关闭选择框的按钮名称  
 					yearSuffix: '年', //年的后缀  
-					monthSuffix: 'yue ', //年的后缀  
+					monthSuffix: '月', //年的后缀  
 					showMonthAfterYear: true, //是否把月放在年的后面  
 					defaultDate: '2012-9-9', //默认日期  
 					minDate: '1900-03-05', //最小日期  
