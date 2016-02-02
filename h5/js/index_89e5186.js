@@ -1,0 +1,1 @@
+function app(){console.log("index")}app(),$(function(){$("#tt").on("click",function(){var o="/h5/img/140-1201_5e2132f.png";console.log(o),$(".img-logo").css("background-image","url("+o+")")})});

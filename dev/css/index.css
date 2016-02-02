@@ -1,0 +1,17 @@
+body {
+	background-color: #FF00AA;
+}
+
+.img-logo {
+	height: 120px;
+	width: 140px;
+	float: left;
+	background-image: url(/img/140-120.png?__sprite);
+}
+.img-l{
+	height: 120px;
+	width: 140px;
+	float: left;
+	background-image: url(/img/start.png?__sprite);
+	background-repeat:no-repeat ;
+}
