@@ -118,20 +118,30 @@ var CommentForm = React.createClass({
 });
 
 var Comment = React.createClass({
+	rawMarkup: function() {
+    var rawMarkup = marked(this.props.children.toString(), {sanitize: true});
+    return { __html: rawMarkup };
+  },
   render: function() {
     return (
       <div className="comment">
         <h2 className="commentAuthor">
           {this.props.author}
         </h2>
-        {this.props.children}
+        <span dangerouslySetInnerHTML={this.rawMarkup()} />
       </div>
     );
   }
 });
 
+var comment_url="";
+if(location.href.indexOf("demo.zhuyangxing")>-1){
+	comment_url="http://openks.duapp.com/api/comments";
+}else{
+	comment_url="http://127.0.0.1:18080/api/comments";
+}
 
 ReactDOM.render(
-  <CommentBox url="http://openks.duapp.com/api/comments" />,
+  <CommentBox url={comment_url} />,
   document.getElementById('content')
 );
