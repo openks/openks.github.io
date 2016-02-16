@@ -11,6 +11,9 @@
  * fis3 release debug -w 启用debug配置
  * */
 
+fis.set('project.ignore', [
+  '.git/**'
+]);
 
 //www.a.com/h5/index.html
 fis.match('*', {
