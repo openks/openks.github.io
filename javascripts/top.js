@@ -6,7 +6,7 @@ $(function() {
 	var fileref = document.createElement('link');
 	fileref.setAttribute("rel", "stylesheet");
 	fileref.setAttribute("type", "text/css");
-	fileref.setAttribute("href", "//demo.zhuyangxing.cn/stylesheets/top.css");
+	fileref.setAttribute("href", "//www.zhuyangxing.cn/stylesheets/top.css");
 	document.getElementsByTagName("head")[0].appendChild(fileref);
 
 	$(".js_top").on("mouseenter", function() {

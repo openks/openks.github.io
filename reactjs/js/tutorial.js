@@ -135,7 +135,7 @@ var Comment = React.createClass({
 });
 
 var comment_url="";
-if(location.href.indexOf("demo.zhuyangxing")>-1){
+if(location.href.indexOf("zhuyangxing")>-1){
 	comment_url="http://openks.duapp.com/api/comments";
 }else{
 	comment_url="http://127.0.0.1:18080/api/comments";
