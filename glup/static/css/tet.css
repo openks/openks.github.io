@@ -1,0 +1,91 @@
+.num {
+	/* background-color: yellow; */
+	overflow: hidden;
+	margin: 0 auto;
+	margin-top: 100px;
+	border-radius: 4px;/*no*/
+	border: 1px solid #9b9b9b;/*no*/
+	width: 600px;
+}
+
+ul.pw {
+	margin: 0;
+	list-style: none;
+	padding: 0;
+	overflow: hidden;
+	/* width: 480px; */
+}
+
+ul.pw li {
+	height: 100px;
+	width: 100px;
+	text-align: center;
+	line-height: 100px;
+	font-size: 100px;
+	display: inline-block;
+	box-sizing: border-box;
+	border-right: 1px solid #d9d9d9;/*no*/
+	float: left;
+}
+
+ul {
+	margin: 0;
+	list-style: none;
+	padding: 0;
+}
+
+ul.key {
+	overflow: hidden;
+}
+
+li.key {
+	height: 120px;
+	width: 33.333333%;
+	text-align: center;
+	line-height: 120px;
+	font-size: 60px;/*px*/
+	display: block;
+	border-top: 1px solid #d9d9d9;/*no*/
+	border-right: 1px solid #d9d9d9;/*no*/
+	float: left;
+	box-sizing: border-box;
+}
+
+.keybord {
+	overflow: hidden;
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+}
+
+body {
+	margin: 0;
+}
+
+li.key.emp {
+	background-color: #E2E7ED;
+}
+
+li.key.delete {
+	background-color: #E2E7ED;
+	font-size: 40px;/*px*/
+	/* font-weight: normal;safsad */
+}
+
+.showPwd {
+	text-align: center;
+	margin-top: 40px;
+}
+
+.selector {
+	display: flex;
+	width: 150px;
+	height: 64px;/*px*/
+	font-size: 28px;/*px*/
+	border: 1px solid #ddd;/*no*/
+	color:blue;
+}
+
+ul.pw li:last-child {
+  border-right: 0;
+}
