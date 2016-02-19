@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/alipay-demo1.css" />
+		<script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>
+		<script src="//libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+	</head>
+
+	<body>
+		<div class="num">
+			<ul class="pw">
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+
+		<!--		<input type="button" id="add" value="add" />
+		<input type="button" id="delete" value="delete" />-->
+		<div class="showPwd">
+			<input type="text" id="tex" />
+		</div>
+		<!--		<input type="button" id="dpi" value="dpi" />-->
+		<div class="keybord">
+			<ul class="key">
+				<li class="key">1</li>
+				<li class="key">2</li>
+				<li class="key">3</li>
+				<li class="key">4</li>
+				<li class="key">5</li>
+				<li class="key">6</li>
+				<li class="key">7</li>
+				<li class="key">8</li>
+				<li class="key">9</li>
+				<li class="key emp"></li>
+				<li class="key">0</li>
+				<li class="key delete">删除</li>
+			</ul>
+		</div>
+		<script type="text/javascript">
+			$(function() {
+//				$("#add").on("click", function() {
+//					var last = $(".pw").find(".on:last");
+//					var inputNum = $(".pw li.on").length;
+//					if (inputNum == 0) {
+//						$(".pw li:first").addClass("on").text("·");
+//					} else if (inputNum < 6) {
+//						last.next().addClass("on").text("·");
+//					}
+//				});
+//				$("#delete").on("click", function() {
+//					var inputNum = $(".pw li.on").length;
+//					if (inputNum > 0) {
+//						$(".pw .on:last").removeClass("on").text("");
+//						var str = $("#tex").val();
+//						$("#tex").val(str.substring(0, str.length - 1));
+//					}
+//				});
+				$("#dpi").on("click", function() {
+					alert(window.devicePixelRatio);
+				});
+				$(".keybord li").on("click", function(e) {
+					e.preventDefault();
+//					console.log(e.target.textContent);
+					var tmp = $("#tex").val();
+					if ($(this).hasClass("delete")) {
+						var inputNum = $(".pw li.on").length;
+						if (inputNum > 0) {
+							$(".pw .on:last").removeClass("on").text("");
+							var str = $("#tex").val();
+							$("#tex").val(str.substring(0, str.length - 1));
+						}
+					}
+					if (tmp.length < 6 && !$(this).hasClass("delete")) {
+						$("#tex").val($("#tex").val() + e.target.textContent);
+						if (e.target.textContent.length != 0) {
+							var last = $(".pw").find(".on:last");
+							var inputNum = $(".pw li.on").length;
+							if (inputNum == 0) {
+								$(".pw li:first").addClass("on").text("·");
+							} else if (inputNum < 6) {
+								last.next().addClass("on").text("·");
+							}
+							if ($("#tex").val().length == 6) {
+								alert("您已输入密码：" + $("#tex").val() + "::" + (new Date).getTime());
+							}
+						}
+					}
+				});
+			});
+		</script>
+	</body>
+
+</html>
