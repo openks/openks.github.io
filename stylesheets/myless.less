@@ -57,4 +57,16 @@
 
 .opacity {
     .opacity;
+    .px2px(font-size, 32);
 }
+
+
+.px2px(@name, @px){ 
+    @{name}: round(@px / 2,10) * 1px; 
+    [data-dpr="2"] & { 
+    @{name}: @px * 1px; 
+    } 
+    [data-dpr="3"] & { 
+    @{name}: round(@px / 2 * 3) * 1px 
+    } 
+} 

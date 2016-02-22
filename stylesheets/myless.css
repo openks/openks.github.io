@@ -31,5 +31,12 @@
 .opacity {
   opacity: 0.5;
   filter: alpha(opacity=50);
+  font-size: 16px;
+}
+[data-dpr="2"] .opacity {
+  font-size: 32px;
+}
+[data-dpr="3"] .opacity {
+  font-size: 48px;
 }
 /*# sourceMappingURL=myless.css.map */
