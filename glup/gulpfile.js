@@ -1,16 +1,18 @@
-var	jsSrc = "static/js/*",
+var jsSrc = "static/js/*",
 	jsDec = "./dest/js",
 	imgSrc = "static/img/*",
 	imgDec = "./dest/img",
 	htmlSrc = "static/*.html",
 	htmlDec = "./dest",
+	lessSrc = "static/less/*.less",
+	lessDec = "./dest/css",
 	cssSrc = "static/css/*.css",
 	cssDec = "./dest/css",
 	gulp = require('gulp'),
 	livereload = require('gulp-livereload');
 
 
-gulp.task('default', ['img', 'html', 'css', 'js'], function() {
+gulp.task('default', ['img', 'html', 'less', 'css', 'js'], function() {
 	// 将你的默认的任务代码放在这
 	console.log("this is default!")
 });
@@ -51,6 +53,26 @@ gulp.task('cssnano', function() {
 		.pipe(cssnano())
 		.pipe(gulp.dest(cssDec));
 });
+
+gulp.task('less', function() {
+	var postcss = require('gulp-postcss');
+	var less = require('gulp-less');
+	var px2rem = require('postcss-px2rem');
+	var autoprefixer = require('autoprefixer');
+	var cssnano = require('gulp-cssnano');
+
+	return gulp.src(lessSrc)
+		.pipe(less()) //该任务调用的模块
+		.pipe(postcss([px2rem({
+			remUnit: 75
+		})]))
+		.pipe(postcss([autoprefixer({
+			browsers: ['last 2 versions']
+		})]))
+		.pipe(cssnano())
+		.pipe(gulp.dest(cssDec));
+});
+
 
 //png,jpg,gif,svg
 gulp.task('img', function() {
@@ -113,6 +135,9 @@ gulp.task('js', function() {
 gulp.task('watch', function() {
 	var server = livereload();
 	gulp.watch(htmlSrc, ['html'], function(file) {
+		server.changed(file.path);
+	});
+	gulp.watch(lessSrc, ["less"], function(file) {
 		server.changed(file.path);
 	});
 	gulp.watch(cssSrc, ["css"], function(file) {
