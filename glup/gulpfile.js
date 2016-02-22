@@ -1,15 +1,16 @@
-var gulp = require('gulp');
-var jsSrc = "",
-	jsDec = "",
+var	jsSrc = "static/js/*",
+	jsDec = "./dest/js",
 	imgSrc = "static/img/*",
 	imgDec = "./dest/img",
 	htmlSrc = "static/*.html",
-	htmlDec = "./dest/img",
+	htmlDec = "./dest",
 	cssSrc = "static/css/*.css",
-	cssDec = "./dest/css";
+	cssDec = "./dest/css",
+	gulp = require('gulp'),
+	livereload = require('gulp-livereload');
 
 
-gulp.task('default', ['img', 'html'], function() {
+gulp.task('default', ['img', 'html', 'css', 'js'], function() {
 	// 将你的默认的任务代码放在这
 	console.log("this is default!")
 });
@@ -77,7 +78,7 @@ gulp.task('html', function() {
 			minifyJS: true,
 			minifyCSS: true
 		}))
-		.pipe(gulp.dest('./dest'));
+		.pipe(gulp.dest(htmlDec));
 });
 
 gulp.task('css', function() {
@@ -97,18 +98,30 @@ gulp.task('css', function() {
 		.pipe(gulp.dest(cssDec));
 });
 
+gulp.task('js', function() {
+	var jshint = require('gulp-jshint'),
+		uglify = require('gulp-uglify');
+
+	return gulp.src(jsSrc)
+		.pipe(jshint())
+		.pipe(jshint.reporter('default'))
+		.pipe(uglify())
+		.pipe(gulp.dest(jsDec));
+});
+
 // 监听任务 运行语句 gulp watch
 gulp.task('watch', function() {
-	// 监听html
-	gulp.watch(htmlSrc, ["html"], function(event) {})
-		// 监听css
-	gulp.watch(cssSrc, ["css"], function() {});
-
-	// 监听images
-	gulp.watch(imgSrc, ["img"], function() {});
-
-	// 监听js
-	//gulp.watch('./src/js/*.js', function() {
-	//	gulp.run('js');
-	//});
+	var server = livereload();
+	gulp.watch(htmlSrc, ['html'], function(file) {
+		server.changed(file.path);
+	});
+	gulp.watch(cssSrc, ["css"], function(file) {
+		server.changed(file.path);
+	});
+	gulp.watch(imgSrc, ["img"], function(file) {
+		server.changed(file.path);
+	});
+	gulp.watch(jsSrc, ["js"], function(file) {
+		server.changed(file.path);
+	});
 });
