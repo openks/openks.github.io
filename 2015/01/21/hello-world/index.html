@@ -49,9 +49,10 @@
 					
 					<li>
 					
-					<form class="search" >
+					<form class="search" action="https://www.baidu.com/s" method="get" accept-charset="utf-8">
 						<label>Search</label>
-						<input type="text" id="bdcsMain" name="wd" autocomplete="off" maxlength="20" placeholder="搜索" />
+						<input type="text" id="search" name="wd" autocomplete="off" maxlength="20" placeholder="搜索" />
+						<input type="hidden" name="q" value="site:www.zhuyangxing.cn">
 					</form>
 					
 					</li>
@@ -306,6 +307,6 @@ $(document).ready(function(){
 
 
 
-<script type="text/javascript">(function(){document.write(unescape('%3Cdiv id="bdcs"%3E%3C/div%3E'));var bdcs = document.createElement('script');bdcs.type = 'text/javascript';bdcs.async = true;bdcs.src = 'http://znsv.baidu.com/customer_search/api/js?sid=10861255704412712674' + '&plate_url=' + encodeURIComponent(window.location.href) + '&t=' + Math.ceil(new Date()/3600000);var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(bdcs, s);})();</script>
+
   </body>
 </html>
