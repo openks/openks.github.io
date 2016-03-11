@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.zhuyangxing.cn/2016/03/11/gulp/</loc>
+    
+    <lastmod>2016-03-11T05:25:53.878Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.zhuyangxing.cn/2016/02/26/webpack/</loc>
+    
+    <lastmod>2016-03-11T05:20:48.102Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.zhuyangxing.cn/2016/02/22/hello-world/</loc>
     
     <lastmod>2016-02-25T09:20:20.478Z</lastmod>
