@@ -12,3 +12,10 @@ html页面：压缩html压缩页面内的js,csss删除注释等无用信息
 js文件：校验并压缩js文件
 css文件：添加前缀，px转rem,css压缩
 图片：压缩图片png,jpg,svg,gif
+
+
+1.安装依赖
+npm install --only=dev
+npm install --dev
+2.使用命令
+gulp && gulp watch
