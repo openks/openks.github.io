@@ -1,0 +1,1 @@
+function app(){console.log("index")}app(),$(function(){$("#tt").on("click",function(){var g="/fis3/img/140-120_2f519db.png",i="/fis3/img/140-1201_d55397c.png";$(".img-logo").css("background-image").indexOf("1201")>-1?$(".img-logo").css("background-image","url("+g+")"):$(".img-logo").css("background-image","url("+i+")")})});

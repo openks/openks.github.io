@@ -1,5 +1,5 @@
 /*
- * 1.在dev 目录下使用 fis3 release -d ../ 命令即可生成h5目录
+ * 1.在dev 目录下使用 fis3 release -d ../ 命令即可生成fis3目录
  * 2.本地开发 在dev 目录下
  * fis3 server clean
  * fis3 release //发布到默认地址
@@ -12,12 +12,13 @@
  * */
 
 fis.set('project.ignore', [
-  '.git/**'
+  '.git/**',
+  'fis-conf.js'
 ]);
 
 //www.a.com/h5/index.html
 fis.match('*', {
-	release: 'h5/$0'
+	release: 'fis3/$0'
 });
 
 fis.match('::packager', {
