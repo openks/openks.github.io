@@ -99,3 +99,18 @@ window.requestAnimationFrame(setTime);
 //setTimeout(setTime,1000)
 
 
+
+function showCountDown(year,month,day){
+    var now=new Date();
+    var endDate = new Date(year,month-1,day);
+    var leftsecond = (endDate.getTime()-now.getTime())/1000;
+    var day1 = Math.floor(leftsecond/(60*60*24));
+    var hour = Math.floor((leftsecond-day1*60*60*24)/60/60);
+    var minute = Math.floor((leftsecond-day1*60*60*24-hour*3600)/60);
+    var second = Math.floor(leftsecond-day1*60*60*24-hour*3600-minute*60);
+//  console.log("距离"+year+"年"+month+"月"+day+"日还有："+day1+"天"+hour+"小时"+minute+"分"+second+"秒");
+		$(".timeInfo").text(day1+"天"+hour+"小时"+minute+"分"+second+"秒");
+		window.requestAnimationFrame(function(){showCountDown(2020,2,2);});
+}
+window.requestAnimationFrame(function(){showCountDown(2020,2,2);});
+//var myInterval = setInterval(function(){showCountDown(2020,2,2);},1000);
