@@ -48,7 +48,7 @@ var CommentBox = React.createClass({
   render: function() {
     return (
       <div className="commentBox">
-        <h1>Comments</h1>
+        <h1>Comments(数据来自http://openks.duapp.com/api/comments)</h1>
         <CommentList data={this.state.data} />
         <CommentForm onCommentSubmit={this.handleCommentSubmit} />
       </div>
