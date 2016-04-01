@@ -9,6 +9,10 @@
  * fis3 server start -p 8999 //设置端口
  * fis3 release debug 启用debug配置
  * fis3 release debug -w 启用debug配置
+ * 3.安装插件
+ * npm install -g 插件名
+ * npm install -g fis-parser-less
+ * npm install -g fis3-postpackager-loader
  * */
 
 fis.set('project.ignore', [

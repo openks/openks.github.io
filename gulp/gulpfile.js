@@ -17,6 +17,13 @@ gulp.task('default', ['img', 'html', 'less', 'css', 'js'], function() {
 	console.log("this is default!")
 });
 
+gulp.task('move', function() {
+	gulp.src("static/plugins/**/*")
+		.pipe(gulp.dest("dest/static/plugins"));
+	gulp.src("static/video/**/*")
+		.pipe(gulp.dest("dest/static/video"));
+});
+
 gulp.task('px2rem', function() {
 	var postcss = require('gulp-postcss');
 	var px2rem = require('postcss-px2rem');
