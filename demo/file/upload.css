@@ -49,12 +49,14 @@
 }
 
 .showPic {
-  width: 739px;
-  height: 300px;
+  width: 600px;
   margin: 0 auto;
+	overflow: hidden;
 }
 
 .showPic img {
-  /* width: 300px; */
-  /* height: 300px; */
+	 max-width: 600px;
+	 box-sizing: border-box;
+	 border: 2px solid red;
+   height: auto;
 }
