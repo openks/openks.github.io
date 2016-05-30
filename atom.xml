@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.zhuyangxing.cn/"/>
-  <updated>2016-05-27T09:09:43.646Z</updated>
+  <updated>2016-05-30T08:32:53.692Z</updated>
   <id>http://www.zhuyangxing.cn/</id>
   
   <author>
@@ -14,6 +14,41 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>元素高度随兄弟元素高度变化而变化</title>
+    <link href="http://www.zhuyangxing.cn/2016/05/30/%E5%85%83%E7%B4%A0%E9%AB%98%E5%BA%A6%E9%9A%8F%E5%85%84%E5%BC%9F%E5%85%83%E7%B4%A0%E9%AB%98%E5%BA%A6%E5%8F%98%E5%8C%96%E8%80%8C%E5%8F%98%E5%8C%96/"/>
+    <id>http://www.zhuyangxing.cn/2016/05/30/元素高度随兄弟元素高度变化而变化/</id>
+    <published>2016-05-30T08:30:29.000Z</published>
+    <updated>2016-05-30T08:32:53.692Z</updated>
+    
+    <content type="html">&lt;p&gt;简单来讲就是元素A的高度随元素B的高度变化而变化(假设AB的外层元素为C)&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://7xl9u9.com1.z0.glb.clouddn.com/2016-5-30-15-24-43.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;你想到了几种方法？&lt;br&gt;我想到了两种&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;A的高度设置一个B最大高度都达不到的值(此方法不推荐)&lt;br&gt;把C设置成&lt;code&gt;overflow:hidden;&lt;/code&gt;A,B左浮动,B的高度为&lt;code&gt;auto&lt;/code&gt;,A无限高&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;C相对定位，A左浮动绝对定位高度100%，B右浮动,高度 &lt;code&gt;auto&lt;/code&gt;,则A高度随B发生变化&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;/p&gt;&lt;p data-height=&quot;564&quot; data-theme-id=&quot;light&quot; data-slug-hash=&quot;aZbayy&quot; data-default-tab=&quot;result&quot; data-user=&quot;openks&quot; data-embed-version=&quot;2&quot; class=&quot;codepen&quot;&gt;See the Pen &lt;a href=&quot;https://codepen.io/openks/pen/aZbayy/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;aZbayy&lt;/a&gt; by openks (&lt;a href=&quot;http://codepen.io/openks&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;@openks&lt;/a&gt;) on &lt;a href=&quot;http://codepen.io&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;CodePen&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;
+&lt;script async src=&quot;//assets.codepen.io/assets/embed/ei.js&quot;&gt;&lt;/script&gt;
+</content>
+    
+    <summary type="html">
+    
+      元素高度随兄弟元素高度变化而变化
+    
+    </summary>
+    
+      <category term="前端" scheme="http://www.zhuyangxing.cn/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="css" scheme="http://www.zhuyangxing.cn/tags/css/"/>
+    
+      <category term="前端" scheme="http://www.zhuyangxing.cn/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
   
   <entry>
     <title>sass学习</title>
