@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>省市区设置</title>
+  <script src="js/jquery-2.1.3.min.js" charset="utf-8"></script>
+  <script src="js/address_all.js" charset="utf-8"></script>
+</head>
+<body>
+  <select id="province">
+  </select>
+  <select id="city">
+  </select>
+  <select id="county">
+  </select>
+  <input type="button" name="name" id="setAddr" value="设置徐汇区">
+  <input type="button" name="name" id="getAddr" value="获取当前选择">
+  <script type="text/javascript">
+  /**
+  * 根据对象的id获取数组对象的对象
+  * @param  {[String]} id   对象的id属性值
+  * @param  {[Array]} data  对象数组
+  * @return {[Object]}      查找到的对象
+  */
+  function getObjById(id,data){
+    for(var i=0;i<data.length;i++){
+      if(data[i].id==id){
+        return data[i];
+      }
+    }
+  };
+  /**
+  * 初始化省事区
+  * @param  {[Array]} data 省市区对象数组
+  * @return
+  */
+  function init(data){
+    var str="";
+    for(var i=0;i<data.length;i++){
+      str+="<option value="+data[i].id+">"+data[i].name+"</option>"
+    }
+    $("#province").append(str);
+    $("#province").prepend("<option value=''>省份</option>");
+    $("#city").empty().prepend("<option value=''>市</option>");
+    $("#county").empty().prepend("<option value=''>县</option>");
+  }
+  /**
+  * 填充数据
+  * @param  {[String]} pid      对象的id值
+  * @param  {[Array]} data 省市区对象数组
+  * @param  {[String]} selector 省市区的选择器
+  * @return
+  */
+  function fillSelect(pid,data,selector){
+    var parent = getObjById(pid,data);
+    console.log("pid",pid,"p",parent);
+    var str="",dts=parent.child;
+    for(var i=0;i<dts.length;i++){
+      str+="<option value="+dts[i].id+">"+dts[i].name+"</option>"
+    }
+    $(selector).empty().append(str);
+  }
+  //修改省份
+  $("#province").on("change",function(){
+    if($(this).val()==""){
+      $("#city").empty().prepend("<option value=''>市</option>");
+      $("#county").empty().prepend("<option value=''>县</option>");
+    }else{
+      fillSelect($(this).val(),data,"#city");
+      $("#city").prepend("<option value=''>市</option>");
+      $("#county").empty().prepend("<option value=''>县</option>");
+    }
+  });
+  //修改城市
+  $("#city").on("change",function(){
+    if($(this).val()==""){
+      $("#county").empty().prepend("<option value=''>县</option>");
+    }else{
+      var dd =getObjById($("#province").val(),data);
+      fillSelect($(this).val(),dd.child,"#county");
+      $("#county").prepend("<option value=''>县</option>");
+    }
+  });
+  /**
+  * 获取已经选择的省市区代码
+  */
+  function getAddr(){
+    var pr = $("#province option:selected").text();
+    var ci = $("#city option:selected").text();
+    var co = $("#county option:selected").text();
+    alert(pr+ci+co);
+    console.log("province",pr,"city",ci,"county",co);
+  };
+  /**
+  * 设置省市区
+  * @param {[Number]} pid  省份id
+  * @param {[Number]} ciid 城市id
+  * @param {[Number]} coid 区id
+  */
+  function setAddr(pid,ciid,coid){
+    $("#province").val(pid).trigger("change");
+    $("#city").val(ciid).trigger("change");
+    $("#county").val(coid);
+  };
+  init(data);
+  $("#setAddr").on("click",function(){
+    setAddr(10,108,1132);
+  })
+  $("#getAddr").on("click",function(){
+    getAddr()
+  })
+
+  </script>
+</body>
+</html>
