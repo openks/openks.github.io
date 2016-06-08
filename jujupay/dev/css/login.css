@@ -1,0 +1,167 @@
+@charset "UTF-8";
+/*
+* 这里是一些全局变量
+* 主要是颜色
+*/
+/*主色*/
+/* 背景色 仅作为色块背景时候使用*/
+.bg_black {
+  background-color: #333333; }
+
+.bg_blue {
+  background-color: #3095D3; }
+
+.bg_red {
+  background-color: #EF0606; }
+
+.bg_orange {
+  background-color: #F9F1E2; }
+
+/*边框色 */
+.bd_blue {
+  border-color: #3095D3; }
+
+.bd_gray {
+  border-color: #E5E5E5; }
+
+/*文字色*/
+.t_white {
+  color: #FFFFFF; }
+
+.t_blue {
+  color: #3095D3; }
+
+.t_black {
+  color: #333333; }
+
+.t_gray {
+  color: #666666; }
+
+.t_gray2 {
+  color: #999999; }
+
+.t_red {
+  color: #EF0606; }
+
+/* reset */
+* {
+  margin: 0;
+  padding: 0; }
+
+ol, ul, li {
+  list-style: none; }
+
+img {
+  border: 0; }
+
+button, textarea, input {
+  outline: none;
+  border: 0;
+  background: #fff; }
+
+input[type="button"] {
+  cursor: pointer; }
+
+textarea {
+  resize: none; }
+
+i {
+  font-style: normal; }
+
+a {
+  text-decoration: none; }
+
+.clearfix:after {
+  content: " ";
+  display: block;
+  clear: both;
+  height: 0; }
+
+.bt {
+  border: 0;
+  background: none; }
+
+body {
+  overflow: hidden; }
+
+.wrapper {
+  width: 590px;
+  margin: 0 auto;
+  margin-bottom: 100px; }
+
+.banner {
+  width: 100%;
+  overflow: hidden; }
+  .banner img {
+    width: 100%;
+    height: auto; }
+
+.title {
+  text-align: center;
+  background-image: url(../img/bg1.png);
+  background-repeat: repeat-x;
+  background-position: center; }
+  .title .t_name {
+    display: inline-block;
+    background-color: #333333;
+    font-size: 32px;
+    padding: 10px 50px;
+    color: #FFFFFF;
+    outline: none;
+    border-left: 20px white solid;
+    border-right: 20px white solid; }
+
+.login {
+  margin-bottom: 50px; }
+  .login li {
+    padding: 20px 0;
+    font-size: 32px;
+    position: relative;
+    overflow: hidden; }
+  .login label {
+    float: left;
+    display: inline-block;
+    width: 22%;
+    text-align: right;
+    padding: 16px 0; }
+  .login .inp {
+    width: 74%;
+    display: inline-block;
+    float: right;
+    border-bottom: 1px solid #E5E5E5;
+    padding: 16px 0; }
+  .login .in_vali {
+    border: 0; }
+  .login .bt-vali {
+    font-size: 28px;
+    position: absolute;
+    display: block;
+    right: 0;
+    top: 16px;
+    padding: 20px;
+    border: 1px solid #3095D3;
+    border-radius: 6px; }
+
+.bt_login {
+  width: 100%;
+  height: 90px;
+  line-height: 90px;
+  text-align: center;
+  display: block;
+  border-radius: 10px;
+  font-size: 48px;
+  background-color: #3095D3;
+  color: #FFFFFF; }
+
+.reg {
+  float: right;
+  color: #3095D3; }
+
+.findPwd {
+  float: left;
+  color: #666666; }
+
+.bt_a {
+  display: inline-block;
+  font-size: 30px;
+  margin: 30px 0; }

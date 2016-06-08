@@ -1,0 +1,99 @@
+@import "common";
+
+body{
+  overflow: hidden;
+  // background-color: red;
+}
+.wrapper{
+  width: 590px;
+  margin: 0 auto;
+  margin-bottom: 100px;
+  //  background-color: pink;
+}
+
+.banner{
+  width: 100%;
+  overflow: hidden;
+  img{
+    width: 100%;
+    height: auto;
+  }
+}
+
+.title{
+  text-align: center;
+  background-image: url(../img/bg1.png);
+  background-repeat: repeat-x;
+  background-position: center;
+  .t_name{
+    display: inline-block;
+    background-color: $black;
+    font-size: 32px;
+    padding: 10px 50px;
+    color: $white;
+    outline: none;
+    border-left: 20px white solid;
+    border-right: 20px white solid;
+  }
+}
+
+.login{
+  margin-bottom: 50px;
+  li{
+    padding: 20px 0;
+    font-size: 32px;
+    position: relative;
+    overflow: hidden;
+  }
+  label{
+    float: left;
+    display: inline-block;
+    width: 22%;
+    text-align: right;
+    padding: 16px 0;
+  }
+  .inp{
+    width:74%;
+    display: inline-block;
+    float: right;
+    border-bottom: 1px solid $gray;
+    padding: 16px 0;
+  }
+  .in_vali{
+    border:0;
+  }
+  .bt-vali{
+    font-size: 28px;
+    position: absolute;
+    display: block;
+    right: 0;
+    top:16px;
+    padding: 20px;
+    border:1px solid $blue;
+    border-radius: 6px;
+  }
+}
+.bt_login{
+  width: 100%;
+  height:90px;
+  line-height: 90px;
+  text-align: center;
+  display: block;
+  border-radius: 10px;
+  font-size: 48px;
+  background-color: $blue;
+  color: $white;
+}
+.reg{
+  float: right;
+  color: $blue;
+}
+.findPwd{
+  float: left;
+  color: $t_gray;
+}
+.bt_a{
+  display: inline-block;
+  font-size: 30px;
+  margin: 30px 0;
+}

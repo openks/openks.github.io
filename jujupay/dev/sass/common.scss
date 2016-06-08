@@ -1,0 +1,29 @@
+@charset "UTF-8";
+@import "variable";
+
+/* reset */
+// html{font-size:10px;}
+*{margin:0; padding:0;}
+ol,ul,li{list-style:none;}
+img{border:0;}
+button,textarea,input{outline:none;border:0;background:#fff}
+input[type="button"]{
+  // transition: all .3s ease-in 0s;
+  cursor:pointer;
+}
+textarea{resize:none}
+// h1,h2,h3,h4,h5,h6 {font-size:100%;font-weight:normal;}
+i{font-style:normal}
+a{text-decoration:none}
+
+.clearfix:after {
+  content: " ";
+  display: block;
+  clear: both;
+  height: 0;
+}
+
+.bt{
+  border: 0;
+  background: none;
+}
