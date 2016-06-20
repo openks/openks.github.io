@@ -1,14 +1,14 @@
 ;
 /**
- * 倒计时程序
- *
- * @param totle
- *            倒计时的开始数字
- * @param callBack
- *            每隔数字的处理函数
- * @param callBackLast
- *            数到0时的处理函数
- */
+* 倒计时程序
+*
+* @param totle
+*            倒计时的开始数字
+* @param callBack
+*            每隔数字的处理函数
+* @param callBackLast
+*            数到0时的处理函数
+*/
 var COUNT_INTERVAL = null;
 
 function countDown(totle, callBack, callBackLast) {
@@ -51,9 +51,9 @@ var fontNo = screen.width / 320 * 20;
 document.getElementsByTagName("html")[0].style.fontSize = fontNo + "px"
 
 /**
- * 根据年龄字符串获取年龄值
- * @param {Object} dateStr "2010-01-01"
- */
+* 根据年龄字符串获取年龄值
+* @param {Object} dateStr "2010-01-01"
+*/
 function getYears(dateStr) {
 	var now = new Date();
 	var old = new Date(dateStr);
@@ -68,16 +68,20 @@ function getYears(dateStr) {
 	//  console.log(dateStr  + "--" + years);
 	return years;
 }
-
+/**
+ * 日期对象扩展，日期格式化
+ * @param  {String} format 要格式化的日期"yyyy-MM-dd hh:mm:ss","yyyy/MM/dd"
+ * @return {String}        格式化后的日期
+ */
 Date.prototype.format = function(format) {
 	var o = {
-		"M+": this.getMonth() + 1, //month 
-		"d+": this.getDate(), //day 
-		"h+": this.getHours(), //hour 
-		"m+": this.getMinutes(), //minute 
-		"s+": this.getSeconds(), //second 
-		"q+": Math.floor((this.getMonth() + 3) / 3), //quarter 
-		"S": this.getMilliseconds() //millisecond 
+		"M+": this.getMonth() + 1, //month
+		"d+": this.getDate(), //day
+		"h+": this.getHours(), //hour
+		"m+": this.getMinutes(), //minute
+		"s+": this.getSeconds(), //second
+		"q+": Math.floor((this.getMonth() + 3) / 3), //quarter
+		"S": this.getMilliseconds() //millisecond
 	}
 
 	if (/(y+)/.test(format)) {
@@ -91,14 +95,15 @@ Date.prototype.format = function(format) {
 	}
 	return format;
 };
-/*
+/**
+ * 使用webp图片格式
  * <img data‐src="1.png" data‐webp="1.png.webp" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" >
-	1.  img标签使用1px的透明gif做填充图片
-	2.  利用data­src放普通图片
-	3.  利用data­webp放webp图片
-	4.  利用js判断浏览器是否支持webp，从而选择合适的图片格式
+ * 1.img标签使用1px的透明gif做填充图片
+ * 2.利用data­src放普通图片
+ * 3.利用data­webp放webp图片
+ * 4.利用js判断浏览器是否支持webp，从而选择合适的图片格式
  */
-function check_webp() {
+function use_webp() {
 	var img = new Image();
 	img.src = "data:image/webp;base64,UklGRhoAAABXRUJQVlA4TA0AAAAvAAAAEAcQERGIiP4HAA==";
 	img.onload = function() {
@@ -120,4 +125,24 @@ function check_webp() {
 			imgs[i].src = imgs[i].getAttribute("data-src");
 		}
 	};
-}
+};
+/**
+* 选择器选取的照片可以在微信里双击打开
+* 需引入jquery
+* @param  {String} selector jquery的可以选择img的选择器
+*/
+function showPicInWeixin(selector){
+	var srcList = [];
+	$.each($(selector),function(i,item){
+		if(item.src) {
+			srcList.push(item.src);
+		}
+	});
+	$(selector).on("click",function(){
+		var src = $(this).attr("src");
+		WeixinJSBridge.invoke('imagePreview',{
+			'current' : src,
+			'urls' : srcList
+		});
+	});
+};
