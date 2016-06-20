@@ -1,0 +1,94 @@
+@import "../sass/variable";
+
+.editPwd_cover{
+  height: 620px;
+  margin-top: -310px;
+  text-align: center;
+  font-size: 32px;/*px*/
+  color:$black;
+  .c_title{
+    display: inline-block;
+    padding: 18px 50px;
+    background-color: $blue;
+    position: relative;
+    border-bottom-left-radius: 8px;/*no*/
+    border-bottom-right-radius: 8px;/*no*/
+    color: $white;
+    font-size: 32px;/*px*/
+    top: -8px;/*no*/
+    &:before,&:after{
+      position: absolute;
+      content: "";
+      display:inline-block;
+      width: 16px;/*no*/
+      height: 8px;/*no*/
+      top: 0;
+    }
+    &:before{
+      left: -16px;/*no*/
+      background-image: url("../img/bg_6.png");
+    }
+    &:after{
+      right: -16px;/*no*/
+      background-image: url("../img/bg_7.png");
+    }
+  }
+  .editpwd_ul{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    li{
+      padding: 20px 0;
+      font-size: 32px;/*px*/
+      position: relative;
+      overflow: hidden;
+    }
+    label{
+      float: left;
+      display: inline-block;
+      width: 24%;
+      text-align: right;
+      padding: 16px 0;
+    }
+    .inp{
+      width: 68%;
+      margin-right: 4%;
+      display: inline-block;
+      float: right;
+      border-bottom: 1px solid $gray;/* no */
+      padding: 16px 0;
+    }
+  }
+  .bt-vali{
+    right: 4%;
+    padding: 14px;
+  }
+  .pass{
+    position: absolute;
+    display: block;
+    top:36px;
+    width: 36px;
+    height: 36px;
+    background-image: url("../img/bg_8.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    right: 6%;
+  }
+  .c_bts{
+    width: 100%;
+    border-top: 1px solid $gray;/*no*/
+    overflow: hidden;
+    position: absolute;
+    bottom: 0;
+  }
+  .ok,.cancle{
+    display: inline-block;
+    width: 50%;
+    float: left;
+    line-height: 3.2;
+    color: $blue;
+  }
+  .cancle{
+    border-left: 1px solid $gray;/*no*/
+    box-sizing: border-box;
+  }
+}

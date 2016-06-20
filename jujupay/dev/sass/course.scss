@@ -1,0 +1,19 @@
+@import "common";
+@import "../widget/course";
+
+html{
+    background-color: $bg1;
+}
+
+body{
+  overflow: hidden;
+}
+
+.course{
+  width: 80%;
+  margin: 20px auto 40px;
+  .t_name{
+    border-left: 20px  $bg1 solid;
+    border-right: 20px $bg1 solid;
+  }
+}

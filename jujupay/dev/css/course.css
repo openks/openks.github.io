@@ -125,3 +125,77 @@ a {
     outline: none;
     border-left: 20px white solid;
     border-right: 20px white solid; }
+
+.course {
+  width: 80%;
+  margin: 20px auto 40px; }
+  .course .t_name {
+    border-left: 20px #F2F4F5 solid;
+    border-right: 20px #F2F4F5 solid; }
+
+.course_item {
+  width: 94%;
+  position: relative;
+  margin: 0 auto 40px;
+  background-color: #FFFFFF;
+  border-radius: 8px;
+  /*no*/ }
+  .course_item .item_a {
+    border-bottom: 1px solid #E5E5E5;
+    /*no*/ }
+  .course_item .item_bd {
+    overflow: hidden; }
+  .course_item .item_i {
+    float: left;
+    padding: 20px;
+    width: 320px;
+    height: 260px; }
+  .course_item .item_hd {
+    padding-top: 78px;
+    font-size: 36px;
+    /*px*/
+    line-height: 2;
+    color: #333333; }
+  .course_item .item_con {
+    font-size: 28px;
+    /*px*/
+    line-height: 2;
+    color: #666666; }
+  .course_item .class_type {
+    float: left;
+    line-height: 70px;
+    padding-left: 20px;
+    color: #333333;
+    font-size: 32px;
+    /*px*/ }
+  .course_item .class_price {
+    float: right;
+    line-height: 70px;
+    padding-right: 20px;
+    font-size: 32px;
+    /*px*/
+    color: #666666; }
+  .course_item .price_no {
+    font-size: 60px;
+    line-height: 70px;
+    color: #EF0606;
+    margin-right: 10px; }
+  .course_item .recommend_i {
+    position: absolute;
+    top: -8px;
+    right: 48px;
+    width: 142px;
+    height: 70px; }
+
+html {
+  background-color: #F2F4F5; }
+
+body {
+  overflow: hidden; }
+
+.course {
+  width: 80%;
+  margin: 20px auto 40px; }
+  .course .t_name {
+    border-left: 20px #F2F4F5 solid;
+    border-right: 20px #F2F4F5 solid; }

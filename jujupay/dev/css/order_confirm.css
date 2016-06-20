@@ -125,3 +125,120 @@ a {
     outline: none;
     border-left: 20px white solid;
     border-right: 20px white solid; }
+
+html {
+  background-color: #F2F4F5; }
+
+.wrapper1 {
+  margin: 40px 22px 0;
+  border-radius: 8px;
+  background-color: #FFFFFF;
+  overflow: hidden; }
+
+.info .title1 {
+  color: #000000;
+  font-size: 32px;
+  /*px*/
+  line-height: 2;
+  padding-left: 130px; }
+
+.info .icon {
+  display: block;
+  float: left;
+  width: 70px;
+  height: 62px;
+  margin-left: 38px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: #3095D3;
+  background-image: url("../img/bg_9.png");
+  background-size: 50px 40px;
+  background-repeat: no-repeat;
+  background-position: center; }
+  .info .icon.stu {
+    background-image: url("../img/bg_10.png"); }
+
+.info .flag_ul {
+  padding: 30px 0 30px; }
+
+.info .flag {
+  padding-left: 42px;
+  font-size: 32px;
+  /*px*/
+  line-height: 2.25; }
+
+.info .flag_lb {
+  width: 140px;
+  margin-right: 30px;
+  color: #666666;
+  text-align: right;
+  display: inline-block; }
+
+.info .flag_sp {
+  color: #333333; }
+
+.class_i {
+  border-bottom: 1px solid #E5E5E5;
+  /*no*/ }
+  .class_i .fl_1 {
+    color: #3095D3; }
+
+.count {
+  background-color: #F9F1E2;
+  padding: 30px 0; }
+  .count .flag {
+    padding-left: 42px;
+    font-size: 32px;
+    /*px*/
+    line-height: 1.6;
+    overflow: hidden; }
+  .count .flag_lb {
+    color: #333333;
+    display: inline-block; }
+  .count .flag_sp {
+    float: right;
+    margin-right: 38px; }
+  .count .f1 {
+    font-size: 32px;
+    /*px*/
+    color: #333333; }
+  .count .f2 {
+    font-size: 28px;
+    /*px*/
+    color: #EF0606; }
+  .count .f3 {
+    font-size: 24px;
+    /*px*/
+    color: #333333; }
+  .count .g1 {
+    font-size: 36px;
+    /*px*/
+    color: #000000; }
+  .count .g2 {
+    font-size: 36px;
+    /*px*/
+    color: #EF0606; }
+  .count .g3 {
+    font-size: 36px;
+    /*px*/
+    color: #000000; }
+  .count .p {
+    color: #EF0606;
+    font-weight: bold; }
+
+.bts_conf {
+  overflow: hidden;
+  background-color: #F2F4F5; }
+
+.bt_submit {
+  width: 100%;
+  height: 90px;
+  line-height: 90px;
+  margin: 60px 0 50px;
+  text-align: center;
+  display: block;
+  border-radius: 10px;
+  font-size: 48px;
+  /*px*/
+  background-color: #3095D3;
+  color: #FFFFFF; }

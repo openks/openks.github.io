@@ -125,3 +125,22 @@ a {
     outline: none;
     border-left: 20px white solid;
     border-right: 20px white solid; }
+
+html {
+  background-color: #F2F4F5; }
+
+body {
+  overflow: hidden; }
+
+.intr {
+  margin: 0 20px 40px; }
+  .intr .intr_i {
+    width: 100%;
+    height: auto; }
+  .intr .intr_p {
+    font-size: 32px;
+    /*px*/
+    color: #333333;
+    text-indent: 2em;
+    padding: 32px 0 0;
+    /*px*/ }

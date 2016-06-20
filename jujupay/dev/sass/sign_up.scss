@@ -1,0 +1,243 @@
+@import "common";
+@import "../widget/course";
+
+html{
+  background-color: $bg1;
+}
+
+.course_info{
+  width: 100%;
+  margin-top: 20px;
+  background-color: $white;
+}
+
+.su_tt{
+  margin-bottom: 0;
+  border-radius: 0;
+  .item_a{
+    border-bottom: 1px dashed $gray;/*no*/
+  }
+}
+
+.more{
+  position: relative;
+  width: 84px;
+  height: 84px;
+  margin: -42px auto 0;
+  text-align: center;
+  border-radius: 50%;
+  background-color: $black1;
+  &.down{
+    .title{
+      line-height: 2;
+    }
+  }
+  &.up{
+    .title{
+      line-height: 1.6;
+    }
+    .more_i{
+      padding-top:16px;
+    }
+  }
+  .title{
+    color: $white;
+    font-size: 28px;/*px*/
+  }
+  .more_i{
+    width: 28px;
+    height: 16px;
+    display: block;
+    margin: 0 auto;
+  }
+}
+.more_detail{
+  background-color: $white;
+  border-top: 1px solid $gray;/*no*/
+  padding:0px 46px 50px;
+  .more_p{
+    font-size: 32px;/*px*/
+    line-height: 1.6;
+    color: $t_gray;
+    text-indent: 2em;
+    padding: 32px 0 0;/*px*/
+  }
+}
+
+.su_t{
+  width: 74%;
+  margin: 40px auto;
+  .t_name{
+    background-color: $bg1;
+    color:$black1;
+    border: 0;
+    padding: 10px 30px;
+  }
+  .su_i{
+    &.a{
+      width: 22px;/*px*/
+    }
+    &.b{
+      width: 40px;/*px*/
+    }
+    height: 32px;/*px*/
+    margin-right: 20px;
+  }
+}
+
+.course_ul{
+  margin: 20px auto;
+  background-color: $white;
+  .course_li{
+    padding: 26px 0 0;
+    margin:  0 40px;
+    border-bottom: 1px solid $gray;/*no*/
+  }
+  .course_label{
+    width: 120px;
+    float: left;
+    font-size: 32px;/*px*/
+    line-height: 2.8;
+    color: $black;
+  }
+  .place{
+    padding-left: 120px;
+  }
+  .place_bd{
+    background-color: $bg1;
+    padding:  20px 20px 20px 20px;
+    margin-bottom: 26px;
+  }
+  .place_con{
+    padding: 10px;
+    border: 1px solid transparent;
+    &.cur{
+      border: 1px solid $blue;
+    }
+  }
+  .place_nm,.place_addr{
+    line-height: 2;
+  }
+  .course_type,.course_place{
+    display: block;
+    float: left;
+    padding: 10px 20px;
+    margin-right: 20px;
+    margin-bottom: 26px;
+    font-size: 28px;/*px*/
+    line-height: 1.4;
+    text-align: center;
+    color: $t_gray1;
+    border: 1px solid $t_gray1;/*no*/
+    border-radius: 20px;
+    &.cur{
+      color:$white;
+      background-color: $blue;
+      border-color:$blue;
+    }
+  }
+}
+
+.stu_ul{
+  background-color: $white;
+  margin-bottom: 20px;
+  .stu_li{
+    padding: 26px 0 ;
+    margin:  0 40px;
+    border-bottom: 1px solid $gray;/*no*/
+    input{
+      font-size: 32px;/*px*/
+    }
+  }
+  .stu_label{
+    width: 160px;
+    float: left;
+    font-size: 32px;/*px*/
+    color: $black;
+  }
+  .stu_gender{
+    .male,.female{
+      width: 100px;
+      float: left;
+    }
+    .male{
+      margin-right: 40px;
+    }
+    .gander_i{
+      width: 36px;
+      height: 36px;
+      float: left;
+      margin-right: 10px;
+    }
+    .gander_nm{
+      float: left;
+      display: block;
+      width: 36px;
+      height: 36px;
+      line-height: 36px;
+    }
+  }
+  .card_type{
+    // height: 32px;/*px*/
+    padding: 10px 40px;
+  }
+  .stu_dele{
+    float: right;
+    .stu_dele_i{
+      width: 32px;
+      height: 32px;
+    }
+  }
+  .stu_add{
+    display: block;
+    width: 300px;
+    font-size: 32px;/*px*/
+    .stu_add_i{
+      float: left;
+      width: 40px;
+      height: 40px;
+      margin-right: 10px;
+    }
+    .stu_add_tip{
+      float: left;
+    }
+    color:$blue;
+    margin: 0 auto;
+  }
+  .err_tip{
+    text-align: center;
+  }
+  .error{
+    color:$red;
+    font-size: 32px;/*px*/
+    display: inline-block;
+    text-align: center;
+    margin: 0 auto;
+  }
+}
+
+.ui_pay{
+  width: 100%;
+  height: 100px;
+  background-color: $white;
+  line-height: 100px;
+  .t_price{
+    color: $red;
+    font-size: 32px;/*px*/
+  }
+  .t_totle{
+    padding-left: 40px;
+    font-size: 32px;/*px*/
+    color: $t_gray1;
+  }
+  .t_num{
+    font-size: 52px;/*px*/
+  }
+  .bt_pay{
+    float: right;
+    background-color: $red;
+    padding: 0 50px;
+    font-size: 52px;/*px*/
+    color: $white;
+  }
+}

@@ -125,3 +125,38 @@ a {
     outline: none;
     border-left: 20px white solid;
     border-right: 20px white solid; }
+
+.pay_s {
+  margin: 0 80px;
+  text-align: center; }
+
+.pay_i {
+  width: 192px;
+  height: 270px;
+  padding: 100px 0 80px;
+  display: block;
+  margin: 0 auto; }
+
+.pay_p1 {
+  font-size: 28px;
+  /* px */
+  line-height: 1.6;
+  color: #333333; }
+
+.pay_p2 {
+  font-size: 36px;
+  /* px */
+  line-height: 3;
+  color: #EF0606; }
+
+.bt_ok {
+  width: 100%;
+  height: 90px;
+  line-height: 90px;
+  text-align: center;
+  display: block;
+  border-radius: 10px;
+  font-size: 48px;
+  /*px*/
+  background-color: #3095D3;
+  color: #FFFFFF; }

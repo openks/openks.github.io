@@ -1,0 +1,91 @@
+.editPwd_cover {
+  height: 620px;
+  margin-top: -310px;
+  text-align: center;
+  font-size: 32px;
+  /*px*/
+  color: #333333; }
+  .editPwd_cover .c_title {
+    display: inline-block;
+    padding: 18px 50px;
+    background-color: #3095D3;
+    position: relative;
+    border-bottom-left-radius: 8px;
+    /*no*/
+    border-bottom-right-radius: 8px;
+    /*no*/
+    color: #FFFFFF;
+    font-size: 32px;
+    /*px*/
+    top: -8px;
+    /*no*/ }
+    .editPwd_cover .c_title:before, .editPwd_cover .c_title:after {
+      position: absolute;
+      content: "";
+      display: inline-block;
+      width: 16px;
+      /*no*/
+      height: 8px;
+      /*no*/
+      top: 0; }
+    .editPwd_cover .c_title:before {
+      left: -16px;
+      /*no*/
+      background-image: url("../img/bg_6.png"); }
+    .editPwd_cover .c_title:after {
+      right: -16px;
+      /*no*/
+      background-image: url("../img/bg_7.png"); }
+  .editPwd_cover .editpwd_ul {
+    margin-top: 50px;
+    margin-bottom: 50px; }
+    .editPwd_cover .editpwd_ul li {
+      padding: 20px 0;
+      font-size: 32px;
+      /*px*/
+      position: relative;
+      overflow: hidden; }
+    .editPwd_cover .editpwd_ul label {
+      float: left;
+      display: inline-block;
+      width: 24%;
+      text-align: right;
+      padding: 16px 0; }
+    .editPwd_cover .editpwd_ul .inp {
+      width: 68%;
+      margin-right: 4%;
+      display: inline-block;
+      float: right;
+      border-bottom: 1px solid #E5E5E5;
+      /* no */
+      padding: 16px 0; }
+  .editPwd_cover .bt-vali {
+    right: 4%;
+    padding: 14px; }
+  .editPwd_cover .pass {
+    position: absolute;
+    display: block;
+    top: 36px;
+    width: 36px;
+    height: 36px;
+    background-image: url("../img/bg_8.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    right: 6%; }
+  .editPwd_cover .c_bts {
+    width: 100%;
+    border-top: 1px solid #E5E5E5;
+    /*no*/
+    overflow: hidden;
+    position: absolute;
+    bottom: 0; }
+  .editPwd_cover .ok, .editPwd_cover .cancle {
+    display: inline-block;
+    width: 50%;
+    float: left;
+    line-height: 3.2;
+    color: #3095D3; }
+  .editPwd_cover .cancle {
+    border-left: 1px solid #E5E5E5;
+    /*no*/
+    box-sizing: border-box; }

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta content="yes" name="apple-mobile-web-app-capable" />
+  <meta content="yes" name="apple-touch-fullscreen" />
+  <meta content="telephone=no,email=no" name="format-detection" />
+  <title>未完成订单</title>
+  <script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>
+  <script src="apply/js/jquery-2.1.3.min.js"></script>
+  <link rel="stylesheet" href="apply/css/order_undone.css" media="screen" title="no title" charset="utf-8">
+</head>
+<body>
+
+  <link rel="import" href="/widget/header.html"/>
+  <div class="wrapper">
+    <div class="u_per">
+      <ul class="u_per_bd">
+        <li class="u_per_con">
+          <label class="u_l" for="" >用户名</label>
+          <span class="u_nm">张晓明</span>
+        </li>
+        <li class="u_per_con">
+          <label class="u_l" for="" >电话</label>
+          <span class="u_nm">13223369633</span>
+        </li>
+        <li class="u_per_con u_per_editPwd">
+          <label class="u_l" for="" >安全中心</label>
+          <span class="u_nm">修改密码</span>
+          <a class="u_ed" href="#"><img class="u_ed_i" src="apply/img/bg_3.png" alt="" /></a>
+        </li>
+      </ul>
+    </div>
+    <div class="select_bt">
+      <div class="bts">
+        <a class="bt done" href="order_done.html">已完成订单</a>
+        <a class="bt undone cur" href="###">未完成订单</a>
+      </div>
+      <div class="od_done od_undone">
+        <div class="od_done_con">
+          <div class="od_d_hd">
+            <!-- <i class="ck_box"><img class="ck_i unchecked" src="apply/img/bg_4.png" alt="" /></i> -->
+            <h1 class="od_d_nm">足球培训幼儿班</h1>
+            <span class="od_no">订单号:<i>DE7698NF</i></span>
+          </div>
+          <div class="od_d_bd">
+            <img class="i_bd" src="apply/img/pic_1.png" alt="" />
+            <div class="">
+              <p class="od_d_i">
+                <span class="tag">4-6岁</span>
+                <span class="tag">月课程</span>
+              </p>
+              <p class="od_d_i">
+                <label class="a" for="">时间:</label>
+                <span class="b">周六13:00-16:00</span>
+              </p>
+              <p class="od_d_i">
+                <label class="a" for="">场地:</label>
+                <span class="b">宝山区上海大学</span>
+              </p>
+              <p class="od_d_i">
+                <label class="a" for="">日期/截止:</label>
+                <span class="b">2016年6月29日前</span>
+              </p>
+            </div>
+          </div>
+          <div class="od_d_bd1">
+            <ul>
+              <li class="od_d_li">
+                <p class="od_d_i">
+                  <!-- <i class="ck_box"><img class="ck_i checked" src="apply/img/bg_5.png" alt="" /></i> -->
+                  <label class="a">学员1:</label>
+                  <span class="b">张三</span>
+                </p>
+                <p  class="od_d_i">
+                  <label class="a" for="">电话:</label>
+                  <span class="b">13111111111</span>
+                  <span class="c">剩余支付时间</span>
+                </p>
+                <p class="od_d_i">
+                  <label class="a" for="">年龄:</label>
+                  <span class="b">5岁</span>
+                  <span class="d">50分08秒</span>
+                </p>
+                <p class="od_d_i">
+                  <label class="a" for="">场地:</label>
+                  <span class="b">宝山区上海大学</span>
+                </p>
+              </li>
+              <li class="od_d_li">
+                <p class="od_d_i">
+                  <!-- <i class="ck_box"><img class="ck_i unchecked" src="apply/img/bg_4.png" alt="" /></i> -->
+                  <label class="a">学员1:</label>
+                  <span class="b">张三</span>
+                </p>
+                <p  class="od_d_i">
+                  <label class="a" for="">电话:</label>
+                  <span class="b">13111111111</span>
+                  <span class="c">剩余支付时间</span>
+                </p>
+                <p class="od_d_i">
+                  <label class="a" for="">年龄:</label>
+                  <span class="b">5岁</span>
+                  <span class="d">50分08秒</span>
+                </p>
+                <p class="od_d_i">
+                  <label class="a" for="">场地:</label>
+                  <span class="b">宝山区上海大学</span>
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="ui_pay">
+      <label class="t_totle">总价</label>
+      <label class="t_price">￥<i class="t_num">888</i></label>
+      <a class="bt bt_pay" href="#">支付</a>
+    </div>
+  </div>
+  <link rel="import" href="/widget/editPwd.html"/>
+  <script type="text/javascript">
+  $(function(){
+    getIndex();
+    $(".u_per_editPwd").on("click",function(){
+      $(".cover").removeClass("hide");
+    });
+    $(".js_cancle").on("click",function(){
+      $(".cover").addClass("hide");
+    });
+    //未完成已完成订单切换
+    // $(".select_bt .bt").on("click",function(e){
+    //   e.preventDefault();
+    //   if(!$(this).hasClass("cur")){
+    //     $(".select_bt .bt").toggleClass("cur");
+    //   }
+    // })
+  });
+  function getIndex(){
+    $(".ico_title:nth-child(3)").addClass("cur");
+    $(".flag").addClass("c3");
+  }
+  </script>
+</body>
+</html>

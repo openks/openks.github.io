@@ -1,0 +1,23 @@
+@import "common";
+
+html{
+    background-color: $bg1;
+}
+
+body{
+  overflow: hidden;
+}
+
+.intr{
+  margin: 0 20px 40px;
+  .intr_i{
+    width: 100%;
+    height: auto;
+  }
+  .intr_p{
+    font-size: 32px;/*px*/
+    color: $black;
+    text-indent: 2em;
+    padding: 32px 0 0;/*px*/
+  }
+}

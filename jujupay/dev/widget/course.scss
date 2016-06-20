@@ -1,0 +1,97 @@
+@import "../sass/variable";
+
+.course{
+  width: 80%;
+  margin: 20px auto 40px;
+  .t_name{
+    border-left: 20px  $bg1 solid;
+    border-right: 20px $bg1 solid;
+  }
+}
+
+.course_item{
+  width: 94%;
+  position: relative;
+  margin: 0 auto 40px;
+  background-color: $white;
+  border-radius: 8px;/*no*/
+  .item_a{
+    border-bottom: 1px solid $gray;/*no*/
+  }
+  .item_bd{
+    overflow: hidden;
+  }
+  .item_i{
+    float: left;
+    padding: 20px;
+    width: 320px;
+    height: 260px;
+  }
+  .item_hd{
+    padding-top: 78px;
+    font-size: 36px;/*px*/
+    line-height: 2;
+    color: $black;
+  }
+  .item_con{
+    font-size: 28px;/*px*/
+    line-height: 2;
+    color: $t_gray;
+  }
+  .class_type{
+    float: left;
+    line-height: 70px;
+    padding-left: 20px;
+    color: $black;
+    font-size: 32px;/*px*/
+  }
+  .class_price{
+    float: right;
+    line-height: 70px;
+    padding-right: 20px;
+    font-size: 32px;/*px*/
+    color: $t_gray;
+  }
+  .price_no{
+    font-size: 60px;
+    line-height: 70px;
+    color: $red;
+    margin-right: 10px;
+  }
+  // .recommend{
+  //   position: absolute;
+  //   top: -8px;/*px*/
+  //   right: 48px;
+  //   color: $white;
+  //   font-size: 32px;
+  //   padding: 22px 24px 14px;
+  //   background-color: $blue;
+  //   border-bottom-left-radius: 8px;
+  //   border-bottom-right-radius: 8px;
+  //   &:before,&:after{
+  //     position: absolute;
+  //     content: "";
+  //     display:inline-block;
+  //     width: 16px;/*px*/
+  //     height: 8px;/*px*/
+  //     top: 0;
+  //   }
+  //   &:before{
+  //     left: -16px;/*px*/
+  //     background-image: url("../img/bg_6.png");
+  //     background-size: contain;
+  //   }
+  //   &:after{
+  //     right: -16px;/*px*/
+  //     background-image: url("../img/bg_7.png");
+  //     background-size: contain;
+  //   }
+  // }
+  .recommend_i{
+    position: absolute;
+    top: -8px;
+    right: 48px;
+    width: 142px;
+    height: 70px;
+  }
+}

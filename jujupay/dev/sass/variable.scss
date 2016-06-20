@@ -1,56 +1,12 @@
-/*
-* 这里是一些全局变量
-* 主要是颜色
-*/
-/*主色*/
-
 $blue: #3095D3;
 $black:#333333;
+$black1:#000000;
 $gray:#E5E5E5;
 $gray1:#333333;
 $red:#EF0606;
 $white:#FFFFFF;
+$b_b1:#d6d7d8;
 $t_gray:#666666;
-
-/* 背景色 仅作为色块背景时候使用*/
-.bg_black{
-  background-color: #333333;
-}
-.bg_blue{
-  background-color: #3095D3;
-}
-.bg_red{
-  background-color: #EF0606;
-}
-.bg_orange{
-  background-color: #F9F1E2;
-}
-
-
-/*边框色 */
-.bd_blue{
-  border-color: #3095D3;
-}
-.bd_gray{
-  border-color: #E5E5E5;
-}
-
-/*文字色*/
-.t_white{
-  color:#FFFFFF;
-}
-.t_blue{
-  color: #3095D3;
-}
-.t_black{
-  color: #333333;
-}
-.t_gray{
-  color: #666666;
-}
-.t_gray2{
-  color: #999999;
-}
-.t_red{
-  color: #EF0606;
-}
+$t_gray1:#999999;
+$bg1:#F2F4F5;
+$bg2:#F9F1E2;

@@ -2,21 +2,20 @@
 <html>
 <head>
   <meta charset="utf-8" />
-  <!-- <meta content="yes" name="apple-mobile-web-app-capable" />
-  <meta content="yes" name="apple-touch-fullscreen" /> -->
+  <meta content="yes" name="apple-mobile-web-app-capable" />
+  <meta content="yes" name="apple-touch-fullscreen" />
   <meta content="telephone=no,email=no" name="format-detection" />
-  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
-  <meta content="maximum-dpr=2" name="flexible" />
   <title>登陆页</title>
-  <script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>
-  <script src="js/jquery-2.1.3.min.js"></script>
-  <link rel="stylesheet" href="css/login.css" media="screen" title="no title" charset="utf-8">
+  <script src="apply/js/flexible.js"></script>
+  <script src="apply/js/jquery-2.1.3.min.js"></script>
+  <script src="apply/js/common.js"></script>
+  <link rel="stylesheet" href="apply/css/login.css" media="screen" title="no title" charset="utf-8">
 </head>
 <body>
 
   <div class="wrapper ">
     <div class="banner">
-      <img src="img/banner_1.png" alt="" />
+      <img src="apply/img/banner_1.png" alt="" />
     </div>
     <h1 class="title"><span class="t_name">请您先登录</span></h1>
     <ul class="login">
@@ -26,19 +25,60 @@
       </li>
       <li>
         <label for="pwd">密码</label>
-        <input class="inp" type="text" name="name" value="" id="pwd" placeholder="请输入密码">
+        <input class="inp" type="password" name="name" value="" id="pwd" placeholder="请输入密码">
       </li>
       <li>
         <label for="validateNo">验证码</label>
-        <input class="inp in_vali" type="text" name="name" value="" id="validateNo" placeholder="请输入验证码">
-        <a class="bt-vali" type="button" name="name">获取验证码</a>
+        <input class="inp in_vali lst" type="text" name="name" value="" id="validateNo" placeholder="请输入验证码">
+        <img class="bt-vali_i" src="apply/img/vcode.png" alt="" />
+      </li>
+      <li class="err">
+        <span class="error">错误信息</span>
       </li>
     </ul>
     <a class="bt bt_login" href="###" type="button" name="name">登录</a>
-    <a class="bt findPwd bt_a" href="###" name="name">找回密码</a>
-    <a class="bt reg bt_a" href="reg.html" name="name">用户注册</a>
+    <div class="clearfix">
+      <a class="bt findPwd bt_a" href="###" name="name">找回密码</a>
+      <a class="bt reg bt_a" href="reg.html" name="name">用户注册</a>
+    </div>
   </div>
-<script type="text/javascript">
+
+  <div class="cover hide">
+    <div class="con forget">
+      <span class="c_title">找回密码</span>
+      <ul class="login">
+        <li>
+          <label for="phoneNo1">手机号</label>
+          <input class="inp" type="text" name="name" value="" id="phoneNo1" placeholder="请输入手机号码">
+          <a class="bt-vali" type="button" name="name">获取验证码</a>
+        </li>
+        <li>
+          <label for="validateNo2">验证码</label>
+          <input class="inp in_vali" type="text" name="name" value="" id="validateNo2" placeholder="请输入验证码">
+          <img class="bt-vali_i" src="apply/img/vcode.png" alt="" />
+        </li>
+        <li>
+          <label for="validateNo1">验证码</label>
+          <input class="inp in_vali" type="text" name="name" value="" id="validateNo1" placeholder="请输入验证码">
+          <span class="pass"></span>
+        </li>
+        <li>
+          <label for="n_pwd">新密码</label>
+          <input class="inp" type="password" name="name" value="" id="n_pwd" placeholder="请输入密码">
+        </li>
+        <li>
+          <label for="n_pwd2">确认密码</label>
+          <input class="inp lst" type="password" name="name" value="" id="n_pwd2" placeholder="请输入密码">
+        </li>
+
+      </ul>
+      <div class="c_bts">
+        <a class="bt ok js_ok" href="#">确定</a>
+        <a class="bt cancle js_cancle" href="#">取消</a>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
   $(function(){
     console.log("dpr,"+lib.flexible.dpr+
     "\nrem:"+lib.flexible.rem+
@@ -46,7 +86,16 @@
     "\nscreen-width:"+ window.screen.width+
     "\nbody宽:"+$("body").width()
   );
+  $(".findPwd").on("click",function(e){
+    e.preventDefault();
+    $(".cover").removeClass("hide");
+    calHeight(".con");
   })
+  $(".js_cancle").on("click",function(e){
+    e.preventDefault();
+    $(this).parents(".cover").addClass("hide");
+  });
+});
 </script>
 </body>
 </html>
