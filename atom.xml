@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.zhuyangxing.cn/"/>
-  <updated>2016-06-17T09:15:52.411Z</updated>
+  <updated>2016-06-24T07:22:59.083Z</updated>
   <id>http://www.zhuyangxing.cn/</id>
   
   <author>
@@ -14,6 +14,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>用 CSS3 和 JavaScript 制作径向动画菜单</title>
+    <link href="http://www.zhuyangxing.cn/2016/06/24/css3-menu/"/>
+    <id>http://www.zhuyangxing.cn/2016/06/24/css3-menu/</id>
+    <published>2016-06-24T06:41:23.000Z</published>
+    <updated>2016-06-24T07:22:59.083Z</updated>
+    
+    <content type="html">&lt;h1 id=&quot;用-CSS3-和-JavaScript-制作径向动画菜单&quot;&gt;&lt;a href=&quot;#用-CSS3-和-JavaScript-制作径向动画菜单&quot; class=&quot;headerlink&quot; title=&quot;用 CSS3 和 JavaScript 制作径向动画菜单&quot;&gt;&lt;/a&gt;用 CSS3 和 JavaScript 制作径向动画菜单&lt;/h1&gt;&lt;p&gt;先看demo&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;&lt;p data-height=&quot;308&quot; data-theme-id=&quot;0&quot; data-slug-hash=&quot;WxRQJP&quot; data-default-tab=&quot;result&quot; data-user=&quot;openks&quot; data-embed-version=&quot;2&quot; class=&quot;codepen&quot;&gt;See the Pen &lt;a href=&quot;http://codepen.io/openks/pen/WxRQJP/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;圆形动画菜单&lt;/a&gt; by openks (&lt;a href=&quot;http://codepen.io/openks&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;@openks&lt;/a&gt;) on &lt;a href=&quot;http://codepen.io&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;CodePen&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;
+&lt;script async src=&quot;//assets.codepen.io/assets/embed/ei.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;html和css都不难，很容易实现，主要问题在于子图标个数和子图标之间的角度不一样&lt;br&gt;所有子节点都在O点，使用绝对定位后设置子节点的top和left值即可&lt;br&gt;以A点为例子(其中圆点为50%,50%)&lt;br&gt;&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;left=(&lt;span class=&quot;number&quot;&gt;50&lt;/span&gt;+AD距离)*&lt;span class=&quot;number&quot;&gt;100&lt;/span&gt;%&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;top=(&lt;span class=&quot;number&quot;&gt;50&lt;/span&gt;-AE距离)*&lt;span class=&quot;number&quot;&gt;100&lt;/span&gt;%&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;一旦理解了这些就简单多了附图一张（其中n为子节点个数,i为第i个节点）&lt;br&gt;&lt;img src=&quot;http://7xl9u9.com1.z0.glb.clouddn.com/2016-06-24_15-18-30.png&quot; alt=&quot;图片&quot;&gt;;&lt;br&gt;来源在&lt;a href=&quot;http://codepen.io/CreativePunch/pen/lAHiu&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;这里&lt;/a&gt;&lt;br&gt;只不过我一直没看懂它到底是如何计算left和top的，不过思路应该差不多&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      用 CSS3 和 JavaScript 制作径向动画菜单
+    
+    </summary>
+    
+      <category term="前端" scheme="http://www.zhuyangxing.cn/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="前端" scheme="http://www.zhuyangxing.cn/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
   
   <entry>
     <title>独立于后端的前端开发</title>

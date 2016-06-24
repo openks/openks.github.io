@@ -44,7 +44,7 @@
 
 .background-clip(@status:border-box){
     background-clip:@status;
-} 
+}
 
 .clearfix:after {
     content: ".";
@@ -61,12 +61,25 @@
 }
 
 
-.px2px(@name, @px){ 
-    @{name}: round(@px / 2,10) * 1px; 
-    [data-dpr="2"] & { 
-    @{name}: @px * 1px; 
-    } 
-    [data-dpr="3"] & { 
-    @{name}: round(@px / 2 * 3) * 1px 
-    } 
-} 
+.px2px(@name, @px){
+    @{name}: round(@px / 2,10) * 1px;
+    [data-dpr="2"] & {
+    @{name}: @px * 1px;
+    }
+    [data-dpr="3"] & {
+    @{name}: round(@px / 2 * 3) * 1px
+    }
+}
+
+@mixin pseudo_block(@width:50px,@height:50px,@bgc:pink)  {
+  content: "";
+  display: block;
+  border-radius: 50%;
+  position: absolute;
+  width: @width;
+  height: @height;
+  background-color: @bgc;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
