@@ -1,7 +1,7 @@
 /**
  * 默认一个50px宽高且居中颜色为粉色的一个伪元素
  */
-$mixin pseudo_block($width:50px,$height:50px,$bgc:pink) {
+@mixin pseudo_block($width:50px,$height:50px,$bgc:pink) {
   content: "";
   display: block;
   border-radius: 50%;
@@ -16,8 +16,8 @@ $mixin pseudo_block($width:50px,$height:50px,$bgc:pink) {
 /**
  * 添加clear：both
  */
-$mixin clearfix:after {
-    content: "$mixin ";
+@mixin clearfix:after {
+    content: " ";
     display: block;
     clear: both;
     visibility: hidden;
@@ -27,13 +27,13 @@ $mixin clearfix:after {
 /**
  * 隐藏
  */
-$mixin hide {
+@mixin hide {
     display: none!important;
 }
 /**
  * 按钮
  */
-$mixin bt {
+@mixin bt {
     display: inline-block;
     text-align: center;
     cursor: pointer;
@@ -43,7 +43,7 @@ $mixin bt {
  * 设置透明度
  * @param  {Number} $opacity: 0.5      默认透明度0.5
  */
-$mixin opacity($opacity: 0.5) {
+@mixin opacity($opacity: 0.5) {
     $opacityIE: $opacity * 100;
     opacity: $opacity;
     filter: ~"alpha(opacity=${opacityIE})";
@@ -51,7 +51,7 @@ $mixin opacity($opacity: 0.5) {
 /**
  * 超出长度用省略号补齐
  */
-$mixin ellipsis {
+@mixin ellipsis {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -59,7 +59,7 @@ $mixin ellipsis {
 /**
  * 绝对定位居中
  */
-$mixin center{
+@mixin center{
     position: absolute;
     top: 0;
     right: 0;
