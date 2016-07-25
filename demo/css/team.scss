@@ -1,0 +1,70 @@
+@import "_include-media.scss";
+
+body,ul,li{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+img{
+  width: 100%;
+}
+.employee{
+  border: 20px solid  #f5f5f5;
+  .em_bd{
+    overflow: hidden;
+    margin-left: -10px;
+  }
+  .em_con{
+    float:left;
+    width: 25%;
+    box-sizing: border-box;
+    padding-left: 10px;
+    padding-bottom: 60px;
+    overflow: hidden;
+  }
+  .mail{
+    text-decoration: none;
+    color: #333;
+  }
+  .em_nm,.em_pos{
+    text-align: center;
+  }
+  .em_nm{
+    font-size: 36px;
+    color: #333;
+  }
+  .em_pos{
+    font-size: 24px;
+    color: #999;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+}
+@include media('<=425px') {
+  .employee{
+    .em_con{
+      width: 100%;
+    }
+  }
+}
+@include media('>=768px') {
+  .employee{
+    .em_con{
+      width: 33.33333%;
+    }
+  }
+}
+@include media('>=1024px') {
+  .employee{
+    .em_con{
+      width: 25%;
+    }
+  }
+}
+@include media('>=1440px') {
+  .employee{
+    .em_con{
+      width: 20%;
+    }
+  }
+}

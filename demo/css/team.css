@@ -1,0 +1,72 @@
+body, ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
+
+.employee {
+  border: 20px solid  #f5f5f5;
+}
+
+.employee .em_bd {
+  overflow: hidden;
+  margin-left: -10px;
+}
+
+.employee .em_con {
+  float: left;
+  width: 25%;
+  box-sizing: border-box;
+  padding-left: 10px;
+  padding-bottom: 60px;
+  overflow: hidden;
+}
+
+.employee .mail {
+  text-decoration: none;
+  color: #333;
+}
+
+.employee .em_nm, .employee .em_pos {
+  text-align: center;
+}
+
+.employee .em_nm {
+  font-size: 36px;
+  color: #333;
+}
+
+.employee .em_pos {
+  font-size: 24px;
+  color: #999;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+@media (max-width: 425px) {
+  .employee .em_con {
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .employee .em_con {
+    width: 33.33333%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .employee .em_con {
+    width: 25%;
+  }
+}
+
+@media (min-width: 1440px) {
+  .employee .em_con {
+    width: 20%;
+  }
+}

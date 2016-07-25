@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>关于我们</title>
+  <link rel="stylesheet" href="css/team.css" media="screen" title="no title" charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <script src="js/vue.min.js" charset="utf-8"></script>
+</head>
+<body>
+  <div class="employee">
+    <ul class="em_bd">
+      <li class="em_con" v-for="item in items">
+        <img class="em_photo" src="{{ item.img }}" alt="" />
+        <p class="em_nm">{{ item.name }}</p>
+        <p class="em_pos">{{ item.position }}</p>
+      </li>
+    </ul>
+  </div>
+  <script src="js/data.team.js" charset="utf-8"></script>
+  <script type="text/javascript">
+  // alert(screen.width);
+  var vue=new Vue({
+    el: '.em_bd',
+    data: data_team
+  });
+  </script>
+</body>
+</html>

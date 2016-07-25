@@ -1,0 +1,131 @@
+html, body {
+  position: relative;
+  height: 100%;
+}
+body {
+  background: #eee;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color:#000;
+  margin: 0;
+  padding: 0;
+}
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+.swiper-slide {
+  /*text-align: center;*/
+  text-align: left;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: flex-start;
+  -ms-flex-pack: flex-start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  -webkit-align-items: flex-start;
+  align-items: flex-start;
+}
+.swiper-pagination-bullet {
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  font-size: 12px;
+  color:#000;
+  opacity: 1;
+  background: rgba(0,0,0,0.2);
+}
+.swiper-pagination-bullet-active {
+  color:#fff;
+  background: #007aff;
+}
+section{
+  width: 100%;
+}
+h1{
+  margin: 20px;
+  font-size: 1em;
+  font-weight: normal;
+}
+ul{
+  list-style-type: none;
+  padding: 0;
+  padding-left: 3em;
+}
+input[type="radio"],input[type="checkbox"]{
+  display: none;
+}
+input[type="checkbox" i]{
+  margin: 0;
+}
+label{
+  display: block;
+  line-height: 1;
+  padding: 0.6em 0;
+}
+
+.ra{
+  display: inline-block;
+  color: transparent;
+  left: -1.5em;
+  margin-right: -1em;
+  position: relative;
+  vertical-align: middle;
+}
+.ra:before {
+  content: "\3000";
+  background-color: white;
+  border-radius: 50%;
+  border: 1px solid #9B9B9B;
+  width: 1em;
+  height: 1em;
+  display: block;
+}
+input:checked+.ra:after{
+  content: "\3000";
+  background-color: #3095D3;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0.6em;
+  height: 0.6em;
+  transform: translate(-50%,-50%);
+  border-radius: 50%;
+}
+.ck{
+  display: inline-block;
+  color: transparent;
+  left: -1.5em;
+  margin-right: -1em;
+  position: relative;
+  vertical-align: middle;
+}
+.ck:before {
+  content: "\3000";
+  background-color: white;
+  border: 1px solid #9B9B9B;
+  width: 1em;
+  height: 1em;
+  display: block;
+}
+input:checked+.ck:after{
+  content: "\3000";
+  background-color: #3095D3;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0.6em;
+  height: 0.6em;
+  transform: translate(-50%,-50%);
+}
