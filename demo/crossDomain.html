@@ -36,14 +36,14 @@
 				$("#getMessage").on("click", function() {
 					$.ajax({
 						type: "post",
-						// url: "http://10.10.11.222:18080/login",
-						url: "http://openks.duapp.com/login",
+						// url: "http://10.10.11.222:18080/api/login",
+						url: "http://openks.duapp.com/api/login",
 						dataType: 'json',
 						data: {
 							"uname": "zs",
 							"pwd": "8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92"
 						},
-						async: false,
+						async: true,
 						beforeSend: function() {
 							$(".result").remove();
 							$("body").append("<div class='result'><br>before Send!!<br></div>")
@@ -63,8 +63,8 @@
 				// $("#getMessage").on("click", function() {
 				// 	$.ajax({
 				// 		type: "post", //会被转为get
-				// 		url: "http://10.10.11.222:18080/api/login",
-				// 		// url: "http://openks.duapp.com/login_jp",
+				// 		// url: "http://10.10.11.222:18080/api/login_jp",
+				// 		url: "http://openks.duapp.com/api/login_jp",
 				// 		dataType: 'jsonp',
 				// 		jsonp: 'jsonpcallback',
 				// 		data: {
