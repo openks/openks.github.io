@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>日历控件</title>
+	<script src="//libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+
+	<script src="//apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+	<script src="js/jquery-datepicker-zh.js"></script>
+	<link href="//apps.bdimg.com/libs/jqueryui/1.10.4/css/jquery-ui.min.css" rel="stylesheet" />
+	<!-- <link href="//apps.bdimg.com/libs/jqueryui/1.10.4/css/jquery-ui.css" rel="stylesheet" /> -->
+	<style type="text/css">
+	th.ui-datepicker-week-end,
+	td.ui-datepicker-week-end {
+		display: none;
+	}
+	.ui-datepicker .ui-datepicker-header {
+		border: 1px solid #fff;
+		background: #fff;
+	}
+	.ui-datepicker-calendar thead{
+		background: #F1EFF5;
+	}
+	.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+		text-align: center;
+			border: 1px solid #fff;
+		background: #fff;
+	}
+	.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active {
+		border: 1px solid #9AB93A;
+		/*background: #eee;*/
+	}
+	.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight {
+		border: 1px solid #aaa;
+		/*color: #363636;*/
+	}
+	.ui-widget-content {
+		border: 1px solid #9EBC42;
+		color: #222;
+	}
+	.ui-datepicker {
+		padding: .4em 1em 0;
+	}
+	.ui-widget-header .ui-datepicker-prev,.ui-widget-header .ui-datepicker-next {
+		background-size: 80% 80%;
+		background-repeat: no-repeat;
+	}
+	.ui-widget-header .ui-datepicker-prev {
+		background-image: url("img/icon_arr_left.png");
+	}
+	.ui-widget-header .ui-datepicker-next {
+		background-image: url("img/icon_arr_right.png");
+	}
+	.ui-widget-header .ui-icon {
+		background-image: url();
+	}
+	.ui-state-hover,
+	.ui-widget-content .ui-state-hover,
+	.ui-widget-header .ui-state-hover,
+	.ui-state-focus,
+	.ui-widget-content .ui-state-focus,
+	.ui-widget-header .ui-state-focus {
+			border: 1px solid #fff;
+		font-weight: normal;
+		background-color:transparent;
+		color: #212121;
+	}
+	/*.ui-datepicker .ui-datepicker-prev-hover,
+	.ui-datepicker .ui-datepicker-next-hover {
+		top: 2px;
+	}
+	.ui-datepicker .ui-datepicker-prev {
+		left: 0px;
+	}
+	.ui-datepicker .ui-datepicker-next {
+		right: 0px;
+	}
+	.ui-datepicker .ui-datepicker-prev-hover {
+		left: 0px;
+	}
+	.ui-datepicker .ui-datepicker-next-hover {
+		right: 0px;
+	}*/
+	</style>
+</head>
+
+<body>
+	<input type="text" class="datepicker">
+	<script type="text/javascript">
+	Date.prototype.format = function(format) {
+		var o = {
+			"M+": this.getMonth() + 1, //month
+			"d+": this.getDate(), //day
+			"h+": this.getHours(), //hour
+			"m+": this.getMinutes(), //minute
+			"s+": this.getSeconds(), //second
+			"q+": Math.floor((this.getMonth() + 3) / 3), //quarter
+			"S": this.getMilliseconds() //millisecond
+		}
+		if (/(y+)/.test(format)) {
+			format = format.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
+		}
+		for (var k in o) {
+			if (new RegExp("(" + k + ")").test(format)) {
+				format = format.replace(RegExp.$1, RegExp.$1.length == 1 ? o[k] : ("00" + o[k]).substr(("" + o[k]).length));
+			}
+		}
+		return format;
+	}
+	$(function() {
+		$(".datepicker").datepicker({ //添加日期选择功能
+			numberOfMonths: 1, //显示几个月
+			showButtonPanel: false, //是否显示按钮面板
+			// changeMonth: true,
+			// changeYear: true,
+			dateFormat: 'yy-mm-dd', //日期格式
+			clearText: "清除", //清除日期的按钮名称
+			closeText: "关闭", //关闭选择框的按钮名称
+			// yearSuffix: '年', //年的后缀
+			monthSuffix: '月', //年的后缀
+			showMonthAfterYear: true, //是否把月放在年的后面
+			defaultDate: new Date(), //默认日期
+			minDate: new Date(), //最小日期
+			maxDate: "2016-10-01", //最大日期
+			monthNames: ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月'],
+			dayNames: ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'],
+			dayNamesShort: ['周日', '周一', '周二', '周三', '周四', '周五', '周六'],
+			dayNamesMin: ['日', '一', '二', '三', '四', '五', '六'],
+			onSelect: function(selectedDate) { //选择日期后执行的操作
+				//						alert(selectedDate);
+			}
+		});
+	})
+	</script>
+</body>
+
+</html>

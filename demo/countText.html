@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+<body>
+  <textarea class="suggest_area" name="name" rows="8" cols="40"></textarea>
+  <span><i class="count_number">0</i>/10</span>
+  <script src="js/jquery-2.1.3.min.js" charset="utf-8"></script>
+  <script type="text/javascript">
+  $(function(){
+    $(".suggest_area").on("keyup",function(){
+      countText(".suggest_area",".count_number",10);
+    });
+  });
+  /**
+  * [countText description]
+  * @param  {[type]} selector      [description]
+  * @param  {[type]} countSelector [description]
+  * @param  {[type]} maxlimit      [description]
+  * @return {[type]}               [description]
+  */
+  function countText(selector,countSelector,maxlimit){
+    var $ele= $(selector);
+    var len1 =$ele.val().length;
+    if(len1<=maxlimit){
+      $(countSelector).text(len1);
+    }else{
+      $ele.val($ele.val().substring(0,maxlimit));
+      $(countSelector).text(maxlimit);
+    }
+  };
+  </script>
+</body>
+</html>
