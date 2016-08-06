@@ -53,6 +53,12 @@ img {
   }
 }
 
+@media (min-width: 426px) and (max-width: 767px) {
+  .employee .em_con {
+    width: 50%;
+  }
+}
+
 @media (min-width: 768px) {
   .employee .em_con {
     width: 33.33333%;

@@ -47,6 +47,13 @@ img{
     }
   }
 }
+@include media('>425px','<768px') {
+  .employee{
+    .em_con{
+      width: 50%;
+    }
+  }
+}
 @include media('>=768px') {
   .employee{
     .em_con{
