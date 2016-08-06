@@ -34,10 +34,15 @@
 //				});
 				//在服务端设置即可
 				$("#getMessage").on("click", function() {
+					var url="";
+					if(location.href.indexOf("zhuyangxing")>-1){
+						url="http://openks.duapp.com/api/login";
+					}else{
+						url="http://10.10.11.222:18080/api/login";
+					}
 					$.ajax({
 						type: "post",
-						url: "http://10.10.11.222:18080/api/login",
-						// url: "http://openks.duapp.com/api/login",
+						url:url ,
 						dataType: 'json',
 						data: {
 							"uname": "zs",
