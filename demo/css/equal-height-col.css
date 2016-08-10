@@ -39,7 +39,7 @@ div#col1 {
 	overflow: hidden;
 	width: 30%;
 	left: 70%;
-	height: 408px;
+	height: 160px;
 }
 /*Ã¤Â¸â€¹Ã©ÂÂ¢Ã§Å¡â€žÃ¥Â®Å¾Ã§Å½Â°Ã¦â€“Â¹Ã¦Â³â€¢*/
 .equal-height {
@@ -72,7 +72,7 @@ div#inner2 {
     width: 30%;
     overflow: hidden;
     /* background-color: aqua; */
-    height: 200px;
+    height: 120px;
 }
 div#inner3 {
     right: 50%;

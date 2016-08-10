@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>等高列demo</title>
+  <style media="screen">
+  .wrap{
+    display: table;
+    width: 100%;
+    background-color: #eeeeee;
+  }
+  .dm1{
+    width: 20%;
+    background-color: pink;
+    display: table-cell;
+    height: 50px;
+  }
+  .dm2{
+    width: 80%;
+    background-color: Orchid;
+    display: table-cell;
+    height: 50px;
+  }
+  .tips{
+    background-color: #EEEEEE;
+    padding: 20px;
+    color: #666;
+    line-height: 1.8;
+  }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="dm1">
+    </div>
+    <div class="dm2">
+    </div>
+  </div>
+  <div class="tips">
+    <p>假设左右两侧分别为A,B元素，他们的容器为C,现要求如下：</p>
+    <p>1.A、B元素平分C元素,即各占50%</p>
+    <p>2.A元素高度随B元素高度的变化而变化</p>
+    <p>3.B元素高度随A元素高度的变化而变化</p>
+    <p>可分别通过调节A元素的高度查看B元素的效果，通过调整B元素的高度查看A元素的效果</p>
+    <p>实现思路：</p>
+    <p>外层容器display:table,下面两个子元素分别设置为display:table-cell</p>
+  </div>
+</body>
+</html>
