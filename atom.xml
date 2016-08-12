@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.zhuyangxing.cn/"/>
-  <updated>2016-06-24T07:22:59.083Z</updated>
+  <updated>2016-08-12T03:21:37.298Z</updated>
   <id>http://www.zhuyangxing.cn/</id>
   
   <author>
@@ -14,6 +14,38 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>元素高度随兄弟元素高度变化而变化(二)</title>
+    <link href="http://www.zhuyangxing.cn/2016/08/12/%E5%85%83%E7%B4%A0%E9%AB%98%E5%BA%A6%E9%9A%8F%E5%85%84%E5%BC%9F%E5%85%83%E7%B4%A0%E9%AB%98%E5%BA%A6%E5%8F%98%E5%8C%96%E8%80%8C%E5%8F%98%E5%8C%96(%E4%BA%8C)/"/>
+    <id>http://www.zhuyangxing.cn/2016/08/12/元素高度随兄弟元素高度变化而变化(二)/</id>
+    <published>2016-08-12T03:20:48.000Z</published>
+    <updated>2016-08-12T03:21:37.298Z</updated>
+    
+    <content type="html">&lt;p&gt;之前曾写过一篇文章说如何实现&lt;a href=&quot;http://www.zhuyangxing.cn/2016/05/30/%E5%85%83%E7%B4%A0%E9%AB%98%E5%BA%A6%E9%9A%8F%E5%85%84%E5%BC%9F%E5%85%83%E7%B4%A0%E9%AB%98%E5%BA%A6%E5%8F%98%E5%8C%96%E8%80%8C%E5%8F%98%E5%8C%96/&quot;&gt;元素高度随兄弟元素高度变化而变化&lt;/a&gt;的文章,但是发现并不符合新的需求,仍以原图为例&lt;br&gt;&lt;img src=&quot;http://7xl9u9.com1.z0.glb.clouddn.com/2016-5-30-15-24-43.png&quot; alt=&quot;image&quot;&gt;&lt;/p&gt;
+&lt;p&gt;现需求如下：&lt;/p&gt;
+&lt;p&gt;1.A、B元素平分C元素,即各占50%&lt;/p&gt;
+&lt;p&gt;2.A元素高度随B元素高度的变化而变化&lt;/p&gt;
+&lt;p&gt;3.B元素高度随A元素高度的变化而变化&lt;/p&gt;
+&lt;p&gt;简单来讲就是A,B任何一个元素高度变大则另一个元素的高度也会变大，这个效果有点类似table里的单元格，也就是table里的cell,想到有&lt;code&gt;display:table&lt;/code&gt;属性，那自然应该有&lt;code&gt;display:table-cell&lt;/code&gt;。结果一查api还真有,那就简单多了根本不用写js了直接样式就可以全搞定。父元素C用&lt;code&gt;display:table&lt;/code&gt;,AB两个子元素用&lt;code&gt;display:table-cell&lt;/code&gt;就可以了实现起来也是蛮简单的。  &lt;/p&gt;
+&lt;p&gt;可分别通过调节A元素的高度查看B元素的效果，通过调整B元素的高度查看A元素的效果&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.zhuyangxing.cn/demo/div-auto-height.html&quot;&gt;demo&lt;/a&gt;在这里,如果打不开&lt;a href=&quot;http://openks.oschina.io/demo/div-auto-height.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;备用demo&lt;/a&gt;在这里。&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;&lt;p data-height=&quot;490&quot; data-theme-id=&quot;0&quot; data-slug-hash=&quot;ZOVkYK&quot; data-default-tab=&quot;result&quot; data-user=&quot;openks&quot; data-embed-version=&quot;2&quot; class=&quot;codepen&quot;&gt;See the Pen &lt;a href=&quot;http://codepen.io/openks/pen/ZOVkYK/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;元素高度随兄弟元素高度变化而变化(二)&lt;/a&gt; by openks (&lt;a href=&quot;http://codepen.io/openks&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;@openks&lt;/a&gt;) on &lt;a href=&quot;http://codepen.io&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;CodePen&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;
+&lt;script async src=&quot;//assets.codepen.io/assets/embed/ei.js&quot;&gt;&lt;/script&gt;
+</content>
+    
+    <summary type="html">
+    
+      元素高度随兄弟元素高度变化而变化
+    
+    </summary>
+    
+      <category term="前端" scheme="http://www.zhuyangxing.cn/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="前端" scheme="http://www.zhuyangxing.cn/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
   
   <entry>
     <title>用 CSS3 和 JavaScript 制作径向动画菜单</title>

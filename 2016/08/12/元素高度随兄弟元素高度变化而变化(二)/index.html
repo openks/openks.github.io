@@ -4,14 +4,14 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>用 CSS3 和 JavaScript 制作径向动画菜单 | openks的随笔记录</title>
+    <title>元素高度随兄弟元素高度变化而变化(二) | openks的随笔记录</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
     
     <meta name="author" content="朱阳星">
     
-    <meta name="description" itemprop="description" content="用 CSS3 和 JavaScript 制作径向动画菜单">
+    <meta name="description" itemprop="description" content="元素高度随兄弟元素高度变化而变化">
     
-    <meta name="keywords" content="前端，cssc,ss3,js,JavaScript,动画菜单">
+    <meta name="keywords" content="前端,元素高度,等高列">
     
     
     <link rel="alternate" href="/atom.xml" title="openks的随笔记录" type="application/atom+xml">
@@ -84,15 +84,15 @@ var _hmt = _hmt || [];
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2016/06/24/css3-menu/" title="用 CSS3 和 JavaScript 制作径向动画菜单" itemprop="url">用 CSS3 和 JavaScript 制作径向动画菜单</a>
+      <a href="/2016/08/12/元素高度随兄弟元素高度变化而变化(二)/" title="元素高度随兄弟元素高度变化而变化(二)" itemprop="url">元素高度随兄弟元素高度变化而变化(二)</a>
   </h1>
   <p class="article-author">By
     
       <a href="http://www.zhuyangxing.cn" title="朱阳星">朱阳星</a>
     </p>
   <p class="article-time">
-    <time datetime="2016-06-24T06:41:23.000Z" itemprop="datePublished">2016-06-24</time>
-    更新日期:<time datetime="2016-06-24T07:22:59.083Z" itemprop="dateModified">2016-06-24 15:22</time>
+    <time datetime="2016-08-12T03:20:48.000Z" itemprop="datePublished">2016-08-12</time>
+    更新日期:<time datetime="2016-08-12T03:21:37.298Z" itemprop="dateModified">2016-08-12 11:21</time>
     
   </p>
 </header>
@@ -101,15 +101,19 @@ var _hmt = _hmt || [];
 		
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
-		<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#用-CSS3-和-JavaScript-制作径向动画菜单"><span class="toc-number">1.</span> <span class="toc-text">用 CSS3 和 JavaScript 制作径向动画菜单</span></a></li></ol>
+		
 		</div>
 		
-		<h1 id="用-CSS3-和-JavaScript-制作径向动画菜单"><a href="#用-CSS3-和-JavaScript-制作径向动画菜单" class="headerlink" title="用 CSS3 和 JavaScript 制作径向动画菜单"></a>用 CSS3 和 JavaScript 制作径向动画菜单</h1><p>先看demo</p>
-<p></p><p data-height="308" data-theme-id="0" data-slug-hash="WxRQJP" data-default-tab="result" data-user="openks" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/openks/pen/WxRQJP/" target="_blank" rel="external">圆形动画菜单</a> by openks (<a href="http://codepen.io/openks" target="_blank" rel="external">@openks</a>) on <a href="http://codepen.io" target="_blank" rel="external">CodePen</a>.</p><p></p>
+		<p>之前曾写过一篇文章说如何实现<a href="http://www.zhuyangxing.cn/2016/05/30/%E5%85%83%E7%B4%A0%E9%AB%98%E5%BA%A6%E9%9A%8F%E5%85%84%E5%BC%9F%E5%85%83%E7%B4%A0%E9%AB%98%E5%BA%A6%E5%8F%98%E5%8C%96%E8%80%8C%E5%8F%98%E5%8C%96/">元素高度随兄弟元素高度变化而变化</a>的文章,但是发现并不符合新的需求,仍以原图为例<br><img src="http://7xl9u9.com1.z0.glb.clouddn.com/2016-5-30-15-24-43.png" alt="image"></p>
+<p>现需求如下：</p>
+<p>1.A、B元素平分C元素,即各占50%</p>
+<p>2.A元素高度随B元素高度的变化而变化</p>
+<p>3.B元素高度随A元素高度的变化而变化</p>
+<p>简单来讲就是A,B任何一个元素高度变大则另一个元素的高度也会变大，这个效果有点类似table里的单元格，也就是table里的cell,想到有<code>display:table</code>属性，那自然应该有<code>display:table-cell</code>。结果一查api还真有,那就简单多了根本不用写js了直接样式就可以全搞定。父元素C用<code>display:table</code>,AB两个子元素用<code>display:table-cell</code>就可以了实现起来也是蛮简单的。  </p>
+<p>可分别通过调节A元素的高度查看B元素的效果，通过调整B元素的高度查看A元素的效果</p>
+<p><a href="http://www.zhuyangxing.cn/demo/div-auto-height.html">demo</a>在这里,如果打不开<a href="http://openks.oschina.io/demo/div-auto-height.html" target="_blank" rel="external">备用demo</a>在这里。</p>
+<p></p><p data-height="490" data-theme-id="0" data-slug-hash="ZOVkYK" data-default-tab="result" data-user="openks" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/openks/pen/ZOVkYK/" target="_blank" rel="external">元素高度随兄弟元素高度变化而变化(二)</a> by openks (<a href="http://codepen.io/openks" target="_blank" rel="external">@openks</a>) on <a href="http://codepen.io" target="_blank" rel="external">CodePen</a>.</p><p></p>
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
-
-<p>html和css都不难，很容易实现，主要问题在于子图标个数和子图标之间的角度不一样<br>所有子节点都在O点，使用绝对定位后设置子节点的top和left值即可<br>以A点为例子(其中圆点为50%,50%)<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">left=(<span class="number">50</span>+AD距离)*<span class="number">100</span>%</span><br><span class="line">top=(<span class="number">50</span>-AE距离)*<span class="number">100</span>%</span><br></pre></td></tr></table></figure></p>
-<p>一旦理解了这些就简单多了附图一张（其中n为子节点个数,i为第i个节点）<br><img src="http://7xl9u9.com1.z0.glb.clouddn.com/2016-06-24_15-18-30.png" alt="图片">;<br>来源在<a href="http://codepen.io/CreativePunch/pen/lAHiu" target="_blank" rel="external">这里</a><br>只不过我一直没看懂它到底是如何计算left和top的，不过思路应该差不多</p>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -129,7 +133,7 @@ var _hmt = _hmt || [];
 
 <div class="article-share" id="share">
 
-  <!--<div data-url="http://www.zhuyangxing.cn/2016/06/24/css3-menu/" data-title="用 CSS3 和 JavaScript 制作径向动画菜单 | openks的随笔记录" data-tsina="null" class="share clearfix">
+  <!--<div data-url="http://www.zhuyangxing.cn/2016/08/12/元素高度随兄弟元素高度变化而变化(二)/" data-title="元素高度随兄弟元素高度变化而变化(二) | openks的随笔记录" data-tsina="null" class="share clearfix">
   </div>-->
 
 </div>
@@ -138,19 +142,11 @@ var _hmt = _hmt || [];
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/2016/08/12/元素高度随兄弟元素高度变化而变化(二)/" title="元素高度随兄弟元素高度变化而变化(二)">
-  <strong>上一篇:</strong><br/>
-  <span>
-  元素高度随兄弟元素高度变化而变化(二)</span>
-</a>
-</div>
-
 
 <div class="next">
-<a href="/2016/06/17/独立于后端的前端开发/"  title="独立于后端的前端开发">
+<a href="/2016/06/24/css3-menu/"  title="用 CSS3 和 JavaScript 制作径向动画菜单">
  <strong>下一篇:</strong><br/> 
- <span>独立于后端的前端开发
+ <span>用 CSS3 和 JavaScript 制作径向动画菜单
 </span>
 </a>
 </div>
@@ -163,7 +159,7 @@ var _hmt = _hmt || [];
 
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
-  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#用-CSS3-和-JavaScript-制作径向动画菜单"><span class="toc-number">1.</span> <span class="toc-text">用 CSS3 和 JavaScript 制作径向动画菜单</span></a></li></ol>
+  
   </div>
 
 <div id="asidepart">
