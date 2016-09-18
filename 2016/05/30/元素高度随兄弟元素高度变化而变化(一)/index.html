@@ -4,14 +4,14 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>webpack入门学习 | openks的随笔记录</title>
+    <title>元素高度随兄弟元素高度变化而变化(一) | openks的随笔记录</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
     
     <meta name="author" content="朱阳星">
     
-    <meta name="description" itemprop="description" content="学习过gulp,就把webpack也来学习下呗">
+    <meta name="description" itemprop="description" content="元素高度随兄弟元素高度变化而变化">
     
-    <meta name="keywords" content="hexo">
+    <meta name="keywords" content="前端,元素高度随兄弟元素高度变化而变化">
     
     
     <link rel="alternate" href="/atom.xml" title="openks的随笔记录" type="application/atom+xml">
@@ -84,15 +84,15 @@ var _hmt = _hmt || [];
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2016/02/26/webpack/" title="webpack入门学习" itemprop="url">webpack入门学习</a>
+      <a href="/2016/05/30/元素高度随兄弟元素高度变化而变化(一)/" title="元素高度随兄弟元素高度变化而变化(一)" itemprop="url">元素高度随兄弟元素高度变化而变化(一)</a>
   </h1>
   <p class="article-author">By
     
       <a href="http://www.zhuyangxing.cn" title="朱阳星">朱阳星</a>
     </p>
   <p class="article-time">
-    <time datetime="2016-02-26T03:59:05.000Z" itemprop="datePublished">2016-02-26</time>
-    更新日期:<time datetime="2016-03-11T08:29:57.573Z" itemprop="dateModified">2016-03-11 16:29</time>
+    <time datetime="2016-05-30T08:30:29.000Z" itemprop="datePublished">2016-05-30</time>
+    更新日期:<time datetime="2016-09-18T09:37:25.168Z" itemprop="dateModified">2016-09-18 17:37</time>
     
   </p>
 </header>
@@ -104,18 +104,24 @@ var _hmt = _hmt || [];
 		
 		</div>
 		
-		<p>1.webpack安装</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install webpack -g</span><br></pre></td></tr></table></figure>
-<p>一道常被人轻视的前端JS面试题<br><a href="http://www.cnblogs.com/xxcanghai/p/5189353.html" target="_blank" rel="external">http://www.cnblogs.com/xxcanghai/p/5189353.html</a></p>
-<p>大部分人都会做错的经典JS闭包面试题<br><a href="http://www.cnblogs.com/xxcanghai/p/4991870.html" target="_blank" rel="external">http://www.cnblogs.com/xxcanghai/p/4991870.html</a></p>
-<p>面试小记<br><a href="http://www.cnblogs.com/xxcanghai/p/5205998.html" target="_blank" rel="external">http://www.cnblogs.com/xxcanghai/p/5205998.html</a></p>
+		<p>简单来讲就是元素A的高度随元素B的高度变化而变化(假设AB的外层元素为C)</p>
+<p><img src="http://7xl9u9.com1.z0.glb.clouddn.com/2016-5-30-15-24-43.png" alt=""></p>
+<p>你想到了几种方法？<br>我想到了两种</p>
+<ol>
+<li><p>A的高度设置一个B最大高度都达不到的值(此方法不推荐)<br>把C设置成<code>overflow:hidden;</code>A,B左浮动,B的高度为<code>auto</code>,A无限高</p>
+</li>
+<li><p>C相对定位，A左浮动绝对定位高度100%，B右浮动,高度 <code>auto</code>,则A高度随B发生变化</p>
+</li>
+</ol>
+<p></p><p data-height="564" data-theme-id="light" data-slug-hash="aZbayy" data-default-tab="result" data-user="openks" data-embed-version="2" class="codepen">See the Pen <a href="https://codepen.io/openks/pen/aZbayy/" target="_blank" rel="external">aZbayy</a> by openks (<a href="http://codepen.io/openks" target="_blank" rel="external">@openks</a>) on <a href="http://codepen.io" target="_blank" rel="external">CodePen</a>.</p><p></p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
   
 	</div>
 		<footer class="article-footer clearfix">
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/前端/">前端</a>
+  <span></span> <a href="/tags/css/">css</a><a href="/tags/前端/">前端</a>
   </div>
 
 
@@ -128,7 +134,7 @@ var _hmt = _hmt || [];
 
 <div class="article-share" id="share">
 
-  <!--<div data-url="http://www.zhuyangxing.cn/2016/02/26/webpack/" data-title="webpack入门学习 | openks的随笔记录" data-tsina="null" class="share clearfix">
+  <!--<div data-url="http://www.zhuyangxing.cn/2016/05/30/元素高度随兄弟元素高度变化而变化(一)/" data-title="元素高度随兄弟元素高度变化而变化(一) | openks的随笔记录" data-tsina="null" class="share clearfix">
   </div>-->
 
 </div>
@@ -138,18 +144,18 @@ var _hmt = _hmt || [];
 <nav class="article-nav clearfix">
  
  <div class="prev" >
- <a href="/2016/03/11/gulp/" title="gulp自动化工具的学习">
+ <a href="/2016/06/17/独立于后端的前端开发/" title="独立于后端的前端开发">
   <strong>上一篇:</strong><br/>
   <span>
-  gulp自动化工具的学习</span>
+  独立于后端的前端开发</span>
 </a>
 </div>
 
 
 <div class="next">
-<a href="/2016/02/25/hexo博客搭建/"  title="hexo博客搭建">
+<a href="/2016/05/26/sass/"  title="sass学习">
  <strong>下一篇:</strong><br/> 
- <span>hexo博客搭建
+ <span>sass学习
 </span>
 </a>
 </div>

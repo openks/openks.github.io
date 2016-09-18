@@ -4,14 +4,14 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>webpack入门学习 | openks的随笔记录</title>
+    <title>淘宝Rap服务使用简述 | openks的随笔记录</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
     
     <meta name="author" content="朱阳星">
     
-    <meta name="description" itemprop="description" content="学习过gulp,就把webpack也来学习下呗">
+    <meta name="description" itemprop="description" content="mockjs，生成随机数据，拦截 Ajax 请求，淘宝Rap服务使用简述">
     
-    <meta name="keywords" content="hexo">
+    <meta name="keywords" content="前端，mockjs,前端模拟数据，拦截ajax请求,rap">
     
     
     <link rel="alternate" href="/atom.xml" title="openks的随笔记录" type="application/atom+xml">
@@ -84,15 +84,15 @@ var _hmt = _hmt || [];
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2016/02/26/webpack/" title="webpack入门学习" itemprop="url">webpack入门学习</a>
+      <a href="/2016/09/18/淘宝Rap服务使用简述/" title="淘宝Rap服务使用简述" itemprop="url">淘宝Rap服务使用简述</a>
   </h1>
   <p class="article-author">By
     
       <a href="http://www.zhuyangxing.cn" title="朱阳星">朱阳星</a>
     </p>
   <p class="article-time">
-    <time datetime="2016-02-26T03:59:05.000Z" itemprop="datePublished">2016-02-26</time>
-    更新日期:<time datetime="2016-03-11T08:29:57.573Z" itemprop="dateModified">2016-03-11 16:29</time>
+    <time datetime="2016-09-18T09:26:34.000Z" itemprop="datePublished">2016-09-18</time>
+    更新日期:<time datetime="2016-09-18T09:27:07.425Z" itemprop="dateModified">2016-09-18 17:27</time>
     
   </p>
 </header>
@@ -104,11 +104,10 @@ var _hmt = _hmt || [];
 		
 		</div>
 		
-		<p>1.webpack安装</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install webpack -g</span><br></pre></td></tr></table></figure>
-<p>一道常被人轻视的前端JS面试题<br><a href="http://www.cnblogs.com/xxcanghai/p/5189353.html" target="_blank" rel="external">http://www.cnblogs.com/xxcanghai/p/5189353.html</a></p>
-<p>大部分人都会做错的经典JS闭包面试题<br><a href="http://www.cnblogs.com/xxcanghai/p/4991870.html" target="_blank" rel="external">http://www.cnblogs.com/xxcanghai/p/4991870.html</a></p>
-<p>面试小记<br><a href="http://www.cnblogs.com/xxcanghai/p/5205998.html" target="_blank" rel="external">http://www.cnblogs.com/xxcanghai/p/5205998.html</a></p>
+		<p>前端时间曾经发布文章说<a href="http://www.zhuyangxing.cn/2016/06/17/%E7%8B%AC%E7%AB%8B%E4%BA%8E%E5%90%8E%E7%AB%AF%E7%9A%84%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/">独立于后端的前端开发</a>,但是仍然需要自己写模拟数据，可以通过使用淘宝提供的rap服务来自动生成数据。需要在<a href="http://rap.taobao.org/org/index.do" target="_blank" rel="external">淘宝rap</a>上进行配置</p>
+<p>注册后选择或创建一个团队，新建一个产品线，新建产品，创建项目，创建模块，创建页面<br>对页面的接口进行编辑，然后只需引入一个js文件即可使用模拟数据。<br><img src="http://7xl9u9.com1.z0.glb.clouddn.com/2016-09-18_17-07-45.png" alt="image"></p>
+<p>可以通过项目的编辑添加接口，设置请求类型，请求连接，返回数据格式以及请求和返回数据的数据结构来新建接口，接口建完之后就可以通过引入js文件(在配置按钮里查看)就可以看到效果。</p>
+<p>请求和响应参数均支持mock写法,经测试只支持部分 如@cfirst,@cname就不支持了。</p>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -128,7 +127,7 @@ var _hmt = _hmt || [];
 
 <div class="article-share" id="share">
 
-  <!--<div data-url="http://www.zhuyangxing.cn/2016/02/26/webpack/" data-title="webpack入门学习 | openks的随笔记录" data-tsina="null" class="share clearfix">
+  <!--<div data-url="http://www.zhuyangxing.cn/2016/09/18/淘宝Rap服务使用简述/" data-title="淘宝Rap服务使用简述 | openks的随笔记录" data-tsina="null" class="share clearfix">
   </div>-->
 
 </div>
@@ -138,18 +137,18 @@ var _hmt = _hmt || [];
 <nav class="article-nav clearfix">
  
  <div class="prev" >
- <a href="/2016/03/11/gulp/" title="gulp自动化工具的学习">
+ <a href="/2016/09/18/使用html页面浏览文件夹里的所有图片/" title="使用html页面浏览文件夹里的所有图片">
   <strong>上一篇:</strong><br/>
   <span>
-  gulp自动化工具的学习</span>
+  使用html页面浏览文件夹里的所有图片</span>
 </a>
 </div>
 
 
 <div class="next">
-<a href="/2016/02/25/hexo博客搭建/"  title="hexo博客搭建">
+<a href="/2016/08/12/元素高度随兄弟元素高度变化而变化(二)/"  title="元素高度随兄弟元素高度变化而变化(二)">
  <strong>下一篇:</strong><br/> 
- <span>hexo博客搭建
+ <span>元素高度随兄弟元素高度变化而变化(二)
 </span>
 </a>
 </div>

@@ -4,14 +4,14 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>webpack入门学习 | openks的随笔记录</title>
+    <title>OAuth2.0接入学习，含github和新浪 | openks的随笔记录</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
     
     <meta name="author" content="朱阳星">
     
-    <meta name="description" itemprop="description" content="学习过gulp,就把webpack也来学习下呗">
+    <meta name="description" itemprop="description" content="OAuth2.0接入学习，含github和新浪">
     
-    <meta name="keywords" content="hexo">
+    <meta name="keywords" content="前端，OAuth2.0,github,新浪">
     
     
     <link rel="alternate" href="/atom.xml" title="openks的随笔记录" type="application/atom+xml">
@@ -84,15 +84,15 @@ var _hmt = _hmt || [];
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2016/02/26/webpack/" title="webpack入门学习" itemprop="url">webpack入门学习</a>
+      <a href="/2016/09/18/OAuth2.0接入学习，含github和新浪/" title="OAuth2.0接入学习，含github和新浪" itemprop="url">OAuth2.0接入学习，含github和新浪</a>
   </h1>
   <p class="article-author">By
     
       <a href="http://www.zhuyangxing.cn" title="朱阳星">朱阳星</a>
     </p>
   <p class="article-time">
-    <time datetime="2016-02-26T03:59:05.000Z" itemprop="datePublished">2016-02-26</time>
-    更新日期:<time datetime="2016-03-11T08:29:57.573Z" itemprop="dateModified">2016-03-11 16:29</time>
+    <time datetime="2016-09-18T09:28:58.000Z" itemprop="datePublished">2016-09-18</time>
+    更新日期:<time datetime="2016-09-18T09:35:38.272Z" itemprop="dateModified">2016-09-18 17:35</time>
     
   </p>
 </header>
@@ -101,14 +101,25 @@ var _hmt = _hmt || [];
 		
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
-		
+		<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#github接入"><span class="toc-number">1.</span> <span class="toc-text">github接入</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#新浪微博接入"><span class="toc-number">2.</span> <span class="toc-text">新浪微博接入</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#实现思路"><span class="toc-number">3.</span> <span class="toc-text">实现思路</span></a></li></ol>
 		</div>
 		
-		<p>1.webpack安装</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install webpack -g</span><br></pre></td></tr></table></figure>
-<p>一道常被人轻视的前端JS面试题<br><a href="http://www.cnblogs.com/xxcanghai/p/5189353.html" target="_blank" rel="external">http://www.cnblogs.com/xxcanghai/p/5189353.html</a></p>
-<p>大部分人都会做错的经典JS闭包面试题<br><a href="http://www.cnblogs.com/xxcanghai/p/4991870.html" target="_blank" rel="external">http://www.cnblogs.com/xxcanghai/p/4991870.html</a></p>
-<p>面试小记<br><a href="http://www.cnblogs.com/xxcanghai/p/5205998.html" target="_blank" rel="external">http://www.cnblogs.com/xxcanghai/p/5205998.html</a></p>
+		<h1 id="github接入"><a href="#github接入" class="headerlink" title="github接入"></a>github接入</h1><p>github的<a href="https://developer.github.com/v3/oauth/" target="_blank" rel="external">文档</a>其实说的已经很明白了按照文档一步一步操作就可以了</p>
+<p>总的来说有一下三步：<br>第一步:获取code<br>第二步:使用post获取access_token<br>第三步：根据access_token获取想要数据  </p>
+<p>首先需要创建一个<a href="https://github.com/settings/applications/new" target="_blank" rel="external">应用</a>页面如下<br><img src="http://7xl9u9.com1.z0.glb.clouddn.com/2016-09-18_09-36-19.png" alt="image"><br>填写以上四个信息即可，填写完成效果如下：<br><img src="http://7xl9u9.com1.z0.glb.clouddn.com/2016-09-18_09-46-07.png" alt="image"><br>点击进如可看到如下信息<br><img src="http://7xl9u9.com1.z0.glb.clouddn.com/2016-09-18_09-38-52.png" alt="image"><br>可以得到一个Client ID 和 Client Secret 后面会用到。</p>
+<p>第一步：<br>在自己页面添加按钮点击跳转到git获取权限页面，页面地址为：<code>https://github.com/login/oauth/authorize?client_id=client_id</code>  <a href="https://github.com/login/oauth/authorize?client_id=fdbdb307432243b88b1e" target="_blank" rel="external">我的例子在这里</a> 效果如图： </p>
+<p><img src="http://7xl9u9.com1.z0.glb.clouddn.com/2016-09-18_10-53-00.png" alt="image"><br>如果不同意直接叉掉页面即可，如果同意则跳转到设置的授权回调地址,会带一个名为code的参数</p>
+<p>第二步：<br>根据<code>client_id</code>,<code>client_secret</code>,<code>code</code>三个参数使用POST方法获取<code>access_token</code>返回的不止这一个还有其他参数<br><code>access_token=e72e16c7e42f292c6912e7710c838347ae178b4a&amp;scope=user%2Cgist&amp;token_type=bearer</code></p>
+<p>第三步：<br>通过<code>access_token</code> 就可以使用github 提供的API了。<br>使用get请求<code>https://api.github.com/user?access_token=access_token</code><br>即可获取用户相关信息</p>
+<h1 id="新浪微博接入"><a href="#新浪微博接入" class="headerlink" title="新浪微博接入"></a>新浪微博接入</h1><p>新浪的接入<a href="http://open.weibo.com/wiki/Oauth2/authorize" target="_blank" rel="external">文档</a></p>
+<p>创建<a href="http://open.weibo.com/apps" target="_blank" rel="external">应用</a>创建后页面如下<br><img src="http://7xl9u9.com1.z0.glb.clouddn.com/2016-09-18_14-36-02.png" alt="image"></p>
+<p>在接口管理，授权机制页面设置<code>授权回调页</code>和<code>取消授权回调页</code>地址<br>在网站信息和基本信息里可以看到<code>App Key</code>和<code>App Secret</code></p>
+<p>第一步：<br>在自己页面添加按钮点击跳转到新浪微博获取权限页面，页面地址为：<code>https://api.weibo.com/oauth2/authorize?client_id=client_id&amp;redirect_uri=redirect_uri</code>  <a href="https://api.weibo.com/oauth2/authorize?client_id=2139214853&amp;redirect_uri=http://openks.duapp.com/oauth?t=weibo" target="_blank" rel="external">我的例子在这里</a> 效果如图： </p>
+<p><img src="http://7xl9u9.com1.z0.glb.clouddn.com/2016-09-18_14-17-41.png" alt="image"><br>如果不同意直接叉掉页面即可，如果同意则跳转到设置的授权回调地址,会带一个名为code的参数</p>
+<p>第二步：</p>
+<p>根据<code>client_id(即AppKey)</code>,<code>client_secret(即AppSecret)</code>,<code>grant_type(需填写authorization_code)</code>,<code>redirect_uri</code>,<code>code(上一步返回的)</code>五个必须参数使用POST方法从<code>https://api.weibo.com/oauth2/access_token</code>获取<code>access_token</code>返回的不止这一个还有其他参数<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">       <span class="string">"access_token"</span>: <span class="string">"ACCESS_TOKEN"</span>,</span><br><span class="line">       <span class="string">"expires_in"</span>: <span class="number">1234</span>,</span><br><span class="line">       <span class="string">"remind_in"</span>:<span class="string">"798114"</span>,</span><br><span class="line">       <span class="string">"uid"</span>:<span class="string">"12341234"</span></span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure></p>
+<p>第三步：<br>通过<code>access_token</code>及相关数据就可以使用微博提供的API了。<br>使用get请求<code>https://api.weibo.com/2/users/show.json?access_token=access_token&amp;uid=uid</code>其中uid为要查询用户id<br>即可获取用户相关信息</p>
+<h1 id="实现思路"><a href="#实现思路" class="headerlink" title="实现思路"></a>实现思路</h1><p>点击使用第三方登录后跳转授权页面，授权完成后拿到<code>access_token</code>,根据<code>access_token</code>拿到用户id,把第三方名称加第三方用户id拼接字符串作为自己数据库里用户id,并设置为用户已登录，然后跳转页面到已登录页面，进入自己系统逻辑即可。</p>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -128,7 +139,7 @@ var _hmt = _hmt || [];
 
 <div class="article-share" id="share">
 
-  <!--<div data-url="http://www.zhuyangxing.cn/2016/02/26/webpack/" data-title="webpack入门学习 | openks的随笔记录" data-tsina="null" class="share clearfix">
+  <!--<div data-url="http://www.zhuyangxing.cn/2016/09/18/OAuth2.0接入学习，含github和新浪/" data-title="OAuth2.0接入学习，含github和新浪 | openks的随笔记录" data-tsina="null" class="share clearfix">
   </div>-->
 
 </div>
@@ -137,19 +148,11 @@ var _hmt = _hmt || [];
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/2016/03/11/gulp/" title="gulp自动化工具的学习">
-  <strong>上一篇:</strong><br/>
-  <span>
-  gulp自动化工具的学习</span>
-</a>
-</div>
-
 
 <div class="next">
-<a href="/2016/02/25/hexo博客搭建/"  title="hexo博客搭建">
+<a href="/2016/09/18/使用html页面浏览文件夹里的所有图片/"  title="使用html页面浏览文件夹里的所有图片">
  <strong>下一篇:</strong><br/> 
- <span>hexo博客搭建
+ <span>使用html页面浏览文件夹里的所有图片
 </span>
 </a>
 </div>
@@ -162,7 +165,7 @@ var _hmt = _hmt || [];
 
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
-  
+  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#github接入"><span class="toc-number">1.</span> <span class="toc-text">github接入</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#新浪微博接入"><span class="toc-number">2.</span> <span class="toc-text">新浪微博接入</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#实现思路"><span class="toc-number">3.</span> <span class="toc-text">实现思路</span></a></li></ol>
   </div>
 
 <div id="asidepart">
