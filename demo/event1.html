@@ -1,43 +1,62 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
-	<head>
-		<title></title>
-		<meta name="Description" content="打开控制台查看，在即绑定捕获又绑定冒泡时，按绑定顺序执行" />
-		<style type="text/css">
-			#p { width: 300px; height: 300px; padding: 10px; border: 1px solid black; }
-			    #c { width: 200px; height: 200px; border: 1px solid red; }
-			    #sub { width: 100px; height: 100px; border: 1px solid red; }
-		</style>
-	</head>
+<head>
+	<title></title>
+	<meta name="Description" content="打开控制台查看，在即绑定捕获又绑定冒泡时，按绑定顺序执行" />
+	<style type="text/css">
+		#p {
+			width: 300px;
+			height: 300px;
+			padding: 10px;
+			border: 1px solid black;
+		}
 
-	<body>
-		<div id="p">
-			parent
-			<div id="c">
-				child
-			</div>
+		#c {
+			width: 200px;
+			height: 200px;
+			border: 1px solid red;
+		}
+
+		#sub {
+			width: 100px;
+			height: 100px;
+			border: 1px solid red;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="p">
+		parent
+		<div id="c">
+			child
 		</div>
-		<script type="text/javascript">
-			window.alert = function (msg) {
-			      console.log(msg);
-			    };
-			    var p = document.getElementById('p'),
-			        c = document.getElementById('c');
-			p.addEventListener('click', function (e) {
-			  alert('父节点冒泡')
-			}, false);
-			
-			c.addEventListener('click', function (e) {
-			  alert('子节点冒泡')
-			}, false);
-			c.addEventListener('click', function (e) {
-			  alert('子节点捕获')
-			}, true);
-			
-			p.addEventListener('click', function (e) {
-			  alert('父节点捕获')
-			}, true);
-		</script>
-	</body>
+	</div>
+	<script type="text/javascript">
+		window.alert = function(msg) {
+			console.log(msg);
+		};
+		var p = document.getElementById('p'),
+			c = document.getElementById('c');
+		p.addEventListener('click', function(e) {
+			console.log("p:mao", e.target);
+			alert('父节点冒泡')
+		}, false);
+
+		c.addEventListener('click', function(e) {
+			console.log("c:mao", e.target);
+			alert('子节点冒泡')
+		}, false);
+		c.addEventListener('click', function(e) {
+			console.log("c:bu", e.target);
+			alert('子节点捕获')
+		}, true);
+
+		p.addEventListener('click', function(e) {
+			console.log("p:bu", e.target);
+			alert('父节点捕获')
+		}, true);
+	</script>
+</body>
 
 </html>
