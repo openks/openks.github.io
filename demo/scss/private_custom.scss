@@ -1,0 +1,16 @@
+@import "_comp";
+* {
+  box-sizing: border-box;
+}
+.hide {
+  display: none;
+}
+.time_sel {
+  @include time_sel;
+  width: 220px;
+}
+.inp_sel {
+  width: 220px;
+  margin-bottom: 30px;
+  @include inp_sel;
+}
