@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>懒加载图片</title>
+  </head>
+  <body>
+    <img data-id="img_test8" alt="" data-src="http://www.ijquery.cn/wp-content/uploads/2014/09/20140927142130_56815.png"  data-w="300" data-ratio="0.6007259528130672" data-type="jpeg">
+    <p>
+      农好声时们活指者影决正中种山果现油。会与系北两济对多信感土院。第由各通须地极干拉中局力听或些也。算但组主前法东转物响前断铁才外克里。
+    </p>
+    <img data-id="img_test7" alt="" data-src="http://www.ijquery.cn/wp-content/uploads/2014/09/20140927142130_56815.png"  data-w="300" data-ratio="0.6007259528130672" data-type="jpeg">
+    <p>
+      议们没把问验两极称再高下称资都半积且。等员水验电子改发整县明队消每。无构济千信回准中办线组入便。五分派白干准部切酸提下况深统表亲打。特成只前东音书单查车习专得起越系义。历府商们第除观正在新半转金机分精时。
+    </p>
+    <img data-id="img_test0" alt="" data-src="http://www.ijquery.cn/wp-content/uploads/2014/09/20140927142130_56815.png" data-w="300" data-ratio="0.6007259528130672" data-type="jpeg">
+    <p>
+      农好声时们活指者影决正中种山果现油。会与系北两济对多信感土院。第由各通须地极干拉中局力听或些也。算但组主前法东转物响前断铁才外克里。
+    </p>
+    <img data-id="img_test5" alt="" data-src="http://www.ijquery.cn/wp-content/uploads/2014/09/20140927142130_56815.png" data-w="300" data-ratio="0.6007259528130672" data-type="jpeg">
+    <p>
+      农好声时们活指者影决正中种山果现油。会与系北两济对多信感土院。第由各通须地极干拉中局力听或些也。算但组主前法东转物响前断铁才外克里。
+    </p>
+    <img data-id="img_test4" alt="" data-src="http://www.ijquery.cn/wp-content/uploads/2014/09/20140927142130_56815.png" data-w="300" data-ratio="0.6007259528130672" data-type="jpeg">
+    <p>
+      农好声时们活指者影决正中种山果现油。会与系北两济对多信感土院。第由各通须地极干拉中局力听或些也。算但组主前法东转物响前断铁才外克里。
+    </p>
+    <img data-id="img_test3" alt="" data-src="http://www.ijquery.cn/wp-content/uploads/2014/09/20140927142130_56815.png" data-w="300" data-ratio="0.6007259528130672" data-type="jpeg">
+    <p>
+      农好声时们活指者影决正中种山果现油。会与系北两济对多信感土院。第由各通须地极干拉中局力听或些也。算但组主前法东转物响前断铁才外克里。
+    </p>
+    <img data-id="img_test2" alt="" data-src="http://www.ijquery.cn/wp-content/uploads/2014/09/20140927142130_56815.png" data-w="300" data-ratio="0.6007259528130672" data-type="jpeg">
+    <p>
+      农好声时们活指者影决正中种山果现油。会与系北两济对多信感土院。第由各通须地极干拉中局力听或些也。算但组主前法东转物响前断铁才外克里。
+    </p>
+    <img data-id="img_test1" alt="" data-src="http://www.ijquery.cn/wp-content/uploads/2014/09/20140927142130_56815.png" data-w="300" data-ratio="0.6007259528130672" data-type="jpeg">
+    <p>
+      农好声时们活指者影决正中种山果现油。会与系北两济对多信感土院。第由各通须地极干拉中局力听或些也。算但组主前法东转物响前断铁才外克里。
+    </p>
+    <script type="text/javascript">
+      function showImagePrevew() {
+        var imgs = document.querySelectorAll("img"),
+          img;
+        for (var i = 0, len = imgs.length; i < len; i++) {
+          img = imgs[i];
+          img.src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWN49+7dfwAJYgPK90B8dwAAAABJRU5ErkJggg==";
+          img.width = img.getAttribute("data-w");
+          img.height = (img.width * img.getAttribute("data-ratio"));
+          fillImage("[data-id="+img.getAttribute("data-id")+"]");
+        }
+      }
+      function fillImage(selector) {
+        var img = document.querySelector(selector);
+        var img_tmp = new Image(); //创建一个Image对象，实现图片的预下载
+        img_tmp.src = img.getAttribute("data-src");
+        if (img_tmp.complete) { // 如果图片已经存在于浏览器缓存，直接调用回调函数
+          img.src=img_tmp.src;
+          return; // 直接返回，不用再处理onload事件
+        }
+        img_tmp.onload = function () { //图片下载完毕时异步调用callback函数。
+          img.src=img_tmp.src;
+        };
+      };
+      showImagePrevew();
+      // fillImage("[data-id=img_test0]");
+    </script>
+  </body>
+</html>
