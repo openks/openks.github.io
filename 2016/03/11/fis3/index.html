@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>前端工程构建工具fis3的学习 | openks的随笔记录</title>
+    <title>前端工程构建工具fis3的学习 | 朱阳星的日常</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
     
     <meta name="author" content="朱阳星">
@@ -14,7 +14,7 @@
     <meta name="keywords" content="fis,fis3,自动化构建">
     
     
-    <link rel="alternate" href="/atom.xml" title="openks的随笔记录" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="朱阳星的日常" type="application/atom+xml">
     
     
     <link rel="icon" href="/img/favicon.ico">
@@ -23,7 +23,7 @@
     <link rel="apple-touch-icon" href="/img/pacman.jpg">
     <link rel="apple-touch-icon-precomposed" href="/img/pacman.jpg">
     
-    <link rel="stylesheet" href="/css/style.css" type="text/css">
+    <link rel="stylesheet" href="/css/style.css">
     
 <script type="text/javascript">
 var _hmt = _hmt || [];
@@ -40,41 +40,51 @@ var _hmt = _hmt || [];
   <body>
     <header>
       <div>
+	
+		<div id="imglogo">
+			<a href="/"><img src="/img/logo.svg" alt="朱阳星的日常" title="朱阳星的日常"/></a>
+		</div>
 		
-			<div id="imglogo">
-				<a href="/"><img src="/img/logo.svg" alt="openks的随笔记录" title="openks的随笔记录"/></a>
-			</div>
-			
 			<div id="textlogo">
-				<h1 class="site-name"><a href="/" title="openks的随笔记录">openks的随笔记录</a></h1>
+				<h1 class="site-name"><a href="/" title="朱阳星的日常">朱阳星的日常</a></h1>
 				<h2 class="blog-motto"></h2>
 			</div>
-			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
-			</a></div>
+			<div class="navbar">
+				<a class="navbutton navmobile" href="#" title="菜单">
+				</a>
+			</div>
 			<nav class="animated">
 				<ul>
 					
-						<li><a href="/">首页</a></li>
-					
-						<li><a href="/archives">存档</a></li>
-					
-						<li><a href="/demo.html">栗子</a></li>
-					
-					<li>
-					
-					<form class="search" >
-						<label>search</label>
-						<input type="text" id="bdcsMain" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
-					</form>
-					<!--<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
-						<label>Search</label>
-						<input type="text" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
-						<input type="hidden" name="q" value="site:www.zhuyangxing.cn">
-					</form>-->
-					
-					</li>
+						<li>
+							<a href="/">
+								首页
+							</a>
+						</li>
+						
+						<li>
+							<a href="/archives">
+								存档
+							</a>
+						</li>
+						
+						<li>
+							<a href="/demo.html">
+								栗子
+							</a>
+						</li>
+						
+							<li>
+								
+										<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+											<label>Search</label>
+											<input type="text" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
+											<input type="hidden" name="q" value="site:www.zhuyangxing.cn">
+										</form>
+										
+							</li>
 				</ul>
-			</nav>			
+			</nav>
 </div>
 
     </header>
@@ -91,11 +101,12 @@ var _hmt = _hmt || [];
       <a href="http://www.zhuyangxing.cn" title="朱阳星">朱阳星</a>
     </p>
   <p class="article-time">
-    <time datetime="2016-03-11T05:32:28.000Z" itemprop="datePublished">2016-03-11</time>
-    更新日期:<time datetime="2016-03-11T05:32:53.395Z" itemprop="dateModified">2016-03-11 13:32</time>
-    
+    <time datetime="2016-03-11T05:32:28.000Z" itemprop="datePublished">2016-03-11 13:32</time>
+    <!-- 更新日期:<time datetime="2017-01-14T05:31:39.000Z" itemprop="dateModified">2017-01-14 13:31</time>
+     -->
   </p>
 </header>
+
 	<div class="article-content">
 		
 		
@@ -108,7 +119,7 @@ var _hmt = _hmt || [];
 <p>fis很强大对我来说有一下几个方面可供利用，这几点足以让我学习并利用它了<br>1.对文件增加MD5戳（便于增量发布，缓存）<br>2.对某些图片进行合并（把小图标们进行合并很有必要）<br>3.文件压缩（css,js以及图片文件的压缩）<br>4.多个js,css合并为一个</p>
 </blockquote>
 <p>使用<code>npm install -g fis3</code>命令安装fis3<br>安装完成后执行<code>fis3 -v</code> 判断是否安装成功<br>升级fis使用 <code>npm update -g fis3</code>命令<br>发布<code>fis3 release -d &lt;path&gt;</code> </p>
-<p>配置文件<code>fis-conf.js</code><br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line">fis.match(<span class="string">'::packager'</span>, &#123;</span><br><span class="line"><span class="comment">//打包的时候启用csssprites插件</span></span><br><span class="line">  spriter: fis.plugin(<span class="string">'csssprites'</span>),</span><br><span class="line"><span class="comment">//一个页面只包含这个页面用过的资源</span></span><br><span class="line">  postpackager: fis.plugin(<span class="string">'loader'</span>, &#123;</span><br><span class="line">    <span class="comment">//allInOne: true</span></span><br><span class="line">  &#125;)</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">//js,css,png文件添加MD5戳</span></span><br><span class="line">fis.match(<span class="string">'*.&#123;js,css,png&#125;'</span>, &#123;</span><br><span class="line">  useHash: <span class="literal">true</span></span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">//less文件解析</span></span><br><span class="line">fis.match(<span class="string">'*.less'</span>, &#123;</span><br><span class="line">  <span class="comment">// fis-parser-less 插件进行解析 </span></span><br><span class="line">  <span class="comment">//需要提前安装该插件</span></span><br><span class="line">  parser: fis.plugin(<span class="string">'less'</span>),</span><br><span class="line">  <span class="comment">// .less 文件后缀构建后被改成 .css 文件</span></span><br><span class="line">  rExt: <span class="string">'.css'</span></span><br><span class="line">&#125;)</span><br><span class="line">fis.match(<span class="string">'*.&#123;less,css&#125;'</span>, &#123;</span><br><span class="line"><span class="comment">//需要fis3-postpackager-loader插件</span></span><br><span class="line">  packTo: <span class="string">'/static/aio.css'</span></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//生产环境压缩js文件</span></span><br><span class="line">fis.media(<span class="string">'prod'</span>).match(<span class="string">'*.js'</span>, &#123;</span><br><span class="line"><span class="comment">// fis-optimizer-uglify-js 插件进行压缩，已内置</span></span><br><span class="line">  optimizer: fis.plugin(<span class="string">'uglify-js'</span>)</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">//生产环境压缩css文件,FIS3 构建会对 CSS 中，路径带 ?__sprite的图片进行合并。</span></span><br><span class="line"><span class="comment">//为了节省编译的时间，分配到 useSprite: true 的 CSS 文件才会被处理。</span></span><br><span class="line">fis.media(<span class="string">'prod'</span>).match(<span class="string">'*.css'</span>, &#123;</span><br><span class="line">  useSprite: <span class="literal">true</span>,</span><br><span class="line">  <span class="comment">//fis-optimizer-clean-css 插件进行压缩，已内置</span></span><br><span class="line">  optimizer: fis.plugin(<span class="string">'clean-css'</span>)</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">//生产环境压缩png文件</span></span><br><span class="line">fis.media(<span class="string">'prod'</span>).match(<span class="string">'*.png'</span>, &#123;</span><br><span class="line">  <span class="comment">// fis-optimizer-png-compressor 插件进行压缩，已内置</span></span><br><span class="line">  optimizer: fis.plugin(<span class="string">'png-compressor'</span>)</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//debug环境下不使用MD5,</span></span><br><span class="line"><span class="comment">//fis3 release debug 启用 media debug 的配置</span></span><br><span class="line">fis.media(<span class="string">'debug'</span>).match(<span class="string">'*.&#123;js,css,png&#125;'</span>, &#123;</span><br><span class="line">  useHash: <span class="literal">false</span>,</span><br><span class="line">  useSprite: <span class="literal">false</span>,</span><br><span class="line">  optimizer: <span class="literal">null</span></span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">//执行 fis3 release 直接发布到某个目录</span></span><br><span class="line"><span class="comment">// fis.match('*', &#123;</span></span><br><span class="line"><span class="comment">//   deploy: fis.plugin('local-deliver', &#123;</span></span><br><span class="line"><span class="comment">//     to: '/Users/my-name/work/htdocs'</span></span><br><span class="line"><span class="comment">//   &#125;)</span></span><br><span class="line"><span class="comment">// &#125;)</span></span><br></pre></td></tr></table></figure></p>
+<p>配置文件<code>fis-conf.js</code><br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div></pre></td><td class="code"><pre><div class="line">fis.match(<span class="string">'::packager'</span>, &#123;</div><div class="line"><span class="comment">//打包的时候启用csssprites插件</span></div><div class="line">  spriter: fis.plugin(<span class="string">'csssprites'</span>),</div><div class="line"><span class="comment">//一个页面只包含这个页面用过的资源</span></div><div class="line">  postpackager: fis.plugin(<span class="string">'loader'</span>, &#123;</div><div class="line">    <span class="comment">//allInOne: true</span></div><div class="line">  &#125;)</div><div class="line">&#125;);</div><div class="line"><span class="comment">//js,css,png文件添加MD5戳</span></div><div class="line">fis.match(<span class="string">'*.&#123;js,css,png&#125;'</span>, &#123;</div><div class="line">  <span class="attr">useHash</span>: <span class="literal">true</span></div><div class="line">&#125;);</div><div class="line"><span class="comment">//less文件解析</span></div><div class="line">fis.match(<span class="string">'*.less'</span>, &#123;</div><div class="line">  <span class="comment">// fis-parser-less 插件进行解析 </span></div><div class="line">  <span class="comment">//需要提前安装该插件</span></div><div class="line">  parser: fis.plugin(<span class="string">'less'</span>),</div><div class="line">  <span class="comment">// .less 文件后缀构建后被改成 .css 文件</span></div><div class="line">  rExt: <span class="string">'.css'</span></div><div class="line">&#125;)</div><div class="line">fis.match(<span class="string">'*.&#123;less,css&#125;'</span>, &#123;</div><div class="line"><span class="comment">//需要fis3-postpackager-loader插件</span></div><div class="line">  packTo: <span class="string">'/static/aio.css'</span></div><div class="line">&#125;);</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">//生产环境压缩js文件</span></div><div class="line">fis.media(<span class="string">'prod'</span>).match(<span class="string">'*.js'</span>, &#123;</div><div class="line"><span class="comment">// fis-optimizer-uglify-js 插件进行压缩，已内置</span></div><div class="line">  optimizer: fis.plugin(<span class="string">'uglify-js'</span>)</div><div class="line">&#125;);</div><div class="line"><span class="comment">//生产环境压缩css文件,FIS3 构建会对 CSS 中，路径带 ?__sprite的图片进行合并。</span></div><div class="line"><span class="comment">//为了节省编译的时间，分配到 useSprite: true 的 CSS 文件才会被处理。</span></div><div class="line">fis.media(<span class="string">'prod'</span>).match(<span class="string">'*.css'</span>, &#123;</div><div class="line">  <span class="attr">useSprite</span>: <span class="literal">true</span>,</div><div class="line">  <span class="comment">//fis-optimizer-clean-css 插件进行压缩，已内置</span></div><div class="line">  optimizer: fis.plugin(<span class="string">'clean-css'</span>)</div><div class="line">&#125;);</div><div class="line"><span class="comment">//生产环境压缩png文件</span></div><div class="line">fis.media(<span class="string">'prod'</span>).match(<span class="string">'*.png'</span>, &#123;</div><div class="line">  <span class="comment">// fis-optimizer-png-compressor 插件进行压缩，已内置</span></div><div class="line">  optimizer: fis.plugin(<span class="string">'png-compressor'</span>)</div><div class="line">&#125;);</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">//debug环境下不使用MD5,</span></div><div class="line"><span class="comment">//fis3 release debug 启用 media debug 的配置</span></div><div class="line">fis.media(<span class="string">'debug'</span>).match(<span class="string">'*.&#123;js,css,png&#125;'</span>, &#123;</div><div class="line">  <span class="attr">useHash</span>: <span class="literal">false</span>,</div><div class="line">  <span class="attr">useSprite</span>: <span class="literal">false</span>,</div><div class="line">  <span class="attr">optimizer</span>: <span class="literal">null</span></div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="comment">//执行 fis3 release 直接发布到某个目录</span></div><div class="line"><span class="comment">// fis.match('*', &#123;</span></div><div class="line"><span class="comment">//   deploy: fis.plugin('local-deliver', &#123;</span></div><div class="line"><span class="comment">//     to: '/Users/my-name/work/htdocs'</span></div><div class="line"><span class="comment">//   &#125;)</span></div><div class="line"><span class="comment">// &#125;)</span></div></pre></td></tr></table></figure></p>
 <p>使用 <code>fis3 server open</code>命令开启内部自带的server所在文件夹 默认8080<br>发布到fis自带的server上 <code>fis3 release</code><br>启动文件监听 <code>fis3 release -w</code><br>启动fis3的server <code>fis3 server start</code><br>修改端口并启动<code>fis3 server start -p 10203</code>  </p>
   
 	</div>
@@ -129,7 +140,7 @@ var _hmt = _hmt || [];
 
 <div class="article-share" id="share">
 
-  <!--<div data-url="http://www.zhuyangxing.cn/2016/03/11/fis3/" data-title="前端工程构建工具fis3的学习 | openks的随笔记录" data-tsina="null" class="share clearfix">
+  <!--<div data-url="http://www.zhuyangxing.cn/2016/03/11/fis3/" data-title="前端工程构建工具fis3的学习 | 朱阳星的日常" data-tsina="null" class="share clearfix">
   </div>-->
 
 </div>
@@ -171,19 +182,6 @@ var _hmt = _hmt || [];
 <aside class="clearfix">
 
   
-<div class="categorieslist">
-	<p class="asidetitle">分类</p>
-		<ul>
-		
-			<li><a href="/categories/hexo/" title="hexo">hexo<sup>2</sup></a></li>
-		
-			<li><a href="/categories/前端/" title="前端">前端<sup>15</sup></a></li>
-		
-		</ul>
-</div>
-
-
-  
 <div class="tagslist">
 	<p class="asidetitle">标签</p>
 		<ul class="clearfix">
@@ -194,13 +192,27 @@ var _hmt = _hmt || [];
 		
 			<li><a href="/tags/前端/" title="前端">前端<sup>15</sup></a></li>
 		
+			<li><a href="/tags/工具/" title="工具">工具<sup>1</sup></a></li>
+		
 		</ul>
 </div>
 
 
-  <div class="rsspart">
-	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
+  
+  <div class="archiveslist">
+    <p class="asidetitle"><a href="/archives">归档</a></p>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">一月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">十一月 2016</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">十月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">九月 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">八月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">六月 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">五月 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">四月 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">三月 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">二月 2016</a><span class="archive-list-count">4</span></li></ul>
+  </div>
+
+
+  <div class="linkslist">
+  <p class="asidetitle">友情链接</p>
+    <ul>
+      <li><a href="http://www.zhangxinxu.com" target="_blank" title="张鑫旭">张鑫旭</a></li>
+      <li><a href="http://hexo.io" target="_blank" title="Hexo">Hexo</a></li>
+    </ul>
 </div>
+
 
 </aside>
 </div>

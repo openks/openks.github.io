@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>独立于后端的前端开发 | openks的随笔记录</title>
+    <title>独立于后端的前端开发 | 朱阳星的日常</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
     
     <meta name="author" content="朱阳星">
@@ -14,7 +14,7 @@
     <meta name="keywords" content="前端，mockjs,前端模拟数据，拦截ajax请求">
     
     
-    <link rel="alternate" href="/atom.xml" title="openks的随笔记录" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="朱阳星的日常" type="application/atom+xml">
     
     
     <link rel="icon" href="/img/favicon.ico">
@@ -23,7 +23,7 @@
     <link rel="apple-touch-icon" href="/img/pacman.jpg">
     <link rel="apple-touch-icon-precomposed" href="/img/pacman.jpg">
     
-    <link rel="stylesheet" href="/css/style.css" type="text/css">
+    <link rel="stylesheet" href="/css/style.css">
     
 <script type="text/javascript">
 var _hmt = _hmt || [];
@@ -40,41 +40,51 @@ var _hmt = _hmt || [];
   <body>
     <header>
       <div>
+	
+		<div id="imglogo">
+			<a href="/"><img src="/img/logo.svg" alt="朱阳星的日常" title="朱阳星的日常"/></a>
+		</div>
 		
-			<div id="imglogo">
-				<a href="/"><img src="/img/logo.svg" alt="openks的随笔记录" title="openks的随笔记录"/></a>
-			</div>
-			
 			<div id="textlogo">
-				<h1 class="site-name"><a href="/" title="openks的随笔记录">openks的随笔记录</a></h1>
+				<h1 class="site-name"><a href="/" title="朱阳星的日常">朱阳星的日常</a></h1>
 				<h2 class="blog-motto"></h2>
 			</div>
-			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
-			</a></div>
+			<div class="navbar">
+				<a class="navbutton navmobile" href="#" title="菜单">
+				</a>
+			</div>
 			<nav class="animated">
 				<ul>
 					
-						<li><a href="/">首页</a></li>
-					
-						<li><a href="/archives">存档</a></li>
-					
-						<li><a href="/demo.html">栗子</a></li>
-					
-					<li>
-					
-					<form class="search" >
-						<label>search</label>
-						<input type="text" id="bdcsMain" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
-					</form>
-					<!--<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
-						<label>Search</label>
-						<input type="text" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
-						<input type="hidden" name="q" value="site:www.zhuyangxing.cn">
-					</form>-->
-					
-					</li>
+						<li>
+							<a href="/">
+								首页
+							</a>
+						</li>
+						
+						<li>
+							<a href="/archives">
+								存档
+							</a>
+						</li>
+						
+						<li>
+							<a href="/demo.html">
+								栗子
+							</a>
+						</li>
+						
+							<li>
+								
+										<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+											<label>Search</label>
+											<input type="text" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
+											<input type="hidden" name="q" value="site:www.zhuyangxing.cn">
+										</form>
+										
+							</li>
 				</ul>
-			</nav>			
+			</nav>
 </div>
 
     </header>
@@ -91,11 +101,12 @@ var _hmt = _hmt || [];
       <a href="http://www.zhuyangxing.cn" title="朱阳星">朱阳星</a>
     </p>
   <p class="article-time">
-    <time datetime="2016-06-17T08:20:55.000Z" itemprop="datePublished">2016-06-17</time>
-    更新日期:<time datetime="2016-09-18T08:47:08.080Z" itemprop="dateModified">2016-09-18 16:47</time>
-    
+    <time datetime="2016-06-17T08:20:55.000Z" itemprop="datePublished">2016-06-17 16:20</time>
+    <!-- 更新日期:<time datetime="2017-01-14T05:31:39.000Z" itemprop="dateModified">2017-01-14 13:31</time>
+     -->
   </p>
 </header>
+
 	<div class="article-content">
 		
 		
@@ -104,11 +115,11 @@ var _hmt = _hmt || [];
 		<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#数据模板"><span class="toc-number">1.</span> <span class="toc-text">数据模板</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#属性值是字符串-String"><span class="toc-number">2.</span> <span class="toc-text">属性值是字符串 String</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#属性值是数字-Number"><span class="toc-number">3.</span> <span class="toc-text">属性值是数字 Number</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#属性值是布尔型-Boolean"><span class="toc-number">4.</span> <span class="toc-text">属性值是布尔型 Boolean</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#属性值是对象-Object"><span class="toc-number">5.</span> <span class="toc-text">属性值是对象 Object</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#属性值是数组-Array"><span class="toc-number">6.</span> <span class="toc-text">属性值是数组 Array</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#属性值是函数-Function"><span class="toc-number">7.</span> <span class="toc-text">属性值是函数 Function</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#属性值是正则表达式-RegExp"><span class="toc-number">8.</span> <span class="toc-text">属性值是正则表达式 RegExp</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#数据占位符定义规范-DPD"><span class="toc-number">9.</span> <span class="toc-text">数据占位符定义规范 DPD</span></a></li></ol>
 		</div>
 		
-		<p>在nodejs端使用<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"># 安装</span><br><span class="line">npm install mockjs</span><br><span class="line">// 使用 Mock</span><br><span class="line">var Mock = require('mockjs')</span><br><span class="line">var data = Mock.mock(&#123;</span><br><span class="line">    // 属性 list 的值是一个数组，其中含有 1 到 10 个元素</span><br><span class="line">    'list|1-10': [&#123;</span><br><span class="line">        // 属性 id 是一个自增数，起始值为 1，每次增 1</span><br><span class="line">        'id|+1': 1</span><br><span class="line">    &#125;]</span><br><span class="line">&#125;)</span><br><span class="line">// 输出结果,1-10个之间随机，这里是两个</span><br><span class="line">console.log(JSON.stringify(data, null, 2));</span><br><span class="line">// &#123;</span><br><span class="line">//   "list": [</span><br><span class="line">//     &#123;</span><br><span class="line">//       "id": 1</span><br><span class="line">//     &#125;,</span><br><span class="line">//     &#123;</span><br><span class="line">//       "id": 2</span><br><span class="line">//     &#125;</span><br><span class="line">//   ]</span><br><span class="line">// &#125;</span><br></pre></td></tr></table></figure></p>
-<p>在浏览器中使用<a href="http://openks.oschina.io/demo/mock-data.html" target="_blank" rel="external">demo在这里</a><br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- （必选）加载 Mock --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"http://mockjs.com/dist/mock.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="javascript"></span><br><span class="line"><span class="comment">// 使用 Mock</span></span><br><span class="line"><span class="keyword">var</span> data = Mock.mock(&#123;</span><br><span class="line">  <span class="string">'list|1-10'</span>: [&#123;</span><br><span class="line">    <span class="string">'id|+1'</span>: <span class="number">1</span></span><br><span class="line">  &#125;]</span><br><span class="line">&#125;);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">JSON</span>.stringify(data, <span class="literal">null</span>, <span class="number">2</span>));</span><br><span class="line"><span class="comment">//跟上面结果一样</span></span><br><span class="line"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
-<p>生成图片,生成颜色值，生成段落<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a =Random.image(<span class="string">'200x100'</span>)</span><br><span class="line"><span class="comment">// "http://dummyimage.com/200x100"</span></span><br><span class="line"><span class="comment">// Random.image()</span></span><br><span class="line">Random.image()</span><br><span class="line"><span class="comment">// Random.image( size )</span></span><br><span class="line">Random.image(<span class="string">'200x100'</span>)</span><br><span class="line"><span class="comment">// Random.image( size, background )</span></span><br><span class="line">Random.image(<span class="string">'200x100'</span>, <span class="string">'#FF6600'</span>)</span><br><span class="line"><span class="comment">// Random.image( size, background, text )</span></span><br><span class="line">Random.image(<span class="string">'200x100'</span>, <span class="string">'#4A7BF7'</span>, <span class="string">'Hello'</span>)</span><br><span class="line"><span class="comment">// Random.image( size, background, foreground, text )</span></span><br><span class="line">Random.image(<span class="string">'200x100'</span>, <span class="string">'#50B347'</span>, <span class="string">'#FFF'</span>, <span class="string">'Mock.js'</span>)</span><br><span class="line"><span class="comment">//http://dummyimage.com/200x100/50B347/FFF&amp;text=Mock.js</span></span><br><span class="line"><span class="comment">// Random.image( size, background, foreground, format, text )</span></span><br><span class="line">Random.image(<span class="string">'200x100'</span>, <span class="string">'#894FC4'</span>, <span class="string">'#FFF'</span>, <span class="string">'png'</span>, <span class="string">'!'</span>)</span><br><span class="line"></span><br><span class="line">Random.guid()</span><br><span class="line">Mock.mock(<span class="string">'@guid'</span>)</span><br><span class="line">Mock.mock(<span class="string">'@guid()'</span>)</span><br><span class="line"><span class="comment">// "3b5d25c4-b5Ac-eE3d-253D-3cC6fD707b56"</span></span><br><span class="line"><span class="comment">// "Ad933c55-fAea-7e86-f75b-edb8DEA1fc58"</span></span><br><span class="line"><span class="comment">// "e2Aeece6-e9f1-1ee8-Ba9D-e76cD5E4A5AD"</span></span><br></pre></td></tr></table></figure></p>
+		<p>在nodejs端使用<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"># 安装</div><div class="line">npm install mockjs</div><div class="line">// 使用 Mock</div><div class="line">var Mock = require('mockjs')</div><div class="line">var data = Mock.mock(&#123;</div><div class="line">    // 属性 list 的值是一个数组，其中含有 1 到 10 个元素</div><div class="line">    'list|1-10': [&#123;</div><div class="line">        // 属性 id 是一个自增数，起始值为 1，每次增 1</div><div class="line">        'id|+1': 1</div><div class="line">    &#125;]</div><div class="line">&#125;)</div><div class="line">// 输出结果,1-10个之间随机，这里是两个</div><div class="line">console.log(JSON.stringify(data, null, 2));</div><div class="line">// &#123;</div><div class="line">//   "list": [</div><div class="line">//     &#123;</div><div class="line">//       "id": 1</div><div class="line">//     &#125;,</div><div class="line">//     &#123;</div><div class="line">//       "id": 2</div><div class="line">//     &#125;</div><div class="line">//   ]</div><div class="line">// &#125;</div></pre></td></tr></table></figure></p>
+<p>在浏览器中使用<a href="http://openks.oschina.io/demo/mock-data.html" target="_blank" rel="external">demo在这里</a><br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- （必选）加载 Mock --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"http://mockjs.com/dist/mock.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line"><span class="comment">// 使用 Mock</span></div><div class="line"><span class="keyword">var</span> data = Mock.mock(&#123;</div><div class="line">  <span class="string">'list|1-10'</span>: [&#123;</div><div class="line">    <span class="string">'id|+1'</span>: <span class="number">1</span></div><div class="line">  &#125;]</div><div class="line">&#125;);</div><div class="line"><span class="built_in">console</span>.log(<span class="built_in">JSON</span>.stringify(data, <span class="literal">null</span>, <span class="number">2</span>));</div><div class="line"><span class="comment">//跟上面结果一样</span></div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>生成图片,生成颜色值，生成段落<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a =Random.image(<span class="string">'200x100'</span>)</div><div class="line"><span class="comment">// "http://dummyimage.com/200x100"</span></div><div class="line"><span class="comment">// Random.image()</span></div><div class="line">Random.image()</div><div class="line"><span class="comment">// Random.image( size )</span></div><div class="line">Random.image(<span class="string">'200x100'</span>)</div><div class="line"><span class="comment">// Random.image( size, background )</span></div><div class="line">Random.image(<span class="string">'200x100'</span>, <span class="string">'#FF6600'</span>)</div><div class="line"><span class="comment">// Random.image( size, background, text )</span></div><div class="line">Random.image(<span class="string">'200x100'</span>, <span class="string">'#4A7BF7'</span>, <span class="string">'Hello'</span>)</div><div class="line"><span class="comment">// Random.image( size, background, foreground, text )</span></div><div class="line">Random.image(<span class="string">'200x100'</span>, <span class="string">'#50B347'</span>, <span class="string">'#FFF'</span>, <span class="string">'Mock.js'</span>)</div><div class="line"><span class="comment">//http://dummyimage.com/200x100/50B347/FFF&amp;text=Mock.js</span></div><div class="line"><span class="comment">// Random.image( size, background, foreground, format, text )</span></div><div class="line">Random.image(<span class="string">'200x100'</span>, <span class="string">'#894FC4'</span>, <span class="string">'#FFF'</span>, <span class="string">'png'</span>, <span class="string">'!'</span>)</div><div class="line"></div><div class="line">Random.guid()</div><div class="line">Mock.mock(<span class="string">'@guid'</span>)</div><div class="line">Mock.mock(<span class="string">'@guid()'</span>)</div><div class="line"><span class="comment">// "3b5d25c4-b5Ac-eE3d-253D-3cC6fD707b56"</span></div><div class="line"><span class="comment">// "Ad933c55-fAea-7e86-f75b-edb8DEA1fc58"</span></div><div class="line"><span class="comment">// "e2Aeece6-e9f1-1ee8-Ba9D-e76cD5E4A5AD"</span></div></pre></td></tr></table></figure></p>
 <p>浏览器端最常使用方法</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- （必选）加载 Mock --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"http://mockjs.com/dist/mock.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"</span> <span class="attribute">charset</span>=<span class="value">"utf-8"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="javascript"></span><br><span class="line">Mock.mock(<span class="string">'http://g.cn'</span>, &#123;</span><br><span class="line">    <span class="string">'name'</span>     : <span class="string">'@name'</span>,</span><br><span class="line">    <span class="string">'age|1-100'</span>: <span class="number">100</span>,</span><br><span class="line">    <span class="string">'color'</span>    : <span class="string">'@color'</span></span><br><span class="line">&#125;);</span><br><span class="line">$.ajax(&#123;</span><br><span class="line">    url: <span class="string">'http://g.cn'</span>,</span><br><span class="line">    dataType:<span class="string">'json'</span></span><br><span class="line">  &#125;).done(<span class="function"><span class="keyword">function</span>(<span class="params">data, status, xhr</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="built_in">JSON</span>.stringify(data, <span class="literal">null</span>, <span class="number">4</span>)</span><br><span class="line">  )</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- （必选）加载 Mock --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"http://mockjs.com/dist/mock.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="javascript"></span></div><div class="line">Mock.mock(<span class="string">'http://g.cn'</span>, &#123;</div><div class="line">    <span class="string">'name'</span>     : <span class="string">'@name'</span>,</div><div class="line">    <span class="string">'age|1-100'</span>: <span class="number">100</span>,</div><div class="line">    <span class="string">'color'</span>    : <span class="string">'@color'</span></div><div class="line">&#125;);</div><div class="line">$.ajax(&#123;</div><div class="line">    <span class="attr">url</span>: <span class="string">'http://g.cn'</span>,</div><div class="line">    <span class="attr">dataType</span>:<span class="string">'json'</span></div><div class="line">  &#125;).done(<span class="function"><span class="keyword">function</span>(<span class="params">data, status, xhr</span>)</span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="built_in">JSON</span>.stringify(data, <span class="literal">null</span>, <span class="number">4</span>)</div><div class="line">  )</div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
 <h1 id="数据模板"><a href="#数据模板" class="headerlink" title="数据模板"></a>数据模板</h1><p>数据模板中的每个属性由 3 部分构成：属性名、生成规则、属性值：</p>
 <p> 属性名   name<br> 生成规则 rule<br> 属性值   value<br>‘name|rule’: value<br>属性名 和 生成规则 之间用竖线 | 分隔。<br>生成规则 是可选的。<br>生成规则 有 7 种格式：<br>‘name|min-max’: value<br>‘name|count’: value<br>‘name|min-max.dmin-dmax’: value<br>‘name|min-max.dcount’: value<br>‘name|count.dmin-dmax’: value<br>‘name|count.dcount’: value<br>‘name|+step’: value<br>生成规则 的 含义 需要依赖 属性值的类型 才能确定。<br>属性值 中可以含有 @占位符。<br>属性值 还指定了最终值的初始值和类型。</p>
 <h1 id="属性值是字符串-String"><a href="#属性值是字符串-String" class="headerlink" title="属性值是字符串 String"></a>属性值是字符串 String</h1><p>‘name|min-max’: value<br>通过重复 string 生成一个字符串，重复次数大于等于 min，小于等于 max。<br>‘name|count’: value<br>通过重复 string 生成一个字符串，重复次数等于 count。</p>
@@ -123,7 +134,7 @@ var _hmt = _hmt || [];
 <h1 id="属性值是函数-Function"><a href="#属性值是函数-Function" class="headerlink" title="属性值是函数 Function"></a>属性值是函数 Function</h1><p>‘name’: function<br>执行函数 function，取其返回值作为最终的属性值，函数的上下文为属性 ‘name’ 所在的对象。</p>
 <h1 id="属性值是正则表达式-RegExp"><a href="#属性值是正则表达式-RegExp" class="headerlink" title="属性值是正则表达式 RegExp"></a>属性值是正则表达式 RegExp</h1><p>‘name’: regexp<br>根据正则表达式 regexp 反向生成可以匹配它的字符串。用于生成自定义格式的字符串。</p>
 <h1 id="数据占位符定义规范-DPD"><a href="#数据占位符定义规范-DPD" class="headerlink" title="数据占位符定义规范 DPD"></a>数据占位符定义规范 DPD</h1><p>占位符 只是在属性值字符串中占个位置，并不出现在最终的属性值中。</p>
-<p>占位符 的格式为：<br>@占位符<br>@占位符(参数 [, 参数])<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">Mock.mock(&#123;</span><br><span class="line">    name: &#123;</span><br><span class="line">        first: <span class="string">'@FIRST'</span>,</span><br><span class="line">        middle: <span class="string">'@FIRST'</span>,</span><br><span class="line">        last: <span class="string">'@LAST'</span>,</span><br><span class="line">        full: <span class="string">'@first @middle @last'</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">// &#123;</span></span><br><span class="line"><span class="comment">//   "name": &#123;</span></span><br><span class="line"><span class="comment">//     "first": "Anthony",</span></span><br><span class="line"><span class="comment">//     "middle": "Brenda",</span></span><br><span class="line"><span class="comment">//     "last": "Young",</span></span><br><span class="line"><span class="comment">//     "full": "Anthony Brenda Young"</span></span><br><span class="line"><span class="comment">//   &#125;</span></span><br><span class="line"><span class="comment">// &#125;</span></span><br></pre></td></tr></table></figure></p>
+<p>占位符 的格式为：<br>@占位符<br>@占位符(参数 [, 参数])<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">Mock.mock(&#123;</div><div class="line">    <span class="attr">name</span>: &#123;</div><div class="line">        <span class="attr">first</span>: <span class="string">'@FIRST'</span>,</div><div class="line">        <span class="attr">middle</span>: <span class="string">'@FIRST'</span>,</div><div class="line">        <span class="attr">last</span>: <span class="string">'@LAST'</span>,</div><div class="line">        <span class="attr">full</span>: <span class="string">'@first @middle @last'</span></div><div class="line">    &#125;</div><div class="line">&#125;)</div><div class="line"><span class="comment">// &#123;</span></div><div class="line"><span class="comment">//   "name": &#123;</span></div><div class="line"><span class="comment">//     "first": "Anthony",</span></div><div class="line"><span class="comment">//     "middle": "Brenda",</span></div><div class="line"><span class="comment">//     "last": "Young",</span></div><div class="line"><span class="comment">//     "full": "Anthony Brenda Young"</span></div><div class="line"><span class="comment">//   &#125;</span></div><div class="line"><span class="comment">// &#125;</span></div></pre></td></tr></table></figure></p>
 <p>占位符比较多,全部如下：<br><img src="http://7xl9u9.com1.z0.glb.clouddn.com/mockjs_2016-06-17_17-10-35.png" alt=""><br>更多使用请参考<a href="http://mockjs.com/examples.html" target="_blank" rel="external">mockjs官方示例</a></p>
   
 	</div>
@@ -144,7 +155,7 @@ var _hmt = _hmt || [];
 
 <div class="article-share" id="share">
 
-  <!--<div data-url="http://www.zhuyangxing.cn/2016/06/17/独立于后端的前端开发/" data-title="独立于后端的前端开发 | openks的随笔记录" data-tsina="null" class="share clearfix">
+  <!--<div data-url="http://www.zhuyangxing.cn/2016/06/17/独立于后端的前端开发/" data-title="独立于后端的前端开发 | 朱阳星的日常" data-tsina="null" class="share clearfix">
   </div>-->
 
 </div>
@@ -186,19 +197,6 @@ var _hmt = _hmt || [];
 <aside class="clearfix">
 
   
-<div class="categorieslist">
-	<p class="asidetitle">分类</p>
-		<ul>
-		
-			<li><a href="/categories/hexo/" title="hexo">hexo<sup>2</sup></a></li>
-		
-			<li><a href="/categories/前端/" title="前端">前端<sup>15</sup></a></li>
-		
-		</ul>
-</div>
-
-
-  
 <div class="tagslist">
 	<p class="asidetitle">标签</p>
 		<ul class="clearfix">
@@ -209,13 +207,27 @@ var _hmt = _hmt || [];
 		
 			<li><a href="/tags/前端/" title="前端">前端<sup>15</sup></a></li>
 		
+			<li><a href="/tags/工具/" title="工具">工具<sup>1</sup></a></li>
+		
 		</ul>
 </div>
 
 
-  <div class="rsspart">
-	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
+  
+  <div class="archiveslist">
+    <p class="asidetitle"><a href="/archives">归档</a></p>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">一月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">十一月 2016</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">十月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">九月 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">八月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">六月 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">五月 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">四月 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">三月 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">二月 2016</a><span class="archive-list-count">4</span></li></ul>
+  </div>
+
+
+  <div class="linkslist">
+  <p class="asidetitle">友情链接</p>
+    <ul>
+      <li><a href="http://www.zhangxinxu.com" target="_blank" title="张鑫旭">张鑫旭</a></li>
+      <li><a href="http://hexo.io" target="_blank" title="Hexo">Hexo</a></li>
+    </ul>
 </div>
+
 
 </aside>
 </div>

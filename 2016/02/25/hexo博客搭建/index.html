@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>hexo博客搭建 | openks的随笔记录</title>
+    <title>hexo博客搭建 | 朱阳星的日常</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
     
     <meta name="author" content="朱阳星">
@@ -14,7 +14,7 @@
     <meta name="keywords" content="hexo搭建,pacman代码高亮,pacman,个人博客搭建">
     
     
-    <link rel="alternate" href="/atom.xml" title="openks的随笔记录" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="朱阳星的日常" type="application/atom+xml">
     
     
     <link rel="icon" href="/img/favicon.ico">
@@ -23,7 +23,7 @@
     <link rel="apple-touch-icon" href="/img/pacman.jpg">
     <link rel="apple-touch-icon-precomposed" href="/img/pacman.jpg">
     
-    <link rel="stylesheet" href="/css/style.css" type="text/css">
+    <link rel="stylesheet" href="/css/style.css">
     
 <script type="text/javascript">
 var _hmt = _hmt || [];
@@ -40,41 +40,51 @@ var _hmt = _hmt || [];
   <body>
     <header>
       <div>
+	
+		<div id="imglogo">
+			<a href="/"><img src="/img/logo.svg" alt="朱阳星的日常" title="朱阳星的日常"/></a>
+		</div>
 		
-			<div id="imglogo">
-				<a href="/"><img src="/img/logo.svg" alt="openks的随笔记录" title="openks的随笔记录"/></a>
-			</div>
-			
 			<div id="textlogo">
-				<h1 class="site-name"><a href="/" title="openks的随笔记录">openks的随笔记录</a></h1>
+				<h1 class="site-name"><a href="/" title="朱阳星的日常">朱阳星的日常</a></h1>
 				<h2 class="blog-motto"></h2>
 			</div>
-			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
-			</a></div>
+			<div class="navbar">
+				<a class="navbutton navmobile" href="#" title="菜单">
+				</a>
+			</div>
 			<nav class="animated">
 				<ul>
 					
-						<li><a href="/">首页</a></li>
-					
-						<li><a href="/archives">存档</a></li>
-					
-						<li><a href="/demo.html">栗子</a></li>
-					
-					<li>
-					
-					<form class="search" >
-						<label>search</label>
-						<input type="text" id="bdcsMain" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
-					</form>
-					<!--<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
-						<label>Search</label>
-						<input type="text" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
-						<input type="hidden" name="q" value="site:www.zhuyangxing.cn">
-					</form>-->
-					
-					</li>
+						<li>
+							<a href="/">
+								首页
+							</a>
+						</li>
+						
+						<li>
+							<a href="/archives">
+								存档
+							</a>
+						</li>
+						
+						<li>
+							<a href="/demo.html">
+								栗子
+							</a>
+						</li>
+						
+							<li>
+								
+										<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+											<label>Search</label>
+											<input type="text" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
+											<input type="hidden" name="q" value="site:www.zhuyangxing.cn">
+										</form>
+										
+							</li>
 				</ul>
-			</nav>			
+			</nav>
 </div>
 
     </header>
@@ -91,11 +101,12 @@ var _hmt = _hmt || [];
       <a href="http://www.zhuyangxing.cn" title="朱阳星">朱阳星</a>
     </p>
   <p class="article-time">
-    <time datetime="2016-02-25T08:05:26.000Z" itemprop="datePublished">2016-02-25</time>
-    更新日期:<time datetime="2016-02-25T09:18:21.903Z" itemprop="dateModified">2016-02-25 17:18</time>
-    
+    <time datetime="2016-02-25T08:05:26.000Z" itemprop="datePublished">2016-02-25 16:05</time>
+    <!-- 更新日期:<time datetime="2017-01-14T05:31:39.000Z" itemprop="dateModified">2017-01-14 13:31</time>
+     -->
   </p>
 </header>
+
 	<div class="article-content">
 		
 		
@@ -104,22 +115,22 @@ var _hmt = _hmt || [];
 		<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#安装hexo"><span class="toc-number">1.</span> <span class="toc-text">安装hexo</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#创建新博客"><span class="toc-number">1.1.</span> <span class="toc-text">创建新博客</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#启动服务"><span class="toc-number">1.2.</span> <span class="toc-text">启动服务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#生成静态文件"><span class="toc-number">1.3.</span> <span class="toc-text">生成静态文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#部署到github-io"><span class="toc-number">1.4.</span> <span class="toc-text">部署到github.io</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#更换主题pacman"><span class="toc-number">1.5.</span> <span class="toc-text">更换主题pacman</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#英文改中文"><span class="toc-number">1.6.</span> <span class="toc-text">英文改中文</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#删除文章下面的默认分享"><span class="toc-number">1.7.</span> <span class="toc-text">删除文章下面的默认分享</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#pacman代码高亮"><span class="toc-number">1.8.</span> <span class="toc-text">pacman代码高亮</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#hexo使用css预处理styl文件"><span class="toc-number">1.9.</span> <span class="toc-text">hexo使用css预处理styl文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#rss订阅"><span class="toc-number">1.10.</span> <span class="toc-text">rss订阅</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#网站地图"><span class="toc-number">1.11.</span> <span class="toc-text">网站地图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#百度统计"><span class="toc-number">1.12.</span> <span class="toc-text">百度统计</span></a></li></ol></li></ol>
 		</div>
 		
-		<h2 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h2><h3 id="创建新博客"><a href="#创建新博客" class="headerlink" title="创建新博客"></a>创建新博客</h3><p>在F:\hexo\code文件夹中使用如下命令<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo -g</span><br><span class="line">$ <span class="built_in">cd</span> f:</span><br><span class="line">$ <span class="built_in">cd</span> F:\hexo</span><br><span class="line">$ hexo code</span><br></pre></td></tr></table></figure></p>
-<h3 id="启动服务"><a href="#启动服务" class="headerlink" title="启动服务"></a>启动服务</h3><p>在F:\hexo\code目录下使用命令<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure></p>
-<h3 id="生成静态文件"><a href="#生成静态文件" class="headerlink" title="生成静态文件"></a>生成静态文件</h3><p>在F:\hexo\code目录下使用命令<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure></p>
+		<h2 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h2><h3 id="创建新博客"><a href="#创建新博客" class="headerlink" title="创建新博客"></a>创建新博客</h3><p>在F:\hexo\code文件夹中使用如下命令<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo -g</div><div class="line">$ <span class="built_in">cd</span> f:</div><div class="line">$ <span class="built_in">cd</span> F:\hexo</div><div class="line">$ hexo code</div></pre></td></tr></table></figure></p>
+<h3 id="启动服务"><a href="#启动服务" class="headerlink" title="启动服务"></a>启动服务</h3><p>在F:\hexo\code目录下使用命令<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure></p>
+<h3 id="生成静态文件"><a href="#生成静态文件" class="headerlink" title="生成静态文件"></a>生成静态文件</h3><p>在F:\hexo\code目录下使用命令<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure></p>
 <h3 id="部署到github-io"><a href="#部署到github-io" class="headerlink" title="部署到github.io"></a>部署到github.io</h3><p>把public下面的所有文件都复制到username.github.io项目的根目录</p>
 <h3 id="更换主题pacman"><a href="#更换主题pacman" class="headerlink" title="更换主题pacman"></a>更换主题pacman</h3><p>下载<a href="https://github.com/A-limon/pacman" target="_blank" rel="external">pacman</a>主题,下载zip压缩包即可<br>把压缩包下载完成后解压并修改pacman-master为pacman,并把该目录放到F:\hexo\code\themes目录下<br>修改F:\hexo\code_config.yml文件里的theme为pacman即<code>theme: pacman</code>(中间空格不能少)</p>
-<h3 id="英文改中文"><a href="#英文改中文" class="headerlink" title="英文改中文"></a>英文改中文</h3><p>修改F:\hexo\code_config.yml文件里的language<code>language: zh-CN</code><br>修改theme\pacman\layout\index.ejs文件 (这里pacman作者写成字符串了)<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">prev_text: <span class="string">'&amp;laquo; Prev'</span>,</span><br><span class="line">next_text: <span class="string">'Next &amp;raquo;'</span></span><br></pre></td></tr></table></figure></p>
-<p>修改为<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">prev_text: <span class="string">'&amp;laquo;'</span>+__(<span class="string">'prev'</span>),</span><br><span class="line">next_text: __(<span class="string">'next'</span>)+<span class="string">'&amp;raquo;'</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="英文改中文"><a href="#英文改中文" class="headerlink" title="英文改中文"></a>英文改中文</h3><p>修改F:\hexo\code_config.yml文件里的language<code>language: zh-CN</code><br>修改theme\pacman\layout\index.ejs文件 (这里pacman作者写成字符串了)<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">prev_text: <span class="string">'&amp;laquo; Prev'</span>,</div><div class="line"><span class="attr">next_text</span>: <span class="string">'Next &amp;raquo;'</span></div></pre></td></tr></table></figure></p>
+<p>修改为<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">prev_text: <span class="string">'&amp;laquo;'</span>+__(<span class="string">'prev'</span>),</div><div class="line"><span class="attr">next_text</span>: __(<span class="string">'next'</span>)+<span class="string">'&amp;raquo;'</span></div></pre></td></tr></table></figure></p>
 <p>其他类似未修改的地方与此相似，prev，next是在themes\pacman\languages 下面的zh-CN.yml文件里有配置的。</p>
-<h3 id="删除文章下面的默认分享"><a href="#删除文章下面的默认分享" class="headerlink" title="删除文章下面的默认分享"></a>删除文章下面的默认分享</h3><p>themes\pacman\layout_partial\post\footer.ejs文件里注释掉相关代码即可<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- </span><br><span class="line">&lt;div data-url="&lt;%- item.permalink %&gt;" data-title="&lt;% if (item.title)&#123; %&gt;&lt;%= item.title %&gt; | &lt;% &#125; %&gt;&lt;%= config.title %&gt;" data-tsina="&lt;%= theme.author.tsina %&gt;" class="share clearfix"&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">--&gt;</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="删除文章下面的默认分享"><a href="#删除文章下面的默认分享" class="headerlink" title="删除文章下面的默认分享"></a>删除文章下面的默认分享</h3><p>themes\pacman\layout_partial\post\footer.ejs文件里注释掉相关代码即可<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- </span></div><div class="line">&lt;div data-url="&lt;%- item.permalink %&gt;" data-title="&lt;% if (item.title)&#123; %&gt;&lt;%= item.title %&gt; | &lt;% &#125; %&gt;&lt;%= config.title %&gt;" data-tsina="&lt;%= theme.author.tsina %&gt;" class="share clearfix"&gt;</div><div class="line">&lt;/div&gt;</div><div class="line">--&gt;</div></pre></td></tr></table></figure></p>
 <h3 id="pacman代码高亮"><a href="#pacman代码高亮" class="headerlink" title="pacman代码高亮"></a>pacman代码高亮</h3><p>在themes/pacman/source/css/_base/variable.styl 文件里注释掉highlight = hexo-config(“highlight.enable”)即可</p>
 <h3 id="hexo使用css预处理styl文件"><a href="#hexo使用css预处理styl文件" class="headerlink" title="hexo使用css预处理styl文件"></a>hexo使用css预处理styl文件</h3><p>语法简单,使用缩进表示层级关系</p>
-<h3 id="rss订阅"><a href="#rss订阅" class="headerlink" title="rss订阅"></a>rss订阅</h3><p>安装插件hexo-generator-feed,修改themes/pacman/_config.yml文件的rss,<code>rss: /atom.xml</code>.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install --save hexo-generator-feed</span><br></pre></td></tr></table></figure></p>
-<h3 id="网站地图"><a href="#网站地图" class="headerlink" title="网站地图"></a>网站地图</h3><p>安装插件hexo-generator-sitemap.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install --save hexo-generator-sitemap</span><br></pre></td></tr></table></figure></p>
+<h3 id="rss订阅"><a href="#rss订阅" class="headerlink" title="rss订阅"></a>rss订阅</h3><p>安装插件hexo-generator-feed,修改themes/pacman/_config.yml文件的rss,<code>rss: /atom.xml</code>.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install --save hexo-generator-feed</div></pre></td></tr></table></figure></p>
+<h3 id="网站地图"><a href="#网站地图" class="headerlink" title="网站地图"></a>网站地图</h3><p>安装插件hexo-generator-sitemap.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install --save hexo-generator-sitemap</div></pre></td></tr></table></figure></p>
 <p>安装完插件后都要重启服务，重启办法先暂停再启动： <code>ctrl+c</code>暂停服务,<code>hexo s</code>启动服务，端口默认4000</p>
-<h3 id="百度统计"><a href="#百度统计" class="headerlink" title="百度统计"></a>百度统计</h3><p>编辑文件hexo\themes\pacman_config.yml，增加配置选项(中间的空格绝对不能忘):<br>baidu_tongji: true<br>新建文件hexo\themes\pacman\layout_partial\baidu_tongji.ejs，内容如下：<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#60;% if (theme.baidu_tongji)&#123; %&#62;&#10;&#60;script type=&#34;text/javascript&#34;&#62;&#10;#&#20320;&#30340;&#30334;&#24230;&#32479;&#35745;&#20195;&#30721;&#10;&#60;/script&#62;&#10;&#60;% &#125; %&#62;</span><br></pre></td></tr></table></figure></p>
-<p>注册并登录百度统计获取你的统计代码。<br>编辑文件hexo\themes\pacman\layout_partial\head.ejs，在『/head』之前增加：<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#60;%- partial(&#39;baidu_tongji&#39;) %&#62;</span><br></pre></td></tr></table></figure></p>
+<h3 id="百度统计"><a href="#百度统计" class="headerlink" title="百度统计"></a>百度统计</h3><p>编辑文件hexo\themes\pacman_config.yml，增加配置选项(中间的空格绝对不能忘):<br>baidu_tongji: true<br>新建文件hexo\themes\pacman\layout_partial\baidu_tongji.ejs，内容如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;% if (theme.baidu_tongji)&#123; %&gt;</div><div class="line">&lt;script type=&quot;text/javascript&quot;&gt;</div><div class="line">#你的百度统计代码</div><div class="line">&lt;/script&gt;</div><div class="line">&lt;% &#125; %&gt;</div></pre></td></tr></table></figure></p>
+<p>注册并登录百度统计获取你的统计代码。<br>编辑文件hexo\themes\pacman\layout_partial\head.ejs，在『/head』之前增加：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;%- partial(&apos;baidu_tongji&apos;) %&gt;</div></pre></td></tr></table></figure></p>
 <p>重新生成并部署你的站点。</p>
   
 	</div>
@@ -140,7 +151,7 @@ var _hmt = _hmt || [];
 
 <div class="article-share" id="share">
 
-  <!--<div data-url="http://www.zhuyangxing.cn/2016/02/25/hexo博客搭建/" data-title="hexo博客搭建 | openks的随笔记录" data-tsina="null" class="share clearfix">
+  <!--<div data-url="http://www.zhuyangxing.cn/2016/02/25/hexo博客搭建/" data-title="hexo博客搭建 | 朱阳星的日常" data-tsina="null" class="share clearfix">
   </div>-->
 
 </div>
@@ -182,19 +193,6 @@ var _hmt = _hmt || [];
 <aside class="clearfix">
 
   
-<div class="categorieslist">
-	<p class="asidetitle">分类</p>
-		<ul>
-		
-			<li><a href="/categories/hexo/" title="hexo">hexo<sup>2</sup></a></li>
-		
-			<li><a href="/categories/前端/" title="前端">前端<sup>15</sup></a></li>
-		
-		</ul>
-</div>
-
-
-  
 <div class="tagslist">
 	<p class="asidetitle">标签</p>
 		<ul class="clearfix">
@@ -205,13 +203,27 @@ var _hmt = _hmt || [];
 		
 			<li><a href="/tags/前端/" title="前端">前端<sup>15</sup></a></li>
 		
+			<li><a href="/tags/工具/" title="工具">工具<sup>1</sup></a></li>
+		
 		</ul>
 </div>
 
 
-  <div class="rsspart">
-	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
+  
+  <div class="archiveslist">
+    <p class="asidetitle"><a href="/archives">归档</a></p>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">一月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">十一月 2016</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">十月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">九月 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">八月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">六月 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">五月 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">四月 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">三月 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">二月 2016</a><span class="archive-list-count">4</span></li></ul>
+  </div>
+
+
+  <div class="linkslist">
+  <p class="asidetitle">友情链接</p>
+    <ul>
+      <li><a href="http://www.zhangxinxu.com" target="_blank" title="张鑫旭">张鑫旭</a></li>
+      <li><a href="http://hexo.io" target="_blank" title="Hexo">Hexo</a></li>
+    </ul>
 </div>
+
 
 </aside>
 </div>

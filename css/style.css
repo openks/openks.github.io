@@ -421,11 +421,10 @@ body >header a {
 }
 #textlogo {
   float: left;
-  width: 42%;
+/* width 42% */
   margin-left: 0.5em;
 }
 #textlogo h1.site-name {
-  width: 86%;
   font-family: "covered_by_your_graceregular";
   font-size: 200%;
   line-height: 1.5;
@@ -841,7 +840,6 @@ article .article-content .kb {
   color: #8f8f8f;
   -webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.2), 0 0 0 2px #fff inset;
   box-shadow: 0 1px 0 rgba(0,0,0,0.2), 0 0 0 2px #fff inset;
-  -webkit-border-radius: 3px;
   border-radius: 3px;
   display: inline-block;
   margin: 0 0.1em;
@@ -1141,7 +1139,6 @@ footer.article-footer {
   margin-left: -7.5em;
   background: #fff;
   border: 2px solid #ccc;
-  -webkit-border-radius: 3px;
   border-radius: 3px;
   display: inline-block;
   opacity: 0;
@@ -1439,7 +1436,6 @@ section.comment {
   display: block;
   color: #fff;
   border: 1px solid #fff;
-  -webkit-border-radius: 5px;
   border-radius: 5px;
   background: #2085c5;
   padding: 0.2em 0.55em;
